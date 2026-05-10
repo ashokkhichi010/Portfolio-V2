@@ -10,18 +10,23 @@ export default function Background() {
     const gl = canvas.getContext("webgl2");
     if (!gl) return;
 
-    let moves = [0, 0];
+    let targetMoves = [0, 0];
+    let currentMoves = [0, 0];
     let lastScrollY = window.scrollY;
 
+    // Adjust these multipliers to change how much distance is covered
+    const mouseSensitivity = 0.1;
+    const scrollSensitivity = 0.05;
+
     const onMouseMove = (e) => {
-      moves[0] += e.movementX;
-      moves[1] += e.movementY;
+      targetMoves[0] += e.movementX * mouseSensitivity;
+      targetMoves[1] += e.movementY * mouseSensitivity;
     };
 
     const onScroll = () => {
       const currentScrollY = window.scrollY;
       const deltaY = currentScrollY - lastScrollY;
-      moves[1] += deltaY; 
+      targetMoves[1] += deltaY * scrollSensitivity; 
       lastScrollY = currentScrollY;
     };
 
@@ -94,13 +99,14 @@ void cam(inout vec3 p) {
 }
 void main() {
 	vec2 uv=(FC-.5*R)/MN;
+	uv *= 1.8; // Scale UV to make the nebula appear smaller
 	vec3 col=vec3(0),
 	p=vec3(0,0,-16),
-	rd=N(vec3(uv,1)), rdd=rd;
+	rd=N(vec3(uv,1));
 	cam(p); cam(rd);
 	col=march(p,rd);
 	col=S(-.2,.9,col);
-	vec2 sn=.5+vec2(atan(rdd.x,rdd.z),atan(length(rdd.xz),rdd.y))/6.28318;
+	vec2 sn=.5+vec2(atan(rd.x,rd.z),atan(length(rd.xz),rd.y))/6.28318;
 	col=max(col,vec3(sky(sn,true)+sky(2.+sn*2.,true)));
 	float t=min((time-.5)*.3,1.);
 	uv=FC/R*2.-1.;
@@ -163,14 +169,22 @@ void main() {
     resize();
 
     let animationFrameId;
+    // Adjust this value to change the smoothness (lower = slower/smoother)
+    const lerpFactor = 0.03;
+
     const render = (now) => {
+      // Smoothly interpolate towards the target position
+      currentMoves[0] += (targetMoves[0] - currentMoves[0]) * lerpFactor;
+      currentMoves[1] += (targetMoves[1] - currentMoves[1]) * lerpFactor;
+
       gl.clearColor(0, 0, 0, 1);
       gl.clear(gl.COLOR_BUFFER_BIT);
       gl.useProgram(program);
       
       gl.uniform2f(resolutionLoc, canvas.width, canvas.height);
-      gl.uniform1f(timeLoc, now * 1e-3);
-      gl.uniform2f(moveLoc, moves[0], moves[1]);
+      // Adjusted auto-animation speed (was 1e-3), significantly slowed down
+      gl.uniform1f(timeLoc, now * 0.0001);
+      gl.uniform2f(moveLoc, currentMoves[0], currentMoves[1]);
       
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
       animationFrameId = requestAnimationFrame(render);
