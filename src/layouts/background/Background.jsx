@@ -51,35 +51,6 @@ uniform vec2 move;
 #define S smoothstep
 #define MN min(R.x,R.y)
 #define rot(a) mat2(cos((a)-vec4(0,11,33,0)))
-#define csqr(a) vec2(a.x*a.x-a.y*a.y,2.*a.x*a.y)
-float rnd(vec3 p) {
-	p=fract(p*vec3(12.9898,78.233,156.34));
-	p+=dot(p,p+34.56);
-	return fract(p.x*p.y*p.z);
-}
-float swirls(in vec3 p) {
-	float d=.0;
-	vec3 c=p;
-	for(float i=min(.0,time); i<9.; i++) {
-		p=.7*abs(p)/dot(p,p)-.7;
-		p.yz=csqr(p.yz);
-		p=p.zxy;
-		d+=exp(-19.*abs(dot(p,c)));
-	}
-	return d;
-}
-vec3 march(in vec3 p, vec3 rd) {
-	float d=.2, t=.0, c=.0, k=mix(.9,1.,rnd(rd)),
-	maxd=length(p)-1.;
-	vec3 col=vec3(0);
-	for(float i=min(.0,time); i<120.; i++) {
-		t+=d*exp(-2.*c)*k;
-		c=swirls(p+rd*t);
-		if (t<5e-2 || t>maxd) break;
-		col+=vec3(c*c,c/1.05,c)*8e-3;
-	}
-	return col;
-}
 float rnd(vec2 p) {
 	p=fract(p*vec2(12.9898,78.233));
 	p+=dot(p,p+34.56);
@@ -104,8 +75,6 @@ void main() {
 	p=vec3(0,0,-16),
 	rd=N(vec3(uv,1));
 	cam(p); cam(rd);
-	col=march(p,rd);
-	col=S(-.2,.9,col);
 	vec2 sn=.5+vec2(atan(rd.x,rd.z),atan(length(rd.xz),rd.y))/6.28318;
 	col=max(col,vec3(sky(sn,true)+sky(2.+sn*2.,true)));
 	float t=min((time-.5)*.3,1.);
@@ -183,7 +152,7 @@ void main() {
       
       gl.uniform2f(resolutionLoc, canvas.width, canvas.height);
       // Adjusted auto-animation speed (was 1e-3), significantly slowed down
-      gl.uniform1f(timeLoc, now * 0.0001);
+      gl.uniform1f(timeLoc, now * 0.001);
       gl.uniform2f(moveLoc, currentMoves[0], currentMoves[1]);
       
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
