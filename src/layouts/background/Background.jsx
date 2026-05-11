@@ -1,8 +1,31 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import './Background.css';
 
 export default function Background() {
   const canvasRef = useRef(null);
+  const containerRef = useRef(null);
+
+  const generateStar = useCallback(() => ({
+    top: `${Math.random() * 100}vh`,
+    left: `${Math.random() * 100}vw`,
+    angle: `${Math.random() * 360}deg`,
+    distance: `${300 + Math.random() * 600}px`,
+    duration: `${1 + Math.random() * 2}s`,
+  }), []);
+
+  const [starKey, setStarKey] = useState(0);
+  const [starProps, setStarProps] = useState(generateStar);
+  const [isShooting, setIsShooting] = useState(true);
+
+  const handleAnimationEnd = () => {
+    setIsShooting(false);
+    const nextDelay = 1000 + Math.random() * 5000;
+    setTimeout(() => {
+      setStarProps(generateStar());
+      setStarKey(k => k + 1);
+      setIsShooting(true);
+    }, nextDelay);
+  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -12,6 +35,8 @@ export default function Background() {
 
     let targetMoves = [0, 0];
     let currentMoves = [0, 0];
+    let targetParallax = [0, 0];
+    let currentParallax = [0, 0];
     let lastScrollY = window.scrollY;
 
     // Adjust these multipliers to change how much distance is covered
@@ -21,12 +46,16 @@ export default function Background() {
     const onMouseMove = (e) => {
       targetMoves[0] += e.movementX * mouseSensitivity;
       targetMoves[1] += e.movementY * mouseSensitivity;
+      
+      targetParallax[0] = (e.clientX / window.innerWidth - 0.5) * -100;
+      targetParallax[1] = (e.clientY / window.innerHeight - 0.5) * -100;
     };
 
     const onScroll = () => {
       const currentScrollY = window.scrollY;
       const deltaY = currentScrollY - lastScrollY;
       targetMoves[1] += deltaY * scrollSensitivity; 
+      targetParallax[1] -= deltaY * scrollSensitivity * 5; 
       lastScrollY = currentScrollY;
     };
 
@@ -145,6 +174,13 @@ void main() {
       // Smoothly interpolate towards the target position
       currentMoves[0] += (targetMoves[0] - currentMoves[0]) * lerpFactor;
       currentMoves[1] += (targetMoves[1] - currentMoves[1]) * lerpFactor;
+      
+      currentParallax[0] += (targetParallax[0] - currentParallax[0]) * lerpFactor;
+      currentParallax[1] += (targetParallax[1] - currentParallax[1]) * lerpFactor;
+      
+      if (containerRef.current) {
+        containerRef.current.style.transform = `translate3d(${currentParallax[0]}px, ${currentParallax[1]}px, 0)`;
+      }
 
       gl.clearColor(0, 0, 0, 1);
       gl.clear(gl.COLOR_BUFFER_BIT);
@@ -173,5 +209,25 @@ void main() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="webgl-background" />;
+  return (
+    <>
+      <canvas ref={canvasRef} className="webgl-background" />
+      <div ref={containerRef} className="shooting-stars-container">
+        {isShooting && (
+          <span
+            key={starKey}
+            className="star"
+            onAnimationEnd={handleAnimationEnd}
+            style={{
+              '--top': starProps.top,
+              '--left': starProps.left,
+              '--angle': starProps.angle,
+              '--distance': starProps.distance,
+              '--duration': starProps.duration,
+            }}
+          ></span>
+        )}
+      </div>
+    </>
+  );
 }

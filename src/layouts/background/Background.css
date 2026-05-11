@@ -8,3 +8,58 @@
   pointer-events: none;
   background: black;
 }
+
+.shooting-stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  top: var(--top);
+  left: var(--left);
+  width: 4px;
+  height: 4px;
+  background: #FFF;
+  border-radius: 50%;
+  animation: shooting var(--duration) linear forwards;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+  border-radius: 2px;
+}
+
+@keyframes shooting {
+  0% {
+    transform: rotate(var(--angle)) translateX(0) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateX(calc(var(--distance) * 0.1)) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateX(calc(var(--distance) * 0.9)) scale(1);
+  }
+  100% {
+    transform: rotate(var(--angle)) translateX(var(--distance)) scale(0.5);
+    opacity: 0;
+  }
+}
