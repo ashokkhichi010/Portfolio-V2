@@ -1,0 +1,63 @@
+import React, { useState, useEffect } from 'react'
+import { Home, User, Code, Briefcase, Rocket, Mail, Menu, X } from 'lucide-react'
+import './styles.css'
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const navLinks = [
+    { name: 'Home', icon: <Home size={18} />, href: '#home' },
+    { name: 'About', icon: <User size={18} />, href: '#about' },
+    { name: 'Skills', icon: <Code size={18} />, href: '#skills' },
+    { name: 'Experience', icon: <Briefcase size={18} />, href: '#experience' },
+    { name: 'Projects', icon: <Rocket size={18} />, href: '#projects' },
+    { name: 'Contact', icon: <Mail size={18} />, href: '#contact' },
+  ]
+
+  return (
+    <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className="nav-container">
+        <div className="nav-brand">
+          <div className="brand-logo">
+            <span className="logo-bracket">&lt;</span>
+            <span className="logo-text">ASHOK KUMAR</span>
+            <span className="logo-bracket">/&gt;</span>
+          </div>
+        </div>
+
+        {/* Menu Toggler Button */}
+        <div className="nav-controls">
+          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="nav-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.icon}
+              <span className="nav-text">{link.name}</span>
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
+  )
+}
+
+export default Navbar

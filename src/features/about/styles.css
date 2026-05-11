@@ -1,0 +1,26 @@
+.about-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+.about-stats {
+  display: flex;
+  gap: 4rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: var(--font-code);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
