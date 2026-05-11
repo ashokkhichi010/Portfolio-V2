@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useMemo } from 'react'
+import Section from '../../components/Section'
 import './styles.css'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -174,49 +175,37 @@ export default function SkillsSection() {
   }, [layout])
 
   return (
-    <section id="skills" className="content-section">
-
-      <div className="section-container">
-        <div className="section-header">
-          <span className="section-number">02</span>
-          <h2 className="section-title">&lt;Skills&gt;</h2>
-        </div>
-
-        <div
-          ref={containerRef}
-          className="w-full"
-          role="list"
-          aria-label="Skills"
-        >
-          {layout && rows.map(({ items, isOdd, rowIndex }) => (
-            <div
-              key={rowIndex}
-              className="hex-grid-row"
-              style={{
-                gap: `${layout.gap}px`,
-                // Pull each row up so adjacent rows interlock
-                marginTop: rowIndex === 0 ? 0 : `-${layout.overlap}px`,
-                // Odd rows shift right by half a hex + half a gap
-                marginLeft: isOdd
-                  ? `${Math.round(layout.hexW / 2 + layout.gap / 2)}px`
-                  : 0,
-              }}
-            >
-              {items.map((skill, ci) => (
-                <HexCard
-                  key={skill.name}
-                  skill={skill}
-                  hexW={layout.hexW}
-                  hexH={layout.hexH}
-                  animDelay={rowIndex * 0.06 + ci * 0.04}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
-
-        <h2 className="section-title">&lt;/Skills&gt;</h2>
+    <Section id="skills" number="02" title="Skills">
+      <div
+        ref={containerRef}
+        className="w-full"
+        role="list"
+        aria-label="Skills"
+      >
+        {layout && rows.map(({ items, isOdd, rowIndex }) => (
+          <div
+            key={rowIndex}
+            className="hex-grid-row"
+            style={{
+              gap: `${layout.gap}px`,
+              marginTop: rowIndex === 0 ? 0 : `-${layout.overlap}px`,
+              marginLeft: isOdd
+                ? `${Math.round(layout.hexW / 2 + layout.gap / 2)}px`
+                : 0,
+            }}
+          >
+            {items.map((skill, ci) => (
+              <HexCard
+                key={skill.name}
+                skill={skill}
+                hexW={layout.hexW}
+                hexH={layout.hexH}
+                animDelay={rowIndex * 0.06 + ci * 0.04}
+              />
+            ))}
+          </div>
+        ))}
       </div>
-    </section>
+    </Section>
   )
 }
