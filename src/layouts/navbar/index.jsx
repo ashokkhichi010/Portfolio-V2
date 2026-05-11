@@ -5,7 +5,7 @@ import './styles.css'
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('home')
+  const [activeSection, setActiveSection] = useState(window.location.hash.substring(1) || 'home')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +21,10 @@ const Navbar = () => {
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id)
+          const id = entry.target.id
+          setActiveSection(id)
+          // Update URL hash without jumping
+          window.history.replaceState(null, '', `#${id}`)
         }
       })
     }

@@ -65,7 +65,7 @@
 
 .nav-link:hover, .nav-link.active {
   color: var(--primary);
-  background: rgba(192, 132, 252, 0.1);
+  /* background: rgba(192, 132, 252, 0.1); */
 }
 
 .nav-link.active::after {
