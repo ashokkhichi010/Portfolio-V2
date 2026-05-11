@@ -3,6 +3,7 @@ import Navbar from './layouts/navbar'
 import Hero from './features/hero'
 import AboutSection from './features/about'
 import SkillsSection from './features/skills'
+import ExperienceSection from './features/experience'
 import ProjectsSection from './features/projects'
 import ContactSection from './features/contact'
 import './App.css'
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <AboutSection />
         <SkillsSection />
+        <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
       </main>
