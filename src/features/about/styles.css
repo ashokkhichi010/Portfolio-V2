@@ -1,26 +1,268 @@
-.about-text {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: var(--text-secondary);
-  max-width: 800px;
-  margin-bottom: 3rem;
-}
-
-.about-stats {
+.about-section {
+  min-height: 100vh;
   display: flex;
-  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Lovers Quarrel', cursive, sans-serif;
+  overflow: hidden;
+  /* Prevent scrolling when book scales */
+  position: relative;
 }
 
-.stat-number {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--primary);
-  font-family: var(--font-code);
+.about-book {
+  transition: opacity 0.4s 0.2s;
+  perspective: 250vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.stat-label {
-  font-size: 1rem;
-  color: var(--text-muted);
+.about-book .pages {
+  width: 100vw;
+  height: 55vw;
+  max-width: 120vh;
+  /* Aspect ratio control */
+  max-height: 82.5vh;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 4px;
+  transition: transform 0.6s ease;
+  /* For mobile sliding */
+}
+
+.about-book .page {
+  float: none;
+  clear: none;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  /* 40vw equivalent inside 80vw container */
+  height: 100%;
+  transform-origin: 0 0;
+  transition: transform 1.4s;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  cursor: pointer;
+  user-select: none;
+  /* Hardware acceleration */
+  -webkit-font-smoothing: antialiased;
+}
+
+.about-book .page:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: background 0.7s;
+  z-index: 2;
+}
+
+/* ODD PAGES (Right side of the spine) */
+.about-book .page:nth-child(odd) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+  right: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.about-book .page:nth-child(odd):hover {
+  transform: rotateY(-15deg);
+}
+
+.about-book .page:nth-child(odd):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.about-book .page:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* EVEN PAGES (Left side of the spine) */
+.about-book .page:nth-child(even) {
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transform-origin: 100% 0;
+  left: 0;
+  border-radius: 4px 0 0 4px;
+  border-color: black;
+}
+
+.about-book .page:nth-child(even):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* FLIPPED PAGES */
+.about-book .page.flipped:nth-child(odd) {
+  pointer-events: none;
+  transform: rotateY(-180deg);
+}
+
+.about-book .page.flipped:nth-child(odd):before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.about-book .page.flipped:nth-child(even) {
+  pointer-events: all;
+  transform: rotateY(0deg);
+}
+
+.about-book .page.flipped:nth-child(even):hover {
+  transform: rotateY(15deg);
+}
+
+.about-book .page.flipped:nth-child(even):hover:before {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.about-book .page.flipped:nth-child(even):before {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* --- REALISTIC PAPER THEMES --- */
+.page-theme-cover {
+  background-image: url('../../assets/images/frontcover.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page-theme-back {
+  box-shadow: inset -5px 0 20px rgba(0, 0, 0, 0.5);
+  background-image: url('../../assets/images/backcover.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page-theme-left {
+  color: #2c3e50;
+  background-image: url('../../assets/images/page.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page-theme-right {
+  color: #2c3e50;
+  background-image: url('../../assets/images/page.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Page content */
+.about-page-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* --- COMPONENT STYLES --- */
+
+/* Cover */
+.about-cover-title {
+  font-size: 5vw;
+  font-weight: 900;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+.about-cover-subtitle {
+  font-size: 2vw;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Left Page (Titles) */
+.about-left-title {
+  font-size: 4.5vw;
+  color: #2c3e50;
+  border-bottom: 3px solid rgba(44, 62, 80, 0.3);
+  padding-bottom: 10px;
+  display: inline-block;
+  transform: rotate(-2deg);
+  /* Sketchy handwritten feel */
+}
+
+/* Right Page (Content) */
+.right-content-wrapper {
+  text-align: left;
+  padding: 0 10%;
+}
+
+.about-right-desc {
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-right-list {
+  font-size: 1.6vw;
+  line-height: 1.8;
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.about-right-list li {
+  margin-bottom: 12px;
+}
+
+/* --- MOBILE SPECIFIC --- */
+@media (max-width: 768px) {
+  .about-book {
+    perspective: 300vw;
+  }
+
+  .about-book .pages {
+    /* Scale the book to fit the screen height/width better */
+    width: 180vw;
+    /* The entire 2-page spread is 180vw */
+    height: 123.75vw;
+    /* Maintain 40:55 aspect ratio (55/40 * 90 = 123.75) */
+    max-width: none;
+    max-height: 80vh;
+    /* Prevent overflowing screen height */
+  }
+
+  .about-page-content h2 {
+    font-size: 6vw;
+  }
+
+  .about-page-content p {
+    font-size: 4vw;
+  }
+
+  /* Sliding logic: 
+     On mobile, the book container is wider than the screen (180vw).
+     We use a CSS class on the .pages container to shift it left or right
+     so that the spine is aligned with the active page. 
+  */
+  .about-book .pages.focus-right {
+    transform: translateX(-25%);
+    /* Shift left to center the right page */
+  }
+
+  .about-book .pages.focus-left {
+    transform: translateX(25%);
+    /* Shift right to center the left page */
+  }
+
+  .about-book .pages.focus-cover {
+    transform: translateX(-25%);
+    /* Cover is on the right side */
+  }
 }

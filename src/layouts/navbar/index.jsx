@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Home, User, Code, Briefcase, Rocket, Mail, Menu, X, GraduationCap } from 'lucide-react'
+import { Home, User, Code, Briefcase, Rocket, Eye, Mail, Menu, X, GraduationCap } from 'lucide-react'
 import './styles.css'
 
 const Navbar = () => {

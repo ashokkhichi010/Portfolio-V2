@@ -1,28 +1,154 @@
-import React from 'react'
-import Section from '../../components/Section'
-import './styles.css'
+import React, { useState, useRef } from 'react';
+import LeftPage from './LeftPage';
+import RightPage from './RightPage';
+import CoverPage from './CoverPage';
+import { aboutData } from './data';
+import './styles.css';
 
 const AboutSection = () => {
+  // Track which pages are flipped by their ID
+  const [flippedPages, setFlippedPages] = useState(new Set());
+
+  // Track focus for mobile view ('left' or 'right')
+  const [mobileFocus, setMobileFocus] = useState('right'); // Starts on the cover (right side)
+
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  // Initialize z-indexes so the first page is on top
+  const getZIndex = (index) => {
+    if (index % 2 === 0) {
+      return aboutData.length - index;
+    }
+    return 'auto';
+  };
+
+  const flipNext = (pageIndex) => {
+    // pageIndex is the index in the array (0-based)
+    // Next implies we are flipping a right page (odd child, even index) to the left
+    const newFlipped = new Set(flippedPages);
+    newFlipped.add(aboutData[pageIndex].id);
+    if (pageIndex + 1 < aboutData.length) {
+      newFlipped.add(aboutData[pageIndex + 1].id);
+    }
+    setFlippedPages(newFlipped);
+  };
+
+  const flipPrev = (pageIndex) => {
+    // Prev implies we are un-flipping a left page (even child, odd index) to the right
+    const newFlipped = new Set(flippedPages);
+    newFlipped.delete(aboutData[pageIndex].id);
+    if (pageIndex - 1 >= 0) {
+      newFlipped.delete(aboutData[pageIndex - 1].id);
+    }
+    setFlippedPages(newFlipped);
+  };
+
+  const handlePageClick = (index) => {
+    const isRightSide = index % 2 === 0; // In DOM, 1st element (index 0) is odd child (right side)
+    const isFlipped = flippedPages.has(aboutData[index].id);
+
+    if (!isRightSide && isFlipped) {
+      // Clicked a left page that is currently flipped -> unflip it
+      flipPrev(index);
+      if (window.innerWidth <= 768) setMobileFocus('right');
+    } else if (isRightSide && !isFlipped) {
+      // Clicked a right page that is not flipped -> flip it
+      flipNext(index);
+      if (window.innerWidth <= 768) setMobileFocus('left');
+    }
+  };
+
+  // Mobile Swipe Handling
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].screenX;
+  };
+
+  const handleTouchEnd = (e) => {
+    touchEndX.current = e.changedTouches[0].screenX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    const swipeThreshold = 50; // Minimum distance to trigger swipe
+    const diff = touchStartX.current - touchEndX.current;
+
+    // Determine current visible spread based on flipped pages
+    // The highest index flipped right page tells us where we are
+    let highestFlippedRightIndex = -2; // -2 means cover is not flipped
+    aboutData.forEach((page, index) => {
+      if (index % 2 === 0 && flippedPages.has(page.id)) {
+        highestFlippedRightIndex = index;
+      }
+    });
+
+    if (diff > swipeThreshold) {
+      // Swiped Left (Go Forward)
+      if (mobileFocus === 'left') {
+        setMobileFocus('right');
+      } else {
+        // Focus is right, so flip the current right page
+        const rightPageIndex = highestFlippedRightIndex + 2;
+        if (rightPageIndex < aboutData.length) {
+          flipNext(rightPageIndex);
+          setMobileFocus('left');
+        }
+      }
+    } else if (diff < -swipeThreshold) {
+      // Swiped Right (Go Backward)
+      if (mobileFocus === 'right') {
+        // If we are on the cover (index 0) and not flipped, we can't go back
+        if (highestFlippedRightIndex >= 0) {
+          setMobileFocus('left');
+        }
+      } else {
+        // Focus is left, unflip the current left page
+        const leftPageIndex = highestFlippedRightIndex + 1;
+        if (leftPageIndex >= 0) {
+          flipPrev(leftPageIndex);
+          setMobileFocus('right');
+        }
+      }
+    }
+  };
+
+  // Determine mobile class
+  const getMobileClass = () => {
+    if (flippedPages.size === 0) return 'focus-cover'; // Initial state
+    return mobileFocus === 'left' ? 'focus-left' : 'focus-right';
+  };
+
   return (
-    <Section id="about" number="01" title="About Me">
-      <div className="about-content">
-        <p className="about-text">
-          I'm a passionate Full Stack Developer with experience in building modern web applications.
-          I specialize in JavaScript technologies, React, Node.js, and creating beautiful user interfaces.
-        </p>
-        <div className="about-stats">
-          <div className="stat-item">
-            <div className="stat-number">50+</div>
-            <div className="stat-label">Projects</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">5+</div>
-            <div className="stat-label">Years Exp</div>
-          </div>
+    <section id="about" className="about-section">
+      <div
+        className="about-book"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className={`pages ${getMobileClass()}`}>
+          {aboutData.map((page, index) => {
+            const isFlipped = flippedPages.has(page.id);
+            const zIndex = getZIndex(index);
+
+            // Determine the page's color/style based on its type
+            const pageThemeClass = `page-theme-${page.type}`;
+
+            return (
+              <div
+                key={page.id}
+                className={`page ${isFlipped ? 'flipped' : ''} ${pageThemeClass}`}
+                style={{ zIndex: zIndex }}
+                onClick={() => handlePageClick(index)}
+              >
+                {page.type === 'left' && <LeftPage data={page} />}
+                {page.type === 'right' && <RightPage data={page} />}
+              </div>
+            );
+          })}
         </div>
       </div>
-    </Section>
-  )
-}
+    </section>
+  );
+};
 
-export default AboutSection
+export default AboutSection;
