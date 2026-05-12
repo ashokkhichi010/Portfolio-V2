@@ -1,0 +1,72 @@
+export const journeyData = [
+  {
+    year: "2019",
+    title: "FIRST DEPLOY",
+    type: "CARD",
+    description: "Launched my first personal project to the web. Discovered the power of open source.",
+    id: "001"
+  },
+  {
+    year: "2020",
+    title: "REACT EVOLUTION",
+    type: "CARD",
+    description: "Mastered React and state management. Built complex single-page applications.",
+    id: "002"
+  },
+  {
+    year: "2021",
+    title: "CLOUD ARCHITECT",
+    type: "CARD",
+    description: "AWS Certified. Migrated legacy systems to serverless architectures.",
+    id: "003"
+  },
+  {
+    year: "2022",
+    title: "SENIOR ROLE",
+    type: "CARD",
+    description: "Led a team of developers at a fast-growing startup. Focused on performance and scalability.",
+    id: "004"
+  },
+  {
+    year: "2024",
+    title: "FUTURE VISION",
+    type: "CARD",
+    description: "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    id: "005"
+  },
+  {
+    year: "2024",
+    title: "FUTURE VISION",
+    type: "CARD",
+    description: "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    id: "006"
+  },
+  {
+    year: "2024",
+    title: "FUTURE VISION",
+    type: "CARD",
+    description: "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    id: "007"
+  },
+  {
+    year: "2024",
+    title: "FUTURE VISION",
+    type: "CARD",
+    description: "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    id: "008"
+  },
+  {
+    year: "2024",
+    title: "FUTURE VISION",
+    type: "CARD",
+    description: "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    id: "009"
+  },
+  {
+    year: "2024",
+    title: "FUTURE VISION",
+    type: "CARD",
+    description: "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    id: "010"
+  }
+];

@@ -31,7 +31,7 @@ const Navbar = () => {
     }
 
     const observer = new IntersectionObserver(observerCallback, observerOptions)
-    const sections = ['home', 'about', 'skills', 'experience', 'projects', 'education', 'contact']
+    const sections = ['home', 'about', 'skills', 'experience', 'journey', 'projects', 'education', 'contact']
 
     sections.forEach((id) => {
       const el = document.getElementById(id)
@@ -49,6 +49,7 @@ const Navbar = () => {
     { name: 'About', icon: <User size={18} />, href: '#about' },
     { name: 'Skills', icon: <Code size={18} />, href: '#skills' },
     { name: 'Experience', icon: <Briefcase size={18} />, href: '#experience' },
+    { name: 'Journey', icon: <Rocket size={18} />, href: '#journey' },
     { name: 'Projects', icon: <Rocket size={18} />, href: '#projects' },
     { name: 'Education', icon: <GraduationCap size={18} />, href: '#education' },
     { name: 'Contact', icon: <Mail size={18} />, href: '#contact' },

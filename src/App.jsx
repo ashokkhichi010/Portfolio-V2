@@ -4,6 +4,7 @@ import Hero from './features/hero'
 import AboutSection from './features/about'
 import SkillsSection from './features/skills'
 import ExperienceSection from './features/experience'
+import JourneySection from './features/journey'
 import ProjectsSection from './features/projects'
 import EducationSection from './features/education'
 import ContactSection from './features/contact'
@@ -19,6 +20,7 @@ function App() {
         <AboutSection />
         <SkillsSection />
         <ExperienceSection />
+        <JourneySection />
         <ProjectsSection />
         <EducationSection />
         <ContactSection />
