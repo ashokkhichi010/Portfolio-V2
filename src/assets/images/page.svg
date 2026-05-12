@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" width="400" height="550">
+  <defs>
+    <linearGradient id="pageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2540"/>
+      <stop offset="100%" style="stop-color:#1e2d50"/>
+    </linearGradient>
+    <!-- Subtle vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:transparent"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.25"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base page color -->
+  <rect width="400" height="550" fill="url(#pageGrad)"/>
+
+  <!-- Vignette edges -->
+  <rect width="400" height="550" fill="url(#vignette)"/>
+
+  <!-- Ruled lines (like a notebook) -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="40" y1="80"  x2="360" y2="80"/>
+    <line x1="40" y1="110" x2="360" y2="110"/>
+    <line x1="40" y1="140" x2="360" y2="140"/>
+    <line x1="40" y1="170" x2="360" y2="170"/>
+    <line x1="40" y1="200" x2="360" y2="200"/>
+    <line x1="40" y1="230" x2="360" y2="230"/>
+    <line x1="40" y1="260" x2="360" y2="260"/>
+    <line x1="40" y1="290" x2="360" y2="290"/>
+    <line x1="40" y1="320" x2="360" y2="320"/>
+    <line x1="40" y1="350" x2="360" y2="350"/>
+    <line x1="40" y1="380" x2="360" y2="380"/>
+    <line x1="40" y1="410" x2="360" y2="410"/>
+    <line x1="40" y1="440" x2="360" y2="440"/>
+    <line x1="40" y1="470" x2="360" y2="470"/>
+  </g>
+
+  <!-- Top margin line -->
+  <line x1="10" y1="65" x2="390" y2="65" stroke="#c084fc" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- Left margin red line (like real notebook) -->
+  <line x1="55" y1="55" x2="55" y2="520" stroke="#c084fc" stroke-opacity="0.15" stroke-width="1.5"/>
+
+  <!-- Top corner ornament -->
+  <g stroke="#c084fc" stroke-opacity="0.2" fill="none" stroke-width="0.6">
+    <path d="M10,30 L10,10 L30,10"/>
+    <circle cx="10" cy="10" r="2" fill="#c084fc" fill-opacity="0.2" stroke="none"/>
+  </g>
+  <g stroke="#c084fc" stroke-opacity="0.2" fill="none" stroke-width="0.6">
+    <path d="M390,30 L390,10 L370,10"/>
+    <circle cx="390" cy="10" r="2" fill="#c084fc" fill-opacity="0.2" stroke="none"/>
+  </g>
+
+  <!-- Bottom page number area line -->
+  <line x1="10" y1="525" x2="390" y2="525" stroke="#a78bfa" stroke-opacity="0.15" stroke-width="0.8"/>
+
+  <!-- Bottom corner ornaments -->
+  <g stroke="#c084fc" stroke-opacity="0.2" fill="none" stroke-width="0.6">
+    <path d="M10,510 L10,540 L30,540"/>
+    <circle cx="10" cy="540" r="2" fill="#c084fc" fill-opacity="0.2" stroke="none"/>
+  </g>
+  <g stroke="#c084fc" stroke-opacity="0.2" fill="none" stroke-width="0.6">
+    <path d="M390,510 L390,540 L370,540"/>
+    <circle cx="390" cy="540" r="2" fill="#c084fc" fill-opacity="0.2" stroke="none"/>
+  </g>
+
+  <!-- Small subtle bookmark ribbon top-right -->
+  <polygon points="382,0 398,0 398,40 390,32 382,40" fill="#c084fc" fill-opacity="0.12"/>
+</svg>

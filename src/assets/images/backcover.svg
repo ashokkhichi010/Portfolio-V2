@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550" width="400" height="550">
+  <defs>
+    <linearGradient id="backGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1128"/>
+      <stop offset="50%" style="stop-color:#1a1f3a"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <radialGradient id="bglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#67e8f9;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0"/>
+    </radialGradient>
+    <linearGradient id="spineGradBack" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#67e8f9;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="400" height="550" fill="url(#backGrad)"/>
+  <ellipse cx="200" cy="275" rx="200" ry="270" fill="url(#bglow)"/>
+
+  <!-- Spine shimmer on left edge -->
+  <rect x="0" y="0" width="20" height="550" fill="url(#spineGradBack)" opacity="0.5"/>
+
+  <!-- Outer border -->
+  <rect x="16" y="16" width="368" height="518" fill="none" stroke="#67e8f9" stroke-width="0.8" stroke-opacity="0.3" rx="3"/>
+  <rect x="22" y="22" width="356" height="506" fill="none" stroke="#67e8f9" stroke-width="0.4" stroke-opacity="0.15" rx="2"/>
+
+  <!-- Corner ornaments - top left -->
+  <g stroke="#67e8f9" stroke-opacity="0.4" fill="none" stroke-width="0.8">
+    <path d="M16,50 L16,16 L50,16"/>
+    <path d="M26,50 L26,26 L50,26"/>
+    <circle cx="16" cy="16" r="3" fill="#67e8f9" fill-opacity="0.4" stroke="none"/>
+  </g>
+  <!-- top right -->
+  <g stroke="#67e8f9" stroke-opacity="0.4" fill="none" stroke-width="0.8">
+    <path d="M384,50 L384,16 L350,16"/>
+    <path d="M374,50 L374,26 L350,26"/>
+    <circle cx="384" cy="16" r="3" fill="#67e8f9" fill-opacity="0.4" stroke="none"/>
+  </g>
+  <!-- bottom left -->
+  <g stroke="#67e8f9" stroke-opacity="0.4" fill="none" stroke-width="0.8">
+    <path d="M16,500 L16,534 L50,534"/>
+    <path d="M26,500 L26,524 L50,524"/>
+    <circle cx="16" cy="534" r="3" fill="#67e8f9" fill-opacity="0.4" stroke="none"/>
+  </g>
+  <!-- bottom right -->
+  <g stroke="#67e8f9" stroke-opacity="0.4" fill="none" stroke-width="0.8">
+    <path d="M384,500 L384,534 L350,534"/>
+    <path d="M374,500 L374,524 L350,524"/>
+    <circle cx="384" cy="534" r="3" fill="#67e8f9" fill-opacity="0.4" stroke="none"/>
+  </g>
+
+  <!-- Central circular ornament -->
+  <g transform="translate(200,275)" stroke="#67e8f9" stroke-opacity="0.25" fill="none">
+    <circle r="60" stroke-width="0.5"/>
+    <circle r="50" stroke-width="0.4"/>
+    <circle r="8" stroke-width="0.8" stroke-opacity="0.4"/>
+    <line x1="0" y1="-60" x2="0" y2="60" stroke-width="0.4"/>
+    <line x1="-60" y1="0" x2="60" y2="0" stroke-width="0.4"/>
+    <line x1="-42" y1="-42" x2="42" y2="42" stroke-width="0.3"/>
+    <line x1="42" y1="-42" x2="-42" y2="42" stroke-width="0.3"/>
+  </g>
+  <circle cx="200" cy="275" r="5" fill="#67e8f9" fill-opacity="0.3"/>
+
+  <!-- Dividers -->
+  <line x1="60" y1="185" x2="340" y2="185" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.2"/>
+  <line x1="60" y1="365" x2="340" y2="365" stroke="#67e8f9" stroke-width="0.5" stroke-opacity="0.2"/>
+
+  <!-- Subtle dots -->
+  <g fill="#ffffff" fill-opacity="0.07">
+    <circle cx="60" cy="100" r="1"/>
+    <circle cx="340" cy="150" r="1"/>
+    <circle cx="70" cy="440" r="0.8"/>
+    <circle cx="330" cy="400" r="0.8"/>
+    <circle cx="150" cy="60" r="0.7"/>
+    <circle cx="250" cy="500" r="0.7"/>
+  </g>
+</svg>

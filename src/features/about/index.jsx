@@ -139,13 +139,13 @@ const AboutSection = () => {
         onTouchEnd={handleTouchEnd}
       >
         <div className={`pages ${getMobileClass()}`}>
-          
+
           {/* Outside Book Messages */}
           <div className={`book-intro-text ${isAtStart && !isMobile ? 'visible' : ''}`}>
             <h2>Welcome</h2>
             <p>Open the book to learn more about my journey.</p>
           </div>
-          
+
           <div className={`book-outro-text ${isAtEnd && !isMobile ? 'visible' : ''}`}>
             <h2>Thank You</h2>
             <p>I appreciate you taking the time to read my story.</p>
