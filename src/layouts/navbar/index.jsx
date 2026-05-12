@@ -10,6 +10,14 @@ const Navbar = () => {
 
   useEffect(() => {
     let currentScrollY = window.scrollY
+    let timeoutId = null
+
+    const hideAfterDelay = () => {
+      if (timeoutId) clearTimeout(timeoutId)
+      timeoutId = setTimeout(() => {
+        setIsVisible(false)
+      }, 5000)
+    }
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -21,9 +29,11 @@ const Navbar = () => {
       if (window.scrollY > currentScrollY && window.scrollY > 100) {
         // Scrolling down
         setIsVisible(false)
+        if (timeoutId) clearTimeout(timeoutId)
       } else {
         // Scrolling up
         setIsVisible(true)
+        hideAfterDelay()
       }
       currentScrollY = window.scrollY
     }
@@ -31,6 +41,14 @@ const Navbar = () => {
     const handleMouseMove = (e) => {
       if (e.clientY < 100) {
         setIsVisible(true)
+        hideAfterDelay()
+      }
+    }
+
+    const handleClick = (e) => {
+      if (e.clientY > 100) {
+        setIsVisible(false)
+        if (timeoutId) clearTimeout(timeoutId)
       }
     }
 
@@ -62,9 +80,16 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('mousemove', handleMouseMove)
+    window.addEventListener('click', handleClick)
+    
+    // Start the timer initially
+    hideAfterDelay()
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('click', handleClick)
+      if (timeoutId) clearTimeout(timeoutId)
       observer.disconnect()
     }
   }, [])
@@ -80,7 +105,7 @@ const Navbar = () => {
   ]
 
   return (
-    <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${!isVisible ? 'hidden' : ''}`}>
+    <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${!isVisible && activeSection !== 'home' ? 'hidden' : ''}`}>
       <nav className="nav-container">
         <div className="nav-brand">
           <a href="#home" className="brand-logo" onClick={() => setIsMenuOpen(false)}>
