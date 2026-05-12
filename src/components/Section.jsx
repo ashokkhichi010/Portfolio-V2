@@ -1,6 +1,6 @@
-const Section = ({ id, number, title, children, className = '' }) => {
+const Section = ({ id, number, title, children, className = '', ...props }) => {
   return (
-    <section id={id} className={`content-section ${className}`}>
+    <section id={id} className={`content-section ${className}`} {...props}>
       <div className="section-container">
         <div className="section-header">
           <span className="section-number">{number}</span>

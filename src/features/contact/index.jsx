@@ -5,7 +5,7 @@ import './styles.css'
 
 const ContactSection = () => {
   return (
-    <Section id="contact" number="05" title="Contact">
+    <Section id="contact" number="06" title="Contact">
       <div className="contact-grid">
         <div className="contact-info">
           <h3 className="contact-headline">Let's work together</h3>

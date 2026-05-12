@@ -5,6 +5,7 @@ import AboutSection from './features/about'
 import SkillsSection from './features/skills'
 import ExperienceSection from './features/experience'
 import ProjectsSection from './features/projects'
+import EducationSection from './features/education'
 import ContactSection from './features/contact'
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
+        <EducationSection />
         <ContactSection />
       </main>
     </>

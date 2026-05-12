@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Home, User, Code, Briefcase, Rocket, Mail, Menu, X } from 'lucide-react'
+import { Home, User, Code, Briefcase, Rocket, Mail, Menu, X, GraduationCap } from 'lucide-react'
 import './styles.css'
 
 const Navbar = () => {
@@ -30,8 +30,8 @@ const Navbar = () => {
     }
 
     const observer = new IntersectionObserver(observerCallback, observerOptions)
-    const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact']
-    
+    const sections = ['home', 'about', 'skills', 'experience', 'projects', 'education', 'contact']
+
     sections.forEach((id) => {
       const el = document.getElementById(id)
       if (el) observer.observe(el)
@@ -50,6 +50,7 @@ const Navbar = () => {
     { name: 'Skills', icon: <Code size={18} />, href: '#skills' },
     { name: 'Experience', icon: <Briefcase size={18} />, href: '#experience' },
     { name: 'Projects', icon: <Rocket size={18} />, href: '#projects' },
+    { name: 'Education', icon: <GraduationCap size={18} />, href: '#education' },
     { name: 'Contact', icon: <Mail size={18} />, href: '#contact' },
   ]
 
