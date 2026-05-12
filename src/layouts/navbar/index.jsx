@@ -23,8 +23,9 @@ const Navbar = () => {
         if (entry.isIntersecting) {
           const id = entry.target.id
           setActiveSection(id)
-          // Update URL hash without jumping
-          window.history.replaceState(null, '', `#${id}`)
+          // Update URL hash: Use '/' for home, otherwise use #id
+          const newPath = id === 'home' ? '/' : `#${id}`
+          window.history.replaceState(null, '', newPath)
         }
       })
     }
@@ -45,7 +46,6 @@ const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { name: 'Home', icon: <Home size={18} />, href: '#home' },
     { name: 'About', icon: <User size={18} />, href: '#about' },
     { name: 'Skills', icon: <Code size={18} />, href: '#skills' },
     { name: 'Experience', icon: <Briefcase size={18} />, href: '#experience' },
@@ -58,11 +58,11 @@ const Navbar = () => {
     <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav-container">
         <div className="nav-brand">
-          <div className="brand-logo">
+          <a href="#home" className="brand-logo" onClick={() => setIsMenuOpen(false)}>
             <span className="logo-bracket">&lt;</span>
             <span className="logo-text">ASHOK KUMAR</span>
             <span className="logo-bracket">/&gt;</span>
-          </div>
+          </a>
         </div>
 
         {/* Menu Toggler Button */}
