@@ -4,12 +4,34 @@ import './styles.css'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState(window.location.hash.substring(1) || 'home')
 
   useEffect(() => {
+    let currentScrollY = window.scrollY
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+
+      if (window.scrollY > currentScrollY && window.scrollY > 100) {
+        // Scrolling down
+        setIsVisible(false)
+      } else {
+        // Scrolling up
+        setIsVisible(true)
+      }
+      currentScrollY = window.scrollY
+    }
+
+    const handleMouseMove = (e) => {
+      if (e.clientY < 100) {
+        setIsVisible(true)
+      }
     }
 
     const observerOptions = {
@@ -38,9 +60,11 @@ const Navbar = () => {
       if (el) observer.observe(el)
     })
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('mousemove', handleMouseMove)
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('mousemove', handleMouseMove)
       observer.disconnect()
     }
   }, [])
@@ -56,7 +80,7 @@ const Navbar = () => {
   ]
 
   return (
-    <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${!isVisible ? 'hidden' : ''}`}>
       <nav className="nav-container">
         <div className="nav-brand">
           <a href="#home" className="brand-logo" onClick={() => setIsMenuOpen(false)}>
