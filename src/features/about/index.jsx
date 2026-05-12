@@ -1,16 +1,25 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import LeftPage from './LeftPage';
 import RightPage from './RightPage';
-import CoverPage from './CoverPage';
 import { aboutData } from './data';
 import './styles.css';
 
 const AboutSection = () => {
   // Track which pages are flipped by their ID
   const [flippedPages, setFlippedPages] = useState(new Set());
+  const [mobileFocus, setMobileFocus] = useState('right'); // Starts on the cover (right side)
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Track focus for mobile view ('left' or 'right')
-  const [mobileFocus, setMobileFocus] = useState('right'); // Starts on the cover (right side)
 
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -115,8 +124,12 @@ const AboutSection = () => {
   // Determine mobile class
   const getMobileClass = () => {
     if (flippedPages.size === 0) return 'focus-cover'; // Initial state
+    if (flippedPages.size === aboutData.length) return 'focus-left'; // End state (back cover on left)
     return mobileFocus === 'left' ? 'focus-left' : 'focus-right';
   };
+
+  const isAtStart = flippedPages.size === 0;
+  const isAtEnd = flippedPages.size === aboutData.length;
 
   return (
     <section id="about" className="about-section">
@@ -126,6 +139,17 @@ const AboutSection = () => {
         onTouchEnd={handleTouchEnd}
       >
         <div className={`pages ${getMobileClass()}`}>
+          
+          {/* Outside Book Messages */}
+          <div className={`book-intro-text ${isAtStart && !isMobile ? 'visible' : ''}`}>
+            <h2>Welcome</h2>
+            <p>Open the book to learn more about my journey.</p>
+          </div>
+          
+          <div className={`book-outro-text ${isAtEnd && !isMobile ? 'visible' : ''}`}>
+            <h2>Thank You</h2>
+            <p>I appreciate you taking the time to read my story.</p>
+          </div>
           {aboutData.map((page, index) => {
             const isFlipped = flippedPages.has(page.id);
             const zIndex = getZIndex(index);
@@ -138,7 +162,7 @@ const AboutSection = () => {
                 key={page.id}
                 className={`page ${isFlipped ? 'flipped' : ''} ${pageThemeClass}`}
                 style={{ zIndex: zIndex }}
-                onClick={() => handlePageClick(index)}
+                onClick={() => !isMobile && handlePageClick(index)}
               >
                 {page.type === 'left' && <LeftPage data={page} />}
                 {page.type === 'right' && <RightPage data={page} />}
