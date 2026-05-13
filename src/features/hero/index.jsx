@@ -1,34 +1,71 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { animate, stagger } from 'animejs'
-import { Rocket, Mail, Code, Terminal, Globe, Cpu } from 'lucide-react'
+import { Activity, Briefcase, Code, Layers, Mail, Rocket, Server, ShieldCheck } from 'lucide-react'
 import './styles.css'
 import heroData from '../../data/hero.json'
+import logoUrl from '../../assets/icons/logo.svg';
 
 // Map icon string names from JSON to Lucide components
-const ICON_MAP = { Rocket, Mail, Code, Terminal, Globe, Cpu }
+const ICON_MAP = { Activity, Briefcase, Code, Layers, Mail, Rocket, Server, ShieldCheck };
+
+const PHRASES = heroData.typedTexts ?? [heroData.typedText]
+const TYPE_SPEED = 120   // ms per character typed
+const DELETE_SPEED = 40   // ms per character deleted
+const PAUSE_AFTER = 1800 // ms to hold the completed phrase
+const PAUSE_BEFORE = 400  // ms before typing next phrase
 
 const Hero = () => {
-  const nameRef = useRef(null)
+  const [displayText, setDisplayText] = useState('')
+  const phraseIndex = useRef(0)
+  const charIndex = useRef(0)
+  const isDeleting = useRef(false)
 
+  // Cycling typewriter
   useEffect(() => {
-    const nameText = heroData.typedText
-    animate({ val: 0 }, {
-      val: nameText.length,
-      duration: 1500,
-      delay: 500,
-      ease: 'easeInOutQuad',
-      onUpdate: (anim) => {
-        const length = Math.floor(anim.targets[0].val)
-        if (nameRef.current) {
-          nameRef.current.textContent = nameText.substring(0, length)
-        }
-      }
-    })
+    let timer
 
+    const tick = () => {
+      const current = PHRASES[phraseIndex.current]
+
+      if (!isDeleting.current) {
+        // Typing forward
+        charIndex.current++
+        setDisplayText(current.substring(0, charIndex.current))
+
+        if (charIndex.current === current.length) {
+          // Finished typing — pause, then start deleting
+          isDeleting.current = true
+          timer = setTimeout(tick, PAUSE_AFTER)
+          return
+        }
+        timer = setTimeout(tick, TYPE_SPEED)
+      } else {
+        // Deleting
+        charIndex.current--
+        setDisplayText(current.substring(0, charIndex.current))
+
+        if (charIndex.current === 0) {
+          // Finished deleting — move to next phrase
+          isDeleting.current = false
+          phraseIndex.current = (phraseIndex.current + 1) % PHRASES.length
+          timer = setTimeout(tick, PAUSE_BEFORE)
+          return
+        }
+        timer = setTimeout(tick, DELETE_SPEED)
+      }
+    }
+
+    // Initial delay before first phrase starts
+    timer = setTimeout(tick, 600)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Fade-in entrance for hero elements
+  useEffect(() => {
     animate('.hero-content > *', {
       opacity: [0, 1],
       translateY: [20, 0],
-      delay: stagger(200, { start: 1000 }),
+      delay: stagger(200, { start: 400 }),
       duration: 1000,
       ease: 'easeOutExpo'
     })
@@ -48,17 +85,12 @@ const Hero = () => {
           </div>
 
           <h1 className="hero-name">
-            <span className="name-prefix">const</span>
+            <span className="name-prefix">let</span>
             <span className="name-operator">=</span>
-            <span className="name-value" ref={nameRef}></span>
-            <span className="name-suffix">;</span>
+            <span className="name-value">"{displayText}</span>
+            <span className="typewriter-cursor" aria-hidden="true">|</span>
+            <span className="name-suffix">";</span>
           </h1>
-
-          <div className="hero-title">
-            <span className="title-prefix">//</span>
-            <span className="title-text">{heroData.title}</span>
-          </div>
-
           <p className="hero-description">{heroData.description}</p>
 
           <div className="hero-buttons">
@@ -71,17 +103,6 @@ const Hero = () => {
               )
             })}
           </div>
-
-          <div className="hero-social">
-            {heroData.socials.map((s) => {
-              const IconComp = ICON_MAP[s.icon]
-              return (
-                <a key={s.icon} href={s.href} className="social-icon">
-                  <IconComp size={20} />
-                </a>
-              )
-            })}
-          </div>
         </div>
 
         <div className="hero-image-wrapper">
@@ -89,13 +110,13 @@ const Hero = () => {
             <div className="profile-image-glow"></div>
             <div className="profile-image-frame">
               <div className="profile-image">
-                <Code size={120} className="profile-placeholder" />
+                <img src={logoUrl} alt="LinkedIn" width={260} />
               </div>
             </div>
             {heroData.badges.map((badge) => {
-              const IconComp = ICON_MAP[badge.icon]
+              const IconComp = ICON_MAP[badge.icon] || Code;
               return (
-                <div key={badge.title} className={`floating-badge ${badge.className}`}>
+                <div key={badge.title} className="floating-badge" style={badge.style}>
                   <div className="badge-icon"><IconComp color={badge.color} size={24} /></div>
                   <div className="badge-content">
                     <span className="badge-title">{badge.title}</span>

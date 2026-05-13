@@ -16,7 +16,7 @@
 .code-grid-bg {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(var(--primary) 1px, transparent 1px),
     linear-gradient(90deg, var(--primary) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -38,12 +38,11 @@
 
 .hero-container {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 2rem;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 .hero-greeting {
@@ -65,10 +64,11 @@
 }
 
 .hero-name {
+  height: 120px;
   font-family: var(--font-code);
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .name-prefix { color: var(--purple); }
@@ -78,7 +78,35 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.name-suffix { color: var(--primary); }
+
+.name-suffix {
+  color: var(--primary);
+}
+
+/* Typewriter blinking cursor */
+.typewriter-cursor {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 300;
+  margin-left: 2px;
+  animation: cursorBlink 0.8s step-start infinite;
+  /* keep cursor visible — don't inherit gradient clip from parent */
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: var(--primary);
+}
+
+@keyframes cursorBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
 
 .hero-title {
   font-family: var(--font-code);
@@ -194,16 +222,24 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   animation: float 4s ease-in-out infinite;
 }
 
-.badge-1 { top: 10%; right: -10%; }
-.badge-2 { bottom: 20%; left: -10%; animation-delay: 2s; }
+.badge-icon {
+  font-size: 1.5rem;
+}
 
-.badge-icon { font-size: 1.5rem; }
-.badge-title { display: block; font-weight: 700; font-size: 0.9rem; }
-.badge-libs { font-size: 0.7rem; color: var(--text-muted); }
+.badge-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.badge-libs {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -224,5 +260,17 @@
   }
   .hero-image-wrapper {
     display: none;
+  }
+}
+
+/* Haldle mobile device */
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 }

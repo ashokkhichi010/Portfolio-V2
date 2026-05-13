@@ -1,20 +1,86 @@
 {
   "greeting": "Hello, I'm",
-  "typedText": "Developer",
-  "title": "Full Stack Developer & UI/UX Designer",
-  "description": "Passionate developer creating exceptional digital experiences with modern technologies.",
+  "typedTexts": ["Ashok Kumar", "a Full Stack Developer", "a Backend Engineer", "a SaaS Builder"],
+  "title": "Backend-Focused Full Stack Developer",
+  "description": "I build practical SaaS systems, APIs, and real-time applications focused on solving real operational problems through maintainable backend architecture and workflow-driven development.",
   "buttons": [
-    { "label": "Get In Touch", "href": "#contact", "variant": "primary" },
-    { "label": "View Projects", "href": "#projects", "variant": "secondary" }
-  ],
-  "socials": [
-    { "icon": "Terminal", "href": "#" },
-    { "icon": "Globe", "href": "#" },
-    { "icon": "Cpu", "href": "#" },
-    { "icon": "Mail", "href": "#" }
+    {
+      "label": "Get In Touch",
+      "href": "#contact",
+      "variant": "primary"
+    },
+    {
+      "label": "View Projects",
+      "href": "#projects",
+      "variant": "secondary"
+    }
   ],
   "badges": [
-    { "title": "React", "subtitle": "Modern UI Libraries", "icon": "Code", "color": "var(--primary)", "className": "badge-1" },
-    { "title": "Next.js", "subtitle": "Full Stack Apps", "icon": "Rocket", "color": "var(--cyan)", "className": "badge-2" }
+    {
+      "title": "Backend Systems",
+      "subtitle": "Node.js • NestJS • APIs",
+      "icon": "Server",
+      "color": "var(--blue)",
+      "style": {
+        "bottom": "20%",
+        "left": "-30%",
+        "animation-delay": "4s"
+      }
+    },
+    {
+      "title": "SaaS Platforms",
+      "subtitle": "Workflow-Driven Products",
+      "icon": "Briefcase",
+      "color": "var(--purple)",
+      "style": {
+        "top": "20%",
+        "right": "-30%",
+        "animation-delay": "5s"
+      }
+    },
+    {
+      "title": "Real-Time Systems",
+      "subtitle": "WebSockets & Live Workflows",
+      "icon": "Activity",
+      "color": "var(--green)",
+      "style": {
+        "bottom": "55%",
+        "left": "-36%",
+        "animation-delay": "3s"
+      }
+    },
+    {
+      "title": "Authentication Systems",
+      "subtitle": "JWT • Sessions • Access Control",
+      "icon": "ShieldCheck",
+      "color": "var(--orange)",
+      "style": {
+        "bottom": "25%",
+        "right": "-35%",
+        "animation-delay": "7s"
+      }
+    },
+    {
+      "title": "Product Development",
+      "subtitle": "Idea → Validation → Iteration",
+      "icon": "Rocket",
+      "color": "var(--pink)",
+      "style": {
+        "top": "-10%",
+        "left": "20%",
+        "animation-delay": "8s"
+      }
+    },
+    {
+      "title": "Full-Stack Development",
+      "subtitle": "Node.js • React.js • Flutter • MongoDB • APIs • Deployment",
+      "icon": "Layers",
+      "color": "var(--cyan)",
+      "style": {
+        "bottom": "-10%",
+        "left": "0%",
+        "animation-delay": "9s"
+      }
+    }
   ]
 }
