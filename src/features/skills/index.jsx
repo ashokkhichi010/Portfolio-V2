@@ -1,10 +1,12 @@
 import React, { useRef, useEffect, useState, useMemo } from 'react'
 import Section from '../../components/Section'
 import './styles.css'
-import { SKILLS } from './data'
+import skillsData from '../../data/skills.json'
 import HexCard from './HexCard'
 import SkillsSidePanel from './SkillsSidePanel'
 import SkillsMobileDrawer from './SkillsMobileDrawer'
+
+const SKILLS = skillsData.map((skill, index) => ({ ...skill, index }));
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 

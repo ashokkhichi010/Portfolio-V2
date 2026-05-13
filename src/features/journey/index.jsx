@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import JourneyHUD from './HUD';
 import JourneyItem from './Item';
-import { journeyData } from './data';
+import journeyDataRaw from '../../data/journey.json';
+const journeyData = journeyDataRaw;
 import './styles.css';
 
 const CONFIG = {

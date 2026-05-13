@@ -1,0 +1,20 @@
+{
+  "greeting": "Hello, I'm",
+  "typedText": "Developer",
+  "title": "Full Stack Developer & UI/UX Designer",
+  "description": "Passionate developer creating exceptional digital experiences with modern technologies.",
+  "buttons": [
+    { "label": "Get In Touch", "href": "#contact", "variant": "primary" },
+    { "label": "View Projects", "href": "#projects", "variant": "secondary" }
+  ],
+  "socials": [
+    { "icon": "Terminal", "href": "#" },
+    { "icon": "Globe", "href": "#" },
+    { "icon": "Cpu", "href": "#" },
+    { "icon": "Mail", "href": "#" }
+  ],
+  "badges": [
+    { "title": "React", "subtitle": "Modern UI Libraries", "icon": "Code", "color": "var(--primary)", "className": "badge-1" },
+    { "title": "Next.js", "subtitle": "Full Stack Apps", "icon": "Rocket", "color": "var(--cyan)", "className": "badge-2" }
+  ]
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { educationData } from './data';
+import educationDataRaw from '../../data/education.json';
+const educationData = educationDataRaw;
 import EducationSlide from './EducationSlide';
 import EducationNav from './EducationNav';
 import EducationTrail from './EducationTrail';

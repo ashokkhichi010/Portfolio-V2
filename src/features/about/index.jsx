@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import LeftPage from './LeftPage';
 import RightPage from './RightPage';
-import { aboutData } from './data';
+import aboutData from '../../data/about.json';
 import './styles.css';
 
 const AboutSection = () => {

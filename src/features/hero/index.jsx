@@ -2,14 +2,16 @@ import React, { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs'
 import { Rocket, Mail, Code, Terminal, Globe, Cpu } from 'lucide-react'
 import './styles.css'
+import heroData from '../../data/hero.json'
+
+// Map icon string names from JSON to Lucide components
+const ICON_MAP = { Rocket, Mail, Code, Terminal, Globe, Cpu }
 
 const Hero = () => {
   const nameRef = useRef(null)
-  const particlesRef = useRef(null)
 
   useEffect(() => {
-    // Typing animation
-    const nameText = 'Developer'
+    const nameText = heroData.typedText
     animate({ val: 0 }, {
       val: nameText.length,
       duration: 1500,
@@ -23,7 +25,6 @@ const Hero = () => {
       }
     })
 
-    // Fade in other elements
     animate('.hero-content > *', {
       opacity: [0, 1],
       translateY: [20, 0],
@@ -42,7 +43,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-greeting">
-            <span className="greeting-text">Hello, I'm</span>
+            <span className="greeting-text">{heroData.greeting}</span>
             <span className="greeting-cursor">|</span>
           </div>
 
@@ -55,27 +56,31 @@ const Hero = () => {
 
           <div className="hero-title">
             <span className="title-prefix">//</span>
-            <span className="title-text">Full Stack Developer & UI/UX Designer</span>
+            <span className="title-text">{heroData.title}</span>
           </div>
 
-          <p className="hero-description">
-            Passionate developer creating exceptional digital experiences with modern technologies.
-          </p>
+          <p className="hero-description">{heroData.description}</p>
 
           <div className="hero-buttons">
-            <a href="#contact" className="btn btn-primary">
-              Get In Touch <Rocket size={20} />
-            </a>
-            <a href="#projects" className="btn btn-secondary">
-              View Projects <Code size={20} />
-            </a>
+            {heroData.buttons.map((btn) => {
+              const IconComp = btn.icon ? ICON_MAP[btn.icon] : (btn.variant === 'primary' ? Rocket : Code)
+              return (
+                <a key={btn.label} href={btn.href} className={`btn btn-${btn.variant}`}>
+                  {btn.label} <IconComp size={20} />
+                </a>
+              )
+            })}
           </div>
 
           <div className="hero-social">
-            <a href="#" className="social-icon"><Terminal size={20} /></a>
-            <a href="#" className="social-icon"><Globe size={20} /></a>
-            <a href="#" className="social-icon"><Cpu size={20} /></a>
-            <a href="#" className="social-icon"><Mail size={20} /></a>
+            {heroData.socials.map((s) => {
+              const IconComp = ICON_MAP[s.icon]
+              return (
+                <a key={s.icon} href={s.href} className="social-icon">
+                  <IconComp size={20} />
+                </a>
+              )
+            })}
           </div>
         </div>
 
@@ -87,21 +92,18 @@ const Hero = () => {
                 <Code size={120} className="profile-placeholder" />
               </div>
             </div>
-            {/* Floating Badges */}
-            <div className="floating-badge badge-1">
-              <div className="badge-icon"><Code color="var(--primary)" size={24} /></div>
-              <div className="badge-content">
-                <span className="badge-title">React</span>
-                <span className="badge-libs">Modern UI Libraries</span>
-              </div>
-            </div>
-            <div className="floating-badge badge-2">
-              <div className="badge-icon"><Rocket color="var(--cyan)" size={24} /></div>
-              <div className="badge-content">
-                <span className="badge-title">Next.js</span>
-                <span className="badge-libs">Full Stack Apps</span>
-              </div>
-            </div>
+            {heroData.badges.map((badge) => {
+              const IconComp = ICON_MAP[badge.icon]
+              return (
+                <div key={badge.title} className={`floating-badge ${badge.className}`}>
+                  <div className="badge-icon"><IconComp color={badge.color} size={24} /></div>
+                  <div className="badge-content">
+                    <span className="badge-title">{badge.title}</span>
+                    <span className="badge-libs">{badge.subtitle}</span>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>

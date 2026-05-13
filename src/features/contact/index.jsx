@@ -5,6 +5,7 @@ import './styles.css'
 import githubIcon from '../../assets/icons/github.svg'
 import linkedinIcon from '../../assets/icons/linkedin.svg'
 import xIcon from '../../assets/icons/x.svg'
+import contactData from '../../data/contact.json'
 
 const ContactSection = () => {
   return (
@@ -14,10 +15,8 @@ const ContactSection = () => {
           
           <div className="contact-form-container">
             <div className="contact-field">
-              <h3 className="contact-title">Let's work together</h3>
-              <p className="contact-subtitle">
-                I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
-              </p>
+              <h3 className="contact-title">{contactData.heading}</h3>
+              <p className="contact-subtitle">{contactData.subtitle}</p>
               
               <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
                 <input type="text" className="form-input" placeholder="Name" />
@@ -32,9 +31,9 @@ const ContactSection = () => {
           
           <div className="contact-social-bar">
             <ul className="social-list">
-              <li><a href="#"><img src={githubIcon} alt="Github" width={20} className="social-icon-img" /></a></li>
-              <li><a href="#"><img src={xIcon} alt="X (Twitter)" width={20} className="social-icon-img" /></a></li>
-              <li><a href="#"><img src={linkedinIcon} alt="LinkedIn" width={20} className="social-icon-img" /></a></li>
+              <li><a href={contactData.socials.find(s => s.platform === 'github')?.url ?? '#'}><img src={githubIcon} alt="Github" width={20} className="social-icon-img" /></a></li>
+              <li><a href={contactData.socials.find(s => s.platform === 'x')?.url ?? '#'}><img src={xIcon} alt="X (Twitter)" width={20} className="social-icon-img" /></a></li>
+              <li><a href={contactData.socials.find(s => s.platform === 'linkedin')?.url ?? '#'}><img src={linkedinIcon} alt="LinkedIn" width={20} className="social-icon-img" /></a></li>
             </ul>
           </div>
 
@@ -42,15 +41,15 @@ const ContactSection = () => {
             <h4>Contact Info</h4>
             <div className="info-single">
               <Phone className="info-icon" size={20} />
-              <span>+1 234 567 8900</span>
+              <span>{contactData.phone}</span>
             </div>
             <div className="info-single">
               <Mail className="info-icon" size={20} />
-              <span>hello@example.com</span>
+              <span>{contactData.email}</span>
             </div>
             <div className="info-single">
               <MapPin className="info-icon" size={20} />
-              <span>1000+ Travel partners and 65+ Service city across India, USA, Canada & UAE</span>
+              <span>{contactData.location}</span>
             </div>
           </div>
 

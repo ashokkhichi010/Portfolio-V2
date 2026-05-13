@@ -1,0 +1,42 @@
+[
+  {
+    "period": "2023 - Present",
+    "role": "Lead Architect",
+    "company": "Innovate Tech",
+    "description": "Driving architectural decisions for large-scale enterprise applications and mentoring senior developers across multiple product teams.",
+    "number": "01",
+    "accent": "#c084fc"
+  },
+  {
+    "period": "2021 - 2023",
+    "role": "Full Stack Developer",
+    "company": "Creative Studio",
+    "description": "Developed immersive web experiences using GSAP, Three.js, and modern React patterns for award-winning digital campaigns.",
+    "number": "02",
+    "accent": "#67e8f9"
+  },
+  {
+    "period": "2019 - 2021",
+    "role": "Frontend Engineer",
+    "company": "Global Solutions",
+    "description": "Built and maintained complex dashboards with real-time data visualization, improving key business metrics across 12 client accounts.",
+    "number": "03",
+    "accent": "#fbbf24"
+  },
+  {
+    "period": "2018 - 2019",
+    "role": "Junior Web Developer",
+    "company": "StartUp Hub",
+    "description": "Contributed to core product development and improved initial page load times by 40% through code splitting and lazy loading strategies.",
+    "number": "04",
+    "accent": "#86efac"
+  },
+  {
+    "period": "2017 - 2018",
+    "role": "Web Designer & Dev",
+    "company": "Freelance",
+    "description": "Collaborated with clients globally to design and develop custom responsive websites — delivering 20+ projects from brief to launch.",
+    "number": "05",
+    "accent": "#f9a8d4"
+  }
+]

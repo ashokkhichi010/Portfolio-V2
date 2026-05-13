@@ -22,7 +22,7 @@
 .about-book .pages {
   /* Fills 90% of viewport height, maintaining a 2:3 aspect ratio per page */
   height: 95vh;
-  width: calc(95vh * (80 / 55));
+  width: calc(95vh * (70 / 55));
   /* 2-page spread aspect ratio */
   max-width: 96vw;
   position: relative;
@@ -129,13 +129,13 @@
 
 /* Cover page */
 .page-theme-cover {
-  background: url('../../assets/images/cover.svg') center/cover no-repeat;
+  background: url('../../assets/images/cover.png') center/cover no-repeat;
   border-right: 2px solid rgba(192, 132, 252, 0.3);
 }
 
 /* Back cover */
 .page-theme-back {
-  background: url('../../assets/images/backcover.svg') center/cover no-repeat;
+  background: url('../../assets/images/backcover.png') center/cover no-repeat;
   border-left: 2px solid rgba(103, 232, 249, 0.3);
 }
 
