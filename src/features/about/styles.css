@@ -196,12 +196,12 @@
 /* Left Page — chapter title */
 .about-left-title {
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: 4.5vw;
   font-weight: 700;
   color: var(--primary);
   text-align: center;
   line-height: 1.15;
-  padding-bottom: 0.6rem;
+  padding-bottom: 1vw;
   border-bottom: 1px solid rgba(192, 132, 252, 0.25);
   text-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
 }
@@ -219,15 +219,15 @@
 
 .about-right-desc {
   font-family: 'Satisfy', cursive;
-  font-size: clamp(1.5rem, 1.4vw, 1.15rem);
+  font-size: 2vw;
   color: var(--accent);
   line-height: 1.5;
-  margin-bottom: 0.4rem;
+  margin-bottom: 2vw;
 }
 
 .about-right-list {
   font-family: 'Kalam', cursive;
-  font-size: clamp(0.8rem, 1.25vw, 1.05rem);
+  font-size: 1.25vw;
   line-height: 1.7;
   list-style: none;
   padding-left: 0;
