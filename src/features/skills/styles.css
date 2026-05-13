@@ -23,15 +23,20 @@
   transition:
     filter 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-      /* Bouncy hover effect */
-  animation: 
+  /* Bouncy hover effect */
+    animation:
     hexFadeIn 0.5s ease both,
     hexWave 3s ease-in-out infinite alternate;
 }
 
 @keyframes hexWave {
-  0% { translate: 0 8px; }
-  100% { translate: 0 -8px; }
+  0% {
+      translate: 0 8px;
+    }
+  
+    100% {
+      translate: 0 -8px;
+    }
 }
 
 @keyframes hexFadeIn {
@@ -39,6 +44,7 @@
     opacity: 0;
     transform: scale(0.85);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -49,9 +55,9 @@
 .hex-item:focus-visible {
   filter: drop-shadow(0 22px 32px rgba(0, 0, 0, 0.7));
   transform: scale(2);
-    /* Scale by 2 times */
+  /* Scale by 2 times */
   z-index: 100;
-    /* Extra high z-index to stay above other items */
+  /* Extra high z-index to stay above other items */
   animation-play-state: paused;
 }
 
@@ -82,7 +88,7 @@
   position: relative;
   overflow: hidden;
   background-color: var(--bg-card);
-    /* Added background color */
+  /* Added background color */
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -92,6 +98,7 @@
     filter 0.55s ease-in-out,
     transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 /* ═══════════════════════════════════════════════
    Icon
    ═══════════════════════════════════════════════ */
@@ -131,7 +138,7 @@
   pointer-events: none;
   background: radial-gradient(circle at 50% 50%,
       transparent 0%,
-        rgba(0, 0, 0, 1) 100%);
+      rgba(0, 0, 0, 1) 100%);
   transition: opacity 0.45s ease;
 }
 
@@ -155,7 +162,7 @@
   pointer-events: none;
   background: linear-gradient(to top,
       rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.35) 82%,
+      rgba(0, 0, 0, 0.35) 82%,
         transparent 100%);
   opacity: 0;
   transition: opacity 0.35s ease;
@@ -208,6 +215,7 @@
   width: 100%;
   position: relative;
   min-height: 500px;
+  gap: 30px;
 }
 
 .skills-grid-wrapper {
@@ -221,17 +229,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 3rem;
-  padding-right: 1.5rem;
+  /* padding-left: 3rem; */
+    /* padding-right: 1.5rem; */
 }
 
 @media (min-width: 1024px) {
   .skills-container-layout {
     flex-direction: row;
   }
+
   .skills-grid-wrapper {
     width: 65%;
   }
+
   .skills-side-panel {
     display: flex;
     width: 35%;
@@ -290,7 +300,11 @@
 
 /* Animations */
 .fade-in {
-  animation: fadeInRight 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: fadeInRight 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  
+  .fade-out {
+    animation: fadeOutLeft 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes fadeInRight {
@@ -298,12 +312,24 @@
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+}
 /* Mobile Drawer */
 .skills-mobile-drawer {
   position: fixed;
@@ -341,8 +367,9 @@
   transform: translateY(100%);
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
-  max-height: 80vh;
+  max-height: 60vh;
   overflow-y: auto;
+  height: 60%;
 }
 
 .skills-mobile-drawer.open .drawer-content {
