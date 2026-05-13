@@ -152,9 +152,6 @@
 
 /* Page content */
 .about-page-content {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -169,34 +166,10 @@
 }
 
 /* ─── COMPONENT STYLES ────────────────────────────────────────────────── */
-
-/* Cover */
-.about-cover-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
-  font-weight: 400;
-  letter-spacing: 2px;
-  background: var(--gradient-1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
-}
-
-.about-cover-subtitle {
-  font-family: 'Courgette', cursive;
-  font-size: clamp(0.9rem, 1.8vw, 1.4rem);
-  color: var(--text-secondary);
-  text-align: center;
-  letter-spacing: 1px;
-}
-
 /* Left Page — chapter title */
 .about-left-title {
-  font-family: 'Dancing Script', cursive;
-  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-family: 'Courgette', cursive;
+  font-size: 4vw;
   font-weight: 700;
   color: var(--primary);
   text-align: center;
@@ -207,8 +180,8 @@
 }
 
 .about-left-desc {
-  font-family: 'Kalam', cursive;
-  font-size: clamp(0.7rem, 1.1vw, 1rem);
+  font-family: 'Great Vibes', cursive;
+  font-size: 2vw;
   color: var(--text-secondary);
   text-align: center;
   line-height: 1.6;
@@ -218,7 +191,7 @@
 
 /* Right Page — Content */
 .right-content-wrapper {
-  text-align: left;
+  text-align: justify;
   width: 100%;
   height: 100%;
   display: flex;
@@ -228,16 +201,17 @@
 }
 
 .about-right-desc {
-  font-family: 'Satisfy', cursive;
-  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  /* font-family: 'Satisfy', cursive; */
+  font-family: 'Kalam', cursive;
+  font-size: 1.6vw;
   color: var(--accent);
   line-height: 1.5;
   margin-bottom: 0.6em;
 }
 
 .about-right-list {
-  font-family: 'Kalam', cursive;
-  font-size: clamp(0.7rem, 1.05vw, 1rem);
+  font-family: 'Courgette', cursive;
+  font-size: 1.3vw;
   line-height: 1.7;
   list-style: none;
   padding-left: 0;
@@ -299,7 +273,7 @@
 
 .book-intro-text h2,
 .book-outro-text h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: 5vw;
   font-weight: 700;
   color: #ffa200;
   margin-bottom: 0.5rem;
@@ -308,11 +282,8 @@
 
 .book-intro-text p,
 .book-outro-text p {
-  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-size: 2vw;
   opacity: 0.9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.8rem;
 }
 
@@ -397,31 +368,22 @@
     display: none;
   }
 
-  /* Ensure content stays within the 2:3 background area */
-  .about-page-content {
-    width: min(90vw, calc(90vh * 2 / 3));
-    height: min(135vw, 90vh);
-    margin: auto;
-    padding: 12% 10%;
-  }
-
   /* Scale fonts for mobile */
-  .about-left-title { font-size: 7vw; }
-  .about-left-desc { font-size: 3.5vw; }
-  .about-right-desc { font-size: 4.5vw; }
-  .about-right-list { font-size: 3.5vw; }
+  .about-left-title { font-size: 10vw; }
+  .about-left-desc { font-size: 7vw; }
+  .about-right-desc { font-size: 5vw; }
+  .about-right-list { font-size: 4vw; }
   .about-cover-title { font-size: 10vw; }
   .about-cover-subtitle { font-size: 4vw; }
 
   /* Reposition hints for mobile */
   .book-intro-text, .book-outro-text {
-    width: 90%;
-    left: 5%;
-    right: 5%;
+    width: 100%;
+    top: 95%;
     transform: translateY(calc(-50% - 150px));
     z-index: 20;
     pointer-events: none;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
     display: block !important;
   }
 

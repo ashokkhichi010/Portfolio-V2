@@ -6,7 +6,7 @@ import aboutData from '../../data/about.json';
 import './styles.css';
 import { MoveLeft, MoveUp, MousePointerClick } from 'lucide-react';
 
-const MOBILE_BREAKPOINT = 1024;
+const MOBILE_BREAKPOINT = 1050;
 
 const AboutSection = () => {
   const [flippedPages, setFlippedPages] = useState(new Set());
@@ -96,17 +96,16 @@ const AboutSection = () => {
 
           {/* ── Outside Book Messages ── */}
           <div className={`book-intro-text ${isAtStart ? 'visible' : ''}`}>
-            <h2>Welcome</h2>
             <p>
               {isMobile ? (
                 <>
-                  Swipe from right to left to read
-                  <MoveLeft className="hint-icon-x" size={24} />
+                  <MoveLeft className="hint-icon-x" size={48} />
                 </>
               ) : (
                 <>
+                  <h2>Welcome</h2>
                   Click on the cover page to start
-                  <MousePointerClick className="hint-icon-pulse" size={24} />
+                  <MousePointerClick className="hint-icon-pulse" size={48} />
                 </>
               )}
             </p>
@@ -116,7 +115,7 @@ const AboutSection = () => {
             <h2>Thank You</h2>
             <p>
               Scroll upwards to proceed
-              <MoveUp className="hint-icon-y" size={24} />
+              <MoveUp className="hint-icon-y" size={48} />
             </p>
           </div>
 
