@@ -116,7 +116,12 @@ function HexCard({ skill, hexW, hexH, animDelay, onHover, onClick }) {
       aria-label={`${skill.name} — ${skill.category}`}
       onMouseEnter={() => onHover(skill)}
       onFocus={() => onHover(skill)}
-      onClick={() => onClick(skill)}
+      onClick={() => {
+        // Only trigger click (drawer) on mobile/tablet screens
+        if (window.innerWidth < 1024) {
+          onClick(skill)
+        }
+      }}
     >
       {/* Keyboard-nav focus ring rendered behind the hex shape */}
       <div className="hex-focus-ring" aria-hidden="true" />
@@ -185,14 +190,15 @@ export default function SkillsSection() {
 
   return (
     <Section id="skills" number="02" title="Skills">
-      <div className="flex flex-col lg:flex-row w-full relative min-h-[500px]">
+      <div className="skills-container-layout">
         
         {/* Left Side: Hex Grid */}
         <div
           ref={containerRef}
-          className="w-full lg:w-[65%] shrink-0"
+          className="skills-grid-wrapper"
           role="list"
           aria-label="Skills"
+          onMouseLeave={() => setActiveSkill(null)}
         >
           {layout && rows.map(({ items, isOdd, rowIndex }) => (
             <div
@@ -222,7 +228,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Right Side Panel (Desktop only) */}
-        <div className="hidden lg:flex w-full lg:w-[35%] flex-col justify-center items-start skills-side-panel pl-12 pr-6">
+        <div className="skills-side-panel">
           <div className="panel-content-wrap">
             {activeSkill ? (
               <div key={activeSkill.name} className="code-description fade-in">
@@ -241,12 +247,7 @@ export default function SkillsSection() {
                   <img src={activeSkill.icon} alt={activeSkill.name} />
                 </div>
               </div>
-            ) : (
-              <div className="code-description placeholder fade-in">
-                <p className="code-title text-gray-500">HOVER A SKILL</p>
-                <p className="text-gray-400 mt-2">Explore my technical experience.</p>
-              </div>
-            )}
+            ) : null}
           </div>
         </div>
 
