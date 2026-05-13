@@ -9,6 +9,8 @@
   position: relative;
 }
 
+/* ─── DESKTOP BOOK (≥ 1025px) ─────────────────────────────────────────── */
+
 .about-book {
   transition: opacity 0.4s 0.2s;
   perspective: 300vw;
@@ -19,22 +21,24 @@
   height: 100%;
 }
 
-.about-book .pages {
-  /* Fills 90% of viewport height, maintaining a 2:3 aspect ratio per page */
-  height: 95vh;
-  width: calc(95vh * (70 / 55));
-  /* 2-page spread aspect ratio */
-  max-width: 96vw;
+/*
+  Two-page spread at 2:3 per page.
+  Spread width = 2 pages × (2/3 × height) = 4/3 × height.
+  We use 88vh so there's breathing room.
+*/
+.pages {
+  height: 88vh;
+  width: calc(88vh * (4 / 3));
+  max-width: 94vw;
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  /* Book-like shadow under the spread */
   filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.8));
   border-radius: 2px;
   transition: transform 0.6s ease;
 }
 
-.about-book .page {
+.page {
   float: none;
   clear: none;
   margin: 0;
@@ -49,11 +53,10 @@
   cursor: pointer;
   user-select: none;
   overflow: hidden;
-  /* Clip content to page bounds */
   -webkit-font-smoothing: antialiased;
 }
 
-.about-book .page:before {
+.page:before {
   content: '';
   position: absolute;
   top: 0;
@@ -65,27 +68,27 @@
 }
 
 /* ODD PAGES (Right side of the spine) */
-.about-book .page:nth-child(odd) {
+.page:nth-child(odd) {
   pointer-events: all;
   transform: rotateY(0deg);
   right: 0;
   border-radius: 0 4px 4px 0;
 }
 
-.about-book .page:nth-child(odd):hover {
+.page:nth-child(odd):hover {
   transform: rotateY(-15deg);
 }
 
-.about-book .page:nth-child(odd):hover:before {
+.page:nth-child(odd):hover:before {
   background: rgba(0, 0, 0, 0.03);
 }
 
-.about-book .page:nth-child(odd):before {
+.page:nth-child(odd):before {
   background: rgba(0, 0, 0, 0);
 }
 
 /* EVEN PAGES (Left side of the spine) */
-.about-book .page:nth-child(even) {
+.page:nth-child(even) {
   pointer-events: none;
   transform: rotateY(180deg);
   transform-origin: 100% 0;
@@ -94,52 +97,49 @@
   border-color: black;
 }
 
-.about-book .page:nth-child(even):before {
+.page:nth-child(even):before {
   background: rgba(0, 0, 0, 0.2);
 }
 
 /* FLIPPED PAGES */
-.about-book .page.flipped:nth-child(odd) {
+.page.flipped:nth-child(odd) {
   pointer-events: none;
   transform: rotateY(-180deg);
 }
 
-.about-book .page.flipped:nth-child(odd):before {
+.page.flipped:nth-child(odd):before {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.about-book .page.flipped:nth-child(even) {
+.page.flipped:nth-child(even) {
   pointer-events: all;
   transform: rotateY(0deg);
 }
 
-.about-book .page.flipped:nth-child(even):hover {
+.page.flipped:nth-child(even):hover {
   transform: rotateY(15deg);
 }
 
-.about-book .page.flipped:nth-child(even):hover:before {
+.page.flipped:nth-child(even):hover:before {
   background: rgba(0, 0, 0, 0.03);
 }
 
-.about-book .page.flipped:nth-child(even):before {
+.page.flipped:nth-child(even):before {
   background: rgba(0, 0, 0, 0);
 }
 
 /* --- THEME: Dark Portfolio Style --- */
 
-/* Cover page */
 .page-theme-cover {
   background: url('../../assets/images/cover.png') center/cover no-repeat;
   border-right: 2px solid rgba(192, 132, 252, 0.3);
 }
 
-/* Back cover */
 .page-theme-back {
   background: url('../../assets/images/backcover.png') center/cover no-repeat;
   border-left: 2px solid rgba(103, 232, 249, 0.3);
 }
 
-/* Inner pages */
 .page-theme-left {
   background: url('../../assets/images/page.svg') center/cover no-repeat;
   color: var(--text-primary);
@@ -150,7 +150,7 @@
   color: var(--text-primary);
 }
 
-/* Page content — constrained to never overflow */
+/* Page content */
 .about-page-content {
   position: absolute;
   top: 0;
@@ -168,7 +168,7 @@
   box-sizing: border-box;
 }
 
-/* --- COMPONENT STYLES --- */
+/* ─── COMPONENT STYLES ────────────────────────────────────────────────── */
 
 /* Cover */
 .about-cover-title {
@@ -196,14 +196,24 @@
 /* Left Page — chapter title */
 .about-left-title {
   font-family: 'Dancing Script', cursive;
-  font-size: 4.5vw;
+  font-size: clamp(1.6rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--primary);
   text-align: center;
   line-height: 1.15;
-  padding-bottom: 1vw;
+  padding-bottom: 0.6em;
   border-bottom: 1px solid rgba(192, 132, 252, 0.25);
   text-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
+}
+
+.about-left-desc {
+  font-family: 'Kalam', cursive;
+  font-size: clamp(0.7rem, 1.1vw, 1rem);
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 1em;
+  opacity: 0.85;
 }
 
 /* Right Page — Content */
@@ -219,15 +229,15 @@
 
 .about-right-desc {
   font-family: 'Satisfy', cursive;
-  font-size: 2vw;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
   color: var(--accent);
   line-height: 1.5;
-  margin-bottom: 2vw;
+  margin-bottom: 0.6em;
 }
 
 .about-right-list {
   font-family: 'Kalam', cursive;
-  font-size: 1.25vw;
+  font-size: clamp(0.7rem, 1.05vw, 1rem);
   line-height: 1.7;
   list-style: none;
   padding-left: 0;
@@ -253,53 +263,7 @@
   font-family: var(--font-primary);
 }
 
-/* --- MOBILE SPECIFIC --- */
-@media (max-width: 768px) {
-  .about-book {
-    perspective: 300vw;
-  }
-
-  .about-book .pages {
-    /* Scale the book to fit the screen height/width better */
-    width: 180vw;
-    /* The entire 2-page spread is 180vw */
-    height: 123.75vw;
-    /* Maintain 40:55 aspect ratio (55/40 * 90 = 123.75) */
-    max-width: none;
-    max-height: 80vh;
-    /* Prevent overflowing screen height */
-  }
-
-  .about-page-content h2 {
-    font-size: 6vw;
-  }
-
-  .about-page-content p {
-    font-size: 4vw;
-  }
-
-  /* Sliding logic: 
-     On mobile, the book container is wider than the screen (180vw).
-     We use a CSS class on the .pages container to shift it left or right
-     so that the spine is aligned with the active page. 
-  */
-  .about-book .pages.focus-right {
-    transform: translateX(-25%);
-    /* Shift left to center the right page */
-  }
-
-  .about-book .pages.focus-left {
-    transform: translateX(25%);
-    /* Shift right to center the left page */
-  }
-
-  .about-book .pages.focus-cover {
-    transform: translateX(-25%);
-    /* Cover is on the right side */
-  }
-}
-
-/* --- OUTSIDE BOOK MESSAGES --- */
+/* ─── OUTSIDE BOOK MESSAGES ───────────────────────────────────────────── */
 .book-intro-text,
 .book-outro-text {
   position: absolute;
@@ -335,16 +299,137 @@
 
 .book-intro-text h2,
 .book-outro-text h2 {
-  font-size: 5vw;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 700;
   color: #ffa200;
-  /* Amber accent */
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .book-intro-text p,
 .book-outro-text p {
-  font-size: 2.5vw;
+  font-size: clamp(1rem, 2vw, 1.8rem);
   opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+/* Hint Icons Animations */
+.hint-icon-x {
+  animation: swipeHint 1.5s ease-in-out infinite;
+  color: var(--primary);
+}
+
+.hint-icon-y {
+  animation: scrollHint 1.5s ease-in-out infinite;
+  color: var(--cyan);
+}
+
+.hint-icon-pulse {
+  animation: pulseHint 1.5s ease-in-out infinite;
+  color: var(--primary);
+}
+
+@keyframes swipeHint {
+  0% { transform: translateX(10px); opacity: 0; }
+  50% { transform: translateX(-10px); opacity: 1; }
+  100% { transform: translateX(-30px); opacity: 0; }
+}
+
+@keyframes scrollHint {
+  0% { transform: translateY(10px); opacity: 0; }
+  50% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(-20px); opacity: 0; }
+}
+
+@keyframes pulseHint {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* ─── SINGLE-PAGE MOBILE / TABLET (≤ 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 0;
+  }
+
+  .about-book {
+    perspective: none;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .pages {
+    display: flex;
+    height: 100%;
+    width: auto;
+    filter: none;
+    border-radius: 0;
+    transform: translateX(calc(-1 * var(--active-index, 0) * 100vw));
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .page {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100vw !important;
+    height: 100% !important;
+    flex-shrink: 0;
+    transform: none !important;
+    pointer-events: all !important;
+    cursor: default;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border: none !important;
+  }
+
+  .page:before {
+    display: none;
+  }
+
+  /* Ensure content stays within the 2:3 background area */
+  .about-page-content {
+    width: min(90vw, calc(90vh * 2 / 3));
+    height: min(135vw, 90vh);
+    margin: auto;
+    padding: 12% 10%;
+  }
+
+  /* Scale fonts for mobile */
+  .about-left-title { font-size: 7vw; }
+  .about-left-desc { font-size: 3.5vw; }
+  .about-right-desc { font-size: 4.5vw; }
+  .about-right-list { font-size: 3.5vw; }
+  .about-cover-title { font-size: 10vw; }
+  .about-cover-subtitle { font-size: 4vw; }
+
+  /* Reposition hints for mobile */
+  .book-intro-text, .book-outro-text {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    transform: translateY(calc(-50% - 150px));
+    z-index: 20;
+    pointer-events: none;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    display: block !important;
+  }
+
+  .book-outro-text {
+    transform: translateY(calc(-50% + 150px));
+  }
+
+  .book-intro-text.visible, .book-outro-text.visible {
+    opacity: 1;
+  }
 }
