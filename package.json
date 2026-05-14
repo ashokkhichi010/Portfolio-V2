@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve:hosting": "npm run build && firebase emulators:start --only hosting",
+    "deploy": "firebase deploy --only hosting:ashok-khichi-010-v2",
+    "deploy:preview": "firebase hosting:channel:deploy preview"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
