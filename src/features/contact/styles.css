@@ -176,7 +176,7 @@
   }
   
   .contact-form-container {
-    padding: 40px 40px 380px 40px;
+    padding: 40px 40px 250px 40px;
   }
   
   .contact-social-bar {
@@ -206,7 +206,7 @@
 
 @media (max-width: 768px) {
   .contact-form-container {
-    padding: 30px 30px 400px 30px;
+    padding: 30px 30px 200px 30px;
   }
   
   .contact-field .contact-title {
