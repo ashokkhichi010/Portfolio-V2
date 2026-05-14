@@ -170,6 +170,59 @@
   line-height: 1.6;
 }
 
+.contact-thankyou-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.contact-thankyou-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.72);
+  backdrop-filter: blur(8px);
+}
+
+.contact-thankyou-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 100%);
+  padding: 2rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.contact-thankyou-title {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.contact-thankyou-text {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.contact-thankyou-btn {
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(to top right, var(--primary) -5%, #8f10b7 100%);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
 @media (max-width: 1024px) {
   .contact-inner {
     flex-direction: column;
