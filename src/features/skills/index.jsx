@@ -12,12 +12,14 @@ const SKILLS = skillsData.map((skill, index) => ({ ...skill, index }));
 
 const TARGET_HEX_W = 128 // px
 const GAP = 12  // px
+const minCols = 4
+const maxCols = 10
 
 // ─── Layout calculator ───────────────────────────────────────────────────────
 
 function computeLayout(containerWidth) {
   const g = GAP
-  const cols = Math.min(10, Math.max(2, Math.round(containerWidth / (TARGET_HEX_W + g))))
+  const cols = Math.min(maxCols, Math.max(minCols, Math.round(containerWidth / (TARGET_HEX_W + g))))
   const hexW = Math.floor((containerWidth - (cols - 1) * g) / cols)
   const hexH = Math.round(hexW * 2 / Math.sqrt(3))
   const overlap = Math.max(0, Math.round(hexH * 0.25 - g * 0.866))

@@ -24,19 +24,19 @@
     filter 0.5s cubic-bezier(0.25, 1, 0.5, 1),
     transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   /* Bouncy hover effect */
-    animation:
+  animation:
     hexFadeIn 0.5s ease both,
     hexWave 3s ease-in-out infinite alternate;
 }
 
 @keyframes hexWave {
   0% {
-      translate: 0 8px;
-    }
-  
-    100% {
-      translate: 0 -8px;
-    }
+    translate: 0 8px;
+  }
+
+  100% {
+    translate: 0 -8px;
+  }
 }
 
 @keyframes hexFadeIn {
@@ -163,7 +163,7 @@
   background: linear-gradient(to top,
       rgba(0, 0, 0, 0.95) 0%,
       rgba(0, 0, 0, 0.35) 82%,
-        transparent 100%);
+      transparent 100%);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
@@ -230,12 +230,13 @@
   justify-content: center;
   align-items: flex-start;
   /* padding-left: 3rem; */
-    /* padding-right: 1.5rem; */
+  /* padding-right: 1.5rem; */
 }
 
 @media (min-width: 1024px) {
   .skills-container-layout {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .skills-grid-wrapper {
@@ -245,12 +246,16 @@
   .skills-side-panel {
     display: flex;
     width: 35%;
+    position: sticky;
+    top: 15vh;
+    padding-left: 4rem;
   }
 }
 
 .panel-content-wrap {
   width: 100%;
   position: relative;
+  min-height: 450px;
 }
 
 .code-description {
@@ -301,10 +306,10 @@
 /* Animations */
 .fade-in {
   animation: fadeInRight 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  }
-  
-  .fade-out {
-    animation: fadeOutLeft 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.fade-out {
+  animation: fadeOutLeft 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes fadeInRight {
@@ -330,6 +335,7 @@
     transform: translateX(-80px);
   }
 }
+
 /* Mobile Drawer */
 .skills-mobile-drawer {
   position: fixed;
