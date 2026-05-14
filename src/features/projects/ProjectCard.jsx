@@ -35,13 +35,14 @@ const ProjectCard = ({ project, onOpen }) => {
         }
       }}
     >
-      {currentImage && (
+      {currentImage && project.resolvedImages.map((image, imageIndex) => (
         <img
-          src={currentImage}
-          alt={`${project.title} preview ${activeImageIndex + 1}`}
-          className="project-card-image"
+          key={`${project.title}-${image}`}
+          src={image}
+          alt={`${project.title} preview ${imageIndex + 1}`}
+          className={`project-card-image ${imageIndex === activeImageIndex ? 'is-visible' : ''}`}
         />
-      )}
+      ))}
       <div className="project-card-content">
         <span className="project-card-subtitle">{project.timeframe}</span>
         <h3 className="project-card-title">{project.title}</h3>

@@ -38,6 +38,16 @@ const ProjectsSection = () => {
     }
   }, [activeProjectIndex])
 
+  useEffect(() => {
+    if (!activeProject || activeProject.resolvedImages.length <= 1) return undefined
+
+    const intervalId = window.setInterval(() => {
+      updateProjectImageIndex(activeProject.title, activeProject.resolvedImages.length, 1)
+    }, 3200)
+
+    return () => window.clearInterval(intervalId)
+  }, [activeProject])
+
   const updateProjectImageIndex = (projectTitle, totalImages, direction) => {
     if (totalImages <= 1) return
 

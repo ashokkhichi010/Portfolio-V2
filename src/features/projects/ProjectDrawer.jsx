@@ -33,11 +33,14 @@ const ProjectDrawer = ({
         <div className="project-detail-media">
           {project.resolvedImages.length > 0 ? (
             <>
-              <img
-                src={project.resolvedImages[activeImageIndex]}
-                alt={`${project.title} preview ${activeImageIndex + 1}`}
-                className="project-detail-image is-visible"
-              />
+              {project.resolvedImages.map((image, imageIndex) => (
+                <img
+                  key={`${project.title}-${image}`}
+                  src={image}
+                  alt={`${project.title} preview ${imageIndex + 1}`}
+                  className={`project-detail-image ${imageIndex === activeImageIndex ? 'is-visible' : ''}`}
+                />
+              ))}
               {project.resolvedImages.length > 1 && (
                 <>
                   <button
