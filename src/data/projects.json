@@ -1,32 +1,193 @@
 [
   {
-    "title": "AI Portfolio",
-    "subtitle": "React · GSAP · Three.js",
-    "description": "An interactive developer portfolio with scroll-driven animations, WebGL starfield background, and dynamic section reveals.",
-    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
+    "title": "MD Agro Engineering",
+    "description": "A modern industrial website for a rural agricultural and steel fabrication workshop showcasing tractor attachments, fabrication projects, portable cabins, and custom engineering works. Built with a simple mobile-first experience focused on trust, WhatsApp communication, project visibility, and scalable frontend architecture for future Firebase-powered management features.",
+    "timeframe": "May 2026 - Present",
+    "tags": [
+      "ReactJS",
+      "TailwindCSS",
+      "Framer Motion",
+      "Redux Toolkit",
+      "Responsive Design",
+      "Industrial UI",
+      "WhatsApp Integration",
+      "Firebase",
+      "Frontend Architecture",
+      "UI/UX Design"
+    ],
+    "images": [
+      "md_agro_engineering_1.png",
+      "md_agro_engineering_2.png",
+      "md_agro_engineering_3.png"
+    ],
+    "github": "https://github.com/ak-dev-testing/MD-Agro-Engineering",
+    "live": "https://md-agro-engineering.web.app/"
   },
   {
-    "title": "E-Commerce Platform",
-    "subtitle": "Next.js · Node.js · MongoDB",
-    "description": "Full-stack marketplace with real-time inventory, Stripe payments, and a high-performance customer-facing storefront.",
-    "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000&auto=format&fit=crop"
+    "title": "TypeFromImage",
+    "description": "Typing practice platform that lets users train with custom text and image-based content. Built as a prototype-first product with real-time input handling and audio feedback to improve engagement and validate the idea early.",
+    "timeframe": "Mar 2026",
+    "tags": [
+      "React.js",
+      "Frontend",
+      "Prototype",
+      "Web Audio API"
+    ],
+    "images": [
+      "image_typing_test_start.png",
+      "image_typing_test_panel.png",
+      "image_typing_test_webspte.png"
+    ],
+    "github": "https://github.com/ashokkhichi010/Type-From-Image",
+    "live": "https://image-typing-test.web.app/"
   },
   {
-    "title": "Data Dashboard",
-    "subtitle": "TypeScript · D3.js · Redux",
-    "description": "Interactive analytics platform with live charts, custom date filters, and one-click CSV export capabilities.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+    "title": "Habiqua Room Rental System",
+    "description": "SaaS-style room rental system designed around listing, booking, and pricing workflows. Focused on practical product structure, role handling, and maintainable system design.",
+    "timeframe": "Feb 2026",
+    "tags": [
+      "Serverless-SaaS",
+      "System Design",
+      "Product",
+      "Prototype",
+      "Workflow"
+    ],
+    "images": [
+      "habiqua_website.png",
+      "habiqua_search_rooms.png",
+      "habiqua_admin_dashboard.png"
+    ],
+    "github": "https://github.com/akprojects2310/Habiqua-Student-Hub",
+    "live": "https://habiqua-student-hub.web.app/"
   },
   {
-    "title": "Task Manager",
-    "subtitle": "React · Firebase · TypeScript",
-    "description": "Collaborative project-tracking app for remote teams with real-time updates, drag-and-drop boards, and notifications.",
-    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=1000&auto=format&fit=crop"
+    "title": "S3 Library Platform",
+    "description": "Multi-tenant SaaS platform built to solve real library management issues. Included subscriptions, seat allocation, admin workflows, and product validation through direct library feedback.",
+    "timeframe": "Nov 2024 - Jan 2026",
+    "tags": [
+      "Node.js",
+      "NestJS",
+      "MongoDB",
+      "React.js",
+      "SaaS",
+      "Multi-Tenant"
+    ],
+    "images": [
+      "s3_library_banner.png",
+      "s3_library_dashboard.webp",
+      "s3_search_libraries.webp",
+      "s3_students_list.webp",
+      "s3_student_app.webp",
+      "s3_student_search_libraries.webp",
+      "s3_seat_arrangement.webp"
+    ],
+    "github": "https://github.com/akprojects2310/S3-Website",
+    "live": "https://s3library.com/"
   },
   {
-    "title": "ML Classifier",
-    "subtitle": "Python · TensorFlow · FastAPI",
-    "description": "Browser-based machine learning model that classifies images in real time with a FastAPI backend and Python training pipeline.",
-    "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?q=80&w=1000&auto=format&fit=crop"
+    "title": "Real-Time Chat + Multiplayer System",
+    "description": "Real-time application with chat and multiplayer game features. Built around event-driven architecture, live communication, and synchronized state across users.",
+    "timeframe": "2023 - 2024",
+    "tags": [
+      "Node.js",
+      "Socket.IO",
+      "MongoDB",
+      "WebSockets",
+      "Real-Time"
+    ],
+    "images": [
+      "real_time_chat_palen_mobile.png",
+      "real_time_chat_palen_tab.png"
+    ],
+    "github": "https://github.com/ashokkhichi010/real-time-chatting-and-games",
+    "live": ""
+  },
+  {
+    "title": "Expense Tracker Web App",
+    "description": "Expense tracking system with CRUD operations, reporting, and MySQL integration. Built to manage budgets and understand practical data-driven workflows.",
+    "timeframe": "2022",
+    "tags": [
+      "PHP",
+      "MySQL",
+      "CRUD",
+      "Web App"
+    ],
+    "images": [
+      "expense_tracker_0.jpg",
+      "expense_tracker_1.jpg",
+      "expense_tracker_2.jpg",
+      "expense_tracker_3.jpg"
+    ],
+    "github": "https://github.com/ashokkhichi010/Daily-Expense-tracker",
+    "live": ""
+  },
+  {
+    "title": "Sudoku Solver",
+    "description": "Recursive backtracking-based Sudoku solver focused on constraint checking, search optimization, and algorithmic problem solving.",
+    "timeframe": "2022",
+    "tags": [
+      "PHP",
+      "DSA",
+      "Backtracking",
+      "Algorithms"
+    ],
+    "images": [
+      "sudoku_solver.jpg"
+    ],
+    "github": "https://github.com/ashokkhichi010/Sudoku-Solver",
+    "live": ""
+  },
+  {
+    "title": "N-Queens Solver",
+    "description": "Backtracking solution for the N-Queens problem built to improve understanding of recursion, constraint handling, and algorithm design.",
+    "timeframe": "2022",
+    "tags": [
+      "PHP",
+      "DSA",
+      "Backtracking",
+      "Algorithms"
+    ],
+    "images": [
+      "n_queens_solver.png"
+    ],
+    "github": "https://github.com/ashokkhichi010/N-Queens-Puzzle-Solver",
+    "live": ""
+  },
+  {
+    "title": "Rat in a Maze Solver",
+    "description": "Pathfinding project using recursion and constraint validation. Built to strengthen logical thinking, boundary handling, and algorithmic structure.",
+    "timeframe": "2022",
+    "tags": [
+      "PHP",
+      "Algorithms",
+      "Backtracking",
+      "Problem Solving"
+    ],
+    "images": [
+      "rat_in_maze_solver.png"
+    ],
+    "github": "https://github.com/ashokkhichi010/Rat-in-a-Maze",
+    "live": ""
+  },
+  {
+    "title": "Mars Mission Graphics Program",
+    "description": "C-based graphics simulation created to explore rendering logic, trajectory visualization, and early computer graphics concepts.",
+    "timeframe": "2020",
+    "tags": [
+      "C",
+      "Computer Graphics",
+      "Simulation"
+    ],
+    "images": [
+      "mars_mission_graphics_0.png",
+      "mars_mission_graphics_1.png",
+      "mars_mission_graphics_2.png",
+      "mars_mission_graphics_3.png",
+      "mars_mission_graphics_4.png",
+      "mars_mission_graphics_5.png",
+      "mars_mission_graphics_6.png"
+    ],
+    "github": "https://github.com/ashokkhichi010/Mars-Mission",
+    "live": ""
   }
 ]
