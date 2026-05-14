@@ -1,72 +1,86 @@
 [
   {
     "year": "2019",
-    "title": "FIRST DEPLOY",
+    "title": "STARTED DEVELOPMENT JOURNEY",
     "type": "CARD",
-    "description": "Launched my first personal project to the web. Discovered the power of open source.",
+    "description": "Started learning programming, web development, and computer fundamentals while pursuing BCA. Built small academic and personal projects to strengthen implementation and debugging skills.",
     "id": "001"
   },
   {
     "year": "2020",
-    "title": "REACT EVOLUTION",
+    "title": "FIRST FULL PROJECTS",
     "type": "CARD",
-    "description": "Mastered React and state management. Built complex single-page applications.",
+    "description": "Built frontend and backend projects using HTML, CSS, JavaScript, PHP, and MySQL. Improved understanding of CRUD systems, databases, authentication, and practical problem solving.",
     "id": "002"
   },
   {
     "year": "2021",
-    "title": "CLOUD ARCHITECT",
+    "title": "BACKEND DEVELOPMENT FOCUS",
     "type": "CARD",
-    "description": "AWS Certified. Migrated legacy systems to serverless architectures.",
+    "description": "Developed stronger interest in backend systems, APIs, workflows, and database-driven applications. Started focusing more on practical system behavior and maintainable logic.",
     "id": "003"
   },
   {
     "year": "2022",
-    "title": "SENIOR ROLE",
+    "title": "PROFESSIONAL PREPARATION",
     "type": "CARD",
-    "description": "Led a team of developers at a fast-growing startup. Focused on performance and scalability.",
+    "description": "Worked on backend-focused projects and improved development fundamentals before entering professional software development environments.",
     "id": "004"
   },
   {
-    "year": "2024",
-    "title": "FUTURE VISION",
+    "year": "Oct 2022",
+    "title": "STARTED INDUSTRY EXPERIENCE",
     "type": "CARD",
-    "description": "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    "description": "Joined Square Bits Pvt. Ltd. as Backend Developer Trainee. Learned production-oriented backend development, API handling, debugging, and collaborative workflows.",
     "id": "005"
   },
   {
-    "year": "2024",
-    "title": "FUTURE VISION",
+    "year": "Feb 2023",
+    "title": "BACKEND ENGINEER ROLE",
     "type": "CARD",
-    "description": "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    "description": "Started working as Backend Engineer on SaaS applications involving REST APIs, payments, authentication systems, and operational workflows using Node.js and MongoDB.",
     "id": "006"
   },
   {
     "year": "2024",
-    "title": "FUTURE VISION",
+    "title": "REAL-TIME SYSTEMS & SAAS",
     "type": "CARD",
-    "description": "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    "description": "Worked on backend-heavy systems, WebSocket communication, workflow-driven applications, and scalable SaaS architecture while improving product understanding.",
     "id": "007"
   },
   {
-    "year": "2024",
-    "title": "FUTURE VISION",
+    "year": "Nov 2024",
+    "title": "STARTED S3 LIBRARY PLATFORM",
     "type": "CARD",
-    "description": "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    "description": "Started building S3 Library Platform independently after identifying operational inefficiencies in local library management systems.",
     "id": "008"
   },
   {
-    "year": "2024",
-    "title": "FUTURE VISION",
+    "year": "2025",
+    "title": "PRODUCT VALIDATION PHASE",
     "type": "CARD",
-    "description": "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    "description": "Validated the product through direct interaction with libraries. Learned practical lessons about user behavior, operational workflows, trust barriers, and product adoption challenges.",
     "id": "009"
   },
   {
-    "year": "2024",
-    "title": "FUTURE VISION",
+    "year": "Jan 2026",
+    "title": "PAUSED PRODUCT DEVELOPMENT",
     "type": "CARD",
-    "description": "Building the next generation of web experiences with GSAP, WebGL, and AI integration.",
+    "description": "Paused S3 Library Platform after validation phase to strengthen technical foundations, improve product thinking, and refocus long-term development direction.",
     "id": "010"
+  },
+  {
+    "year": "2026",
+    "title": "ADVANCED FULL-STACK FOCUS",
+    "type": "CARD",
+    "description": "Focused on improving backend architecture, scalable APIs, real-time systems, and maintainable SaaS application development through independent projects and experimentation.",
+    "id": "011"
+  },
+  {
+    "year": "Present",
+    "title": "OPEN TO NEW OPPORTUNITIES",
+    "type": "CARD",
+    "description": "Actively looking for backend-focused full stack development opportunities while continuing to build practical systems, improve backend engineering skills, and work on product-oriented development.",
+    "id": "012"
   }
 ]

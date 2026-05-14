@@ -155,7 +155,7 @@
   height: 480px;
   position: relative;
   border-radius: 24px;
-  background: rgba(15, 15, 20, 0.6);
+  background: rgba(15, 15, 20, 1);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -338,5 +338,15 @@
   .journey-hud {
     inset: 1rem;
     font-size: 9px;
+  }
+
+  /* --- 3D VIEWPORT --- */
+  .journey-viewport {
+    perspective: 5000px;
+  }
+
+  .premium-card {
+    width: 400px;
+    height: 80vh;
   }
 }

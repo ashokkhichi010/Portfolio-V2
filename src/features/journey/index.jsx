@@ -158,7 +158,7 @@ const JourneySection = () => {
   }, [items]);
 
   return (
-    <section id="journey" className="journey-section" ref={containerRef} style={{ height: `${CONFIG.loopSize / 2.6}px` }}>
+    <section id="journey" className="journey-section" ref={containerRef} style={{ height: `${CONFIG.loopSize / 3}px` }}>
       <div className="journey-sticky">
         <JourneyHUD {...hudData} />
 
