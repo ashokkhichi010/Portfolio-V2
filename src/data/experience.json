@@ -1,42 +1,34 @@
 [
   {
-    "period": "2023 - Present",
-    "role": "Lead Architect",
-    "company": "Innovate Tech",
-    "description": "Driving architectural decisions for large-scale enterprise applications and mentoring senior developers across multiple product teams.",
+    "period": "Feb 2026 - Present",
+    "role": "Backend-Focused Full Stack Developer",
+    "company": "Open to Opportunities",
+    "description": "Currently focused on improving backend architecture, SaaS system design, and real-time application development while actively looking for backend-focused full stack development opportunities. Continuing to build independent projects, strengthen product thinking, and improve maintainable system design through practical development work.",
     "number": "01",
     "accent": "#c084fc"
   },
   {
-    "period": "2021 - 2023",
-    "role": "Full Stack Developer",
-    "company": "Creative Studio",
-    "description": "Developed immersive web experiences using GSAP, Three.js, and modern React patterns for award-winning digital campaigns.",
+    "period": "Nov 2024 - Jan 2026 · 1 yr 3 Months",
+    "role": "Independent Product Developer",
+    "company": "S3 Library Platform",
+    "description": "Built a SaaS platform independently after identifying operational problems in local library systems. Worked on backend APIs, authentication systems, subscriptions, seat allocation workflows, attendance tracking, payments, and admin operations. Learned practical product validation, user behavior, operational workflows, and real-world adoption challenges through direct interaction with libraries.",
     "number": "02",
-    "accent": "#67e8f9"
+    "accent": "#60a5fa"
   },
   {
-    "period": "2019 - 2021",
-    "role": "Frontend Engineer",
-    "company": "Global Solutions",
-    "description": "Built and maintained complex dashboards with real-time data visualization, improving key business metrics across 12 client accounts.",
+    "period": "Feb 2023 - Oct 2024 · 1 yr 9 Months",
+    "role": "Backend Engineer",
+    "company": "Square Bits Pvt. Ltd.",
+    "description": "Worked on backend systems for SaaS applications using Node.js, Express.js, MongoDB, and MySQL. Built REST APIs, payment integrations, workflow-based modules, and authentication systems. Improved understanding of scalable backend development, maintainable architecture, debugging, and production-oriented workflows.",
     "number": "03",
-    "accent": "#fbbf24"
+    "accent": "#34d399"
   },
   {
-    "period": "2018 - 2019",
-    "role": "Junior Web Developer",
-    "company": "StartUp Hub",
-    "description": "Contributed to core product development and improved initial page load times by 40% through code splitting and lazy loading strategies.",
+    "period": "Oct 2022 - Jan 2023 · 4 Months",
+    "role": "Backend Developer Trainee",
+    "company": "Square Bits Pvt. Ltd.",
+    "description": "Started professional backend development by working on API development, debugging, testing, and backend workflows in a production-oriented environment. Built strong fundamentals in backend architecture, API handling, database integration, and collaborative development practices.",
     "number": "04",
-    "accent": "#86efac"
-  },
-  {
-    "period": "2017 - 2018",
-    "role": "Web Designer & Dev",
-    "company": "Freelance",
-    "description": "Collaborated with clients globally to design and develop custom responsive websites — delivering 20+ projects from brief to launch.",
-    "number": "05",
-    "accent": "#f9a8d4"
+    "accent": "#f59e0b"
   }
 ]
