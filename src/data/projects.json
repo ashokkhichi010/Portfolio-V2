@@ -1,7 +1,7 @@
 [
   {
     "title": "MD Agro Engineering",
-    "description": "A modern industrial website for a rural agricultural and steel fabrication workshop showcasing tractor attachments, fabrication projects, portable cabins, and custom engineering works. Built with a simple mobile-first experience focused on trust, WhatsApp communication, project visibility, and scalable frontend architecture for future Firebase-powered management features.",
+    "description": "MD Agro Engineering is a modern industrial website project designed for a rural agricultural and steel fabrication workshop. The platform focuses on showcasing real fabrication work including tractor attachments, agricultural machinery, trailer bodies, portable cabins, steel structures, and custom welding projects. Unlike typical corporate or startup websites, this project is intentionally designed for rural and non-technical users with a simple, trustworthy, and mobile-first user experience. The website emphasizes easy navigation, large visual project showcases, WhatsApp-first communication, and fast accessibility on low-network devices. Built using ReactJS, TailwindCSS, Framer Motion, and Redux Toolkit, the project follows a scalable frontend architecture with a separate reusable styling system for future redesign flexibility. Future versions will integrate Firebase for project management, inquiry handling, dynamic content updates, and admin-based project publishing. The overall goal is to improve the workshop’s digital presence, local credibility, and customer trust through authentic industrial branding and practical UI/UX design.",
     "timeframe": "May 2026 - Present",
     "tags": [
       "ReactJS",
@@ -20,13 +20,13 @@
       "md_agro_engineering_2.png",
       "md_agro_engineering_3.png"
     ],
-    "github": "https://github.com/ak-dev-testing/MD-Agro-Engineering",
+    "github": "",
     "live": "https://md-agro-engineering.web.app/"
   },
   {
-    "title": "TypeFromImage",
-    "description": "Typing practice platform that lets users train with custom text and image-based content. Built as a prototype-first product with real-time input handling and audio feedback to improve engagement and validate the idea early.",
-    "timeframe": "Mar 2026",
+    "title": "Type From Image",
+    "description": "TypeFromImage is a typing practice platform built around the idea of allowing users to practice typing using custom image-based or text-based content instead of fixed lessons. The idea originated from observing limitations in existing typing tools where users could not easily practice from their own study material or screenshots. The project was developed using a prototype-first approach to quickly validate usability and engagement. A major focus was placed on responsive typing behavior, fast input handling, and a clean user experience. To improve engagement, a piano-style audio feedback system was added that produces keyboard sounds while typing. The project also helped improve frontend architecture, interactive UI handling, and real-time user input processing while exploring practical product validation strategies.",
+    "timeframe": "APR 2026",
     "tags": [
       "React.js",
       "Frontend",
@@ -43,8 +43,8 @@
   },
   {
     "title": "Habiqua Room Rental System",
-    "description": "SaaS-style room rental system designed around listing, booking, and pricing workflows. Focused on practical product structure, role handling, and maintainable system design.",
-    "timeframe": "Feb 2026",
+    "description": "Habiqua Room Rental System is a workflow-focused SaaS-style platform designed around room listing, booking management, and operational workflows for rental environments. The project focused more on practical product structure and maintainable workflows rather than just UI implementation. Features and architecture were planned around real usage scenarios such as listing management, pricing workflows, user operations, and scalable role handling. The development process helped strengthen understanding of SaaS-oriented architecture, modular development, and practical workflow design. A strong emphasis was placed on simplicity, maintainability, and user-focused operational flow instead of unnecessary complexity. The project also served as an exercise in product-oriented thinking by combining frontend systems with backend workflow planning and scalable application structure.",
+    "timeframe": "MAR 2026",
     "tags": [
       "Serverless-SaaS",
       "System Design",
@@ -62,7 +62,7 @@
   },
   {
     "title": "S3 Library Platform",
-    "description": "Multi-tenant SaaS platform built to solve real library management issues. Included subscriptions, seat allocation, admin workflows, and product validation through direct library feedback.",
+    "description": "S3 Library Platform was built after identifying operational inefficiencies in local library management systems such as rigid subscriptions, manual seat allocation, and workflow limitations. The platform was developed as a multi-tenant SaaS system with features including subscriptions, seat management, attendance tracking, payment workflows, authentication systems, and admin operations. The entire system was built independently, covering backend APIs, frontend integration, database structure, deployment workflows, and operational planning. The project became an important learning experience in real-world product development because validation involved direct interaction with libraries and users. Through this process, practical challenges such as trust barriers, manual operational habits, adoption resistance, and workflow expectations became clear. The project significantly improved backend architecture understanding, product thinking, workflow design, and real-world system validation experience.",
     "timeframe": "Nov 2024 - Jan 2026",
     "tags": [
       "Node.js",
@@ -86,7 +86,7 @@
   },
   {
     "title": "Real-Time Chat + Multiplayer System",
-    "description": "Real-time application with chat and multiplayer game features. Built around event-driven architecture, live communication, and synchronized state across users.",
+    "description": "This project was built to explore real-time communication systems and multi-user synchronization beyond traditional request-response applications. The application included chat functionality along with multiplayer game features where multiple users could interact in real time. The backend architecture focused heavily on WebSocket communication, event-driven systems, synchronized state handling, and low-latency interaction. Building this project helped strengthen understanding of real-time backend workflows, state consistency, event handling, and multi-user coordination challenges. Considerable focus was placed on maintaining synchronization accuracy across users while handling responsive communication between clients and the server. The project also improved architectural thinking around scalable real-time systems and helped move beyond standard CRUD application development into more interactive backend-driven system design.",
     "timeframe": "2023 - 2024",
     "tags": [
       "Node.js",
@@ -104,7 +104,7 @@
   },
   {
     "title": "Expense Tracker Web App",
-    "description": "Expense tracking system with CRUD operations, reporting, and MySQL integration. Built to manage budgets and understand practical data-driven workflows.",
+    "description": "Expense Tracker Web App was developed as a practical CRUD-based application focused on personal expense management and reporting workflows. The system allowed users to manage expenses, categorize entries, and analyze spending patterns through simple reporting features. The project was built using PHP and MySQL and helped strengthen understanding of backend request handling, database operations, CRUD workflows, and structured application logic. A major learning outcome from the project was improving data management skills and understanding how practical systems are designed around user operations. The development process also improved debugging, query handling, and workflow implementation skills while reinforcing the importance of maintainable backend structure and organized data flow.",
     "timeframe": "2022",
     "tags": [
       "PHP",
@@ -123,7 +123,7 @@
   },
   {
     "title": "Sudoku Solver",
-    "description": "Recursive backtracking-based Sudoku solver focused on constraint checking, search optimization, and algorithmic problem solving.",
+    "description": "Sudoku Solver was developed as a recursive backtracking project focused on algorithmic problem solving and constraint-based logic implementation. The application solved Sudoku puzzles by recursively checking possible values while validating row, column, and grid constraints. The project significantly improved understanding of recursion, search optimization, and structured logical problem solving. Considerable attention was placed on building efficient traversal and validation logic while avoiding invalid paths during execution. This project also strengthened debugging skills and improved understanding of algorithmic thinking beyond regular application development. It served as an important exercise in building confidence with recursion and computational problem-solving techniques.",
     "timeframe": "2022",
     "tags": [
       "PHP",
@@ -139,7 +139,7 @@
   },
   {
     "title": "N-Queens Solver",
-    "description": "Backtracking solution for the N-Queens problem built to improve understanding of recursion, constraint handling, and algorithm design.",
+    "description": "N-Queens Solver was built to explore recursive algorithms and constraint-handling problems through the classic N-Queens challenge. The project implemented recursive backtracking logic to place queens while maintaining row, column, and diagonal safety constraints. Building the project improved understanding of recursion depth, branching logic, optimization, and computational reasoning. The project also helped strengthen debugging skills while working with recursive execution flow and dynamic constraint validation. A major focus was placed on improving logical thinking and designing clean recursive structures that could efficiently solve larger board configurations. This project contributed significantly toward strengthening foundational problem-solving and algorithm design capabilities.",
     "timeframe": "2022",
     "tags": [
       "PHP",
@@ -155,7 +155,7 @@
   },
   {
     "title": "Rat in a Maze Solver",
-    "description": "Pathfinding project using recursion and constraint validation. Built to strengthen logical thinking, boundary handling, and algorithmic structure.",
+    "description": "Rat in a Maze Solver was created as a pathfinding and recursion-focused project designed to strengthen algorithmic thinking and logical problem solving. The application used recursive traversal and constraint validation to identify valid movement paths within a maze structure. The project helped improve understanding of recursion, boundary checking, traversal strategies, and backtracking algorithms. During development, strong focus was placed on movement validation, path tracking, and avoiding invalid traversal conditions. The project also improved debugging and logical flow analysis while working with recursive execution patterns. Building this project strengthened core programming fundamentals and helped develop a better understanding of structured algorithmic problem-solving approaches.",
     "timeframe": "2022",
     "tags": [
       "PHP",
@@ -171,7 +171,7 @@
   },
   {
     "title": "Mars Mission Graphics Program",
-    "description": "C-based graphics simulation created to explore rendering logic, trajectory visualization, and early computer graphics concepts.",
+    "description": "Mars Mission Graphics Program was an early project built using the C programming language to explore basic computer graphics concepts and graphical simulation logic. The project focused on visualizing motion, trajectory behavior, and animation concepts through programmatic rendering. Although relatively simple compared to later systems, it helped build foundational understanding of rendering flow, graphical calculations, coordinate systems, and animation behavior. The project also improved confidence with low-level programming concepts and strengthened logical thinking related to graphical computation. Working on this project created early exposure to simulation-based development and helped build interest in how systems can visually represent real-world processes.",
     "timeframe": "2020",
     "tags": [
       "C",
