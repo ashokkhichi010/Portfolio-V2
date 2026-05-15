@@ -16,14 +16,17 @@ export default function SkillsSidePanel({ activeSkill }) {
   }, [activeSkill, displayedSkill]);
 
   const skillToRender = isFading ? displayedSkill : activeSkill;
+  const panelStyle = skillToRender ? {
+    '--skill-bg': skillToRender.bg,
+  } : undefined
 
   return (
     <div className="skills-side-panel">
-      <div className="panel-content-wrap" style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <div className="panel-content-wrap" style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', ...panelStyle }}>
         {skillToRender ? (
           <>
             <div className={`code-description ${isFading ? 'fade-out' : 'fade-in'}`} style={{ position: 'relative', zIndex: 10 }}>
-              <p className="code-title" style={{ color: skillToRender.bg.replace('0.47', '1'), transition: 'color 0.2s ease' }}>
+              <p className="code-title" style={{ transition: 'color 0.2s ease' }}>
                 {skillToRender.name.toUpperCase()}
               </p>
               <div className="desc-block">

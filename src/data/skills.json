@@ -1,51 +1,394 @@
 [
-  { "name": "HTML5", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "bg": "hsla(15, 75%, 25%, 0.47)", "duration": "4+ Years", "experience": "Semantic HTML, Responsive Layouts, Accessibility, Structured UI" },
-  { "name": "CSS3", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "bg": "hsla(205, 75%, 25%, 0.47)", "duration": "4+ Years", "experience": "Responsive Design, Flexbox, Grid, UI Styling, Animations" },
-  { "name": "JavaScript", "category": "Programming", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "bg": "hsla(50, 75%, 25%, 0.47)", "duration": "4+ Years", "experience": "Frontend Logic, Backend Development, APIs, Real-Time Workflows" },
-  { "name": "TypeScript", "category": "Programming", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", "bg": "hsla(215, 75%, 25%, 0.47)", "duration": "2+ Years", "experience": "Type-Safe Applications, Maintainable Systems, Scalable Codebases" },
-  { "name": "Node.js", "category": "Backend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", "bg": "hsla(120, 50%, 25%, 0.47)", "duration": "3+ Years", "experience": "REST APIs, Backend Systems, Authentication, Real-Time Applications" },
-  { "name": "Express.js", "category": "Backend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", "bg": "hsla(0, 0%, 25%, 0.47)", "duration": "3+ Years", "experience": "REST APIs, Middleware Architecture, Backend Workflows" },
-  { "name": "NestJS", "category": "Backend", "icon": "/src/assets/icons/nestjs.svg", "bg": "hsla(340, 75%, 25%, 0.47)", "duration": "2+ Years", "experience": "Scalable APIs, SaaS Systems, Modular Backend Architecture" },
-  { "name": "MongoDB", "category": "Database", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", "bg": "hsla(140, 45%, 25%, 0.47)", "duration": "3+ Years", "experience": "Schema Design, Aggregation, Query Optimization, Data Modeling" },
-  { "name": "MySQL", "category": "Database", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", "bg": "hsla(210, 60%, 25%, 0.47)", "duration": "6+ Months", "experience": "Relational Databases, Queries, Data Management, SQL Workflows" },
-  { "name": "React.js", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "bg": "hsla(195, 75%, 25%, 0.47)", "duration": "2+ Years", "experience": "Component-Based UI, API Integration, Dashboard Interfaces" },
-  { "name": "Next.js", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", "bg": "hsla(0, 0%, 20%, 0.47)", "duration": "5+ Months", "experience": "SSR, SSG, Routing, Modern Frontend Architecture" }, 
-  { "name": "Vite", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg", "bg": "hsla(237, 80%, 40%, 0.47)", "duration": "6+ Months", "experience": "Fast Builds, Development Workflow, Frontend Tooling" }, 
-  { "name": "Tailwind CSS", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", "bg": "hsla(177, 60%, 25%, 0.47)", "duration": "3+ Months", "experience": "Responsive UI, Utility-First Styling, Modern Interfaces" }, 
-  { "name": "Material UI", "category": "Frontend", "icon": "https://cdn.simpleicons.org/mui", "bg": "hsla(210, 75%, 25%, 0.47)", "duration": "2+ Years", "experience": "Dashboard UI, Reusable Components, Application Interfaces" }, 
-  { "name": "Redux Toolkit", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg", "bg": "hsla(263, 50%, 30%, 0.47)", "duration": "2+ Years", "experience": "State Management, API State Handling, Frontend Workflows" }, 
-  { "name": "Sass", "category": "Frontend", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg", "bg": "hsla(330, 50%, 30%, 0.47)", "duration": "1+ Year", "experience": "Reusable Styling, Variables, Mixins, Structured CSS" }, 
-  { "name": "WebSockets", "category": "Real-Time", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg", "bg": "hsla(260, 35%, 25%, 0.47)", "duration": "2+ Years", "experience": "Real-Time Communication, Multi-User Systems, State Synchronization" }, 
-  { "name": "JWT Authentication", "category": "Backend", "icon": "https://cdn.simpleicons.org/jsonwebtokens", "bg": "hsla(25, 70%, 25%, 0.47)", "duration": "3+ Years", "experience": "Authentication Systems, Access Control, Secure APIs" }, 
-  { "name": "Firebase", "category": "Cloud", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", "bg": "hsla(45, 80%, 25%, 0.47)", "duration": "2+ Years", "experience": "Hosting, Authentication, Storage, Deployment Workflows" }, 
-  { "name": "Google Cloud", "category": "Cloud", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg", "bg": "hsla(220, 55%, 25%, 0.47)", "duration": "1+ Year", "experience": "Cloud Run, Backend Deployment, Container Hosting" }, 
-  { "name": "Docker", "category": "DevOps", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", "bg": "hsla(206, 75%, 30%, 0.47)", "duration": "1+ Year", "experience": "Containerization, Docker Compose, Local Development Environments" }, 
-  { "name": "Git", "category": "Tools", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", "bg": "hsla(10, 80%, 30%, 0.47)", "duration": "3+ Years", "experience": "Version Control, Collaboration, Branching, Deployment Workflows" }, 
-  { "name": "GitHub", "category": "Tools", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", "bg": "hsla(0, 0%, 20%, 0.47)", "duration": "3+ Years", "experience": "Repository Management, Collaboration, Open Source Workflows" }, 
-  { "name": "Postman", "category": "Tools", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", "bg": "hsla(18, 75%, 30%, 0.47)", "duration": "2+ Years", "experience": "API Testing, Debugging, Backend Workflow Validation" }, 
-  { "name": "Flutter", "category": "Mobile", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", "bg": "hsla(200, 75%, 25%, 0.47)", "duration": "1+ Year", "experience": "Cross-Platform Applications, Mobile UI, API Integration" }, 
-  { "name": "Stripe", "category": "Payments", "icon": "https://cdn.simpleicons.org/stripe", "bg": "hsla(260, 55%, 25%, 0.47)", "duration": "2+ Months", "experience": "Subscription Payments, Webhooks, Payment Workflows" }, 
-  { "name": "Razorpay", "category": "Payments", "icon": "https://cdn.simpleicons.org/razorpay", "bg": "hsla(220, 70%, 25%, 0.47)", "duration": "2+ Months", "experience": "Payment Gateway Integration, Transactions, Backend Integration" }, 
-  { "name": "DNS Management", "category": "Cloud", "icon": "https://cdn.simpleicons.org/cloudflare", "bg": "hsla(25, 70%, 25%, 0.47)", "duration": "6+ Year", "experience": "Custom Domains, DNS Configuration, Hosting Setup" }, 
-  { "name": "Figma", "category": "Design", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", "bg": "hsla(14, 80%, 30%, 0.47)", "duration": "1+ Year", "experience": "UI Mockups, Layout Planning, Design Systems" }, 
-  { "name": "Framer Motion", "category": "Animation", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", "bg": "hsla(79, 80%, 20%, 0.47)", "duration": "1+ Year", "experience": "UI Animations, Motion Effects, Interactive Interfaces" }, 
-  { "name": "Three.js", "category": "Animation", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg", "bg": "hsla(0, 0%, 10%, 0.47)", "duration": "2+ Months", "experience": "3D Interfaces, Scene Rendering, Interactive Graphics" }, 
-  { "name": "Python", "category": "Programming", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", "bg": "hsla(207, 60%, 30%, 0.47)", "duration": "6+ Months", "experience": "Scripting, Flask Basics, Automation, Data Processing" }, 
-  { "name": "REST APIs", "category": "Backend", "icon": "https://cdn.simpleicons.org/openapiinitiative", "bg": "hsla(120, 40%, 25%, 0.47)", "duration": "3+ Years", "experience": "API Design, CRUD Workflows, Backend Communication" }, 
-  { "name": "Authentication Systems", "category": "Backend", "icon": "https://cdn.simpleicons.org/auth0", "bg": "hsla(28, 60%, 25%, 0.47)", "duration": "3+ Years", "experience": "JWT, Sessions, Access Control, Protected Routes" }, 
-  { "name": "System Design", "category": "Architecture", "icon": "https://cdn.simpleicons.org/diagramsdotnet", "bg": "hsla(210, 45%, 25%, 0.47)", "duration": "2+ Years", "experience": "Workflow Design, SaaS Architecture, Maintainable Systems" },
-  { "name": "ChatGPT", "category": "AI Assistant", "icon": "/src/assets/icons/chatgpt.svg", "bg": "hsla(145, 45%, 25%, 0.47)", "duration": "3+ Years", "experience": "Development Assistance, Architecture Planning, Content Structuring, Debugging" }, 
-  { "name": "Claude", "category": "AI Assistant", "icon": "https://cdn.simpleicons.org/anthropic", "bg": "hsla(28, 45%, 25%, 0.47)", "duration": "6+ Months", "experience": "Long-form Reasoning, Technical Writing, Product Thinking" }, 
-  { "name": "Grok", "category": "AI Assistant", "icon": "https://cdn.simpleicons.org/x", "bg": "hsla(0, 0%, 18%, 0.47)", "duration": "2+ Months", "experience": "Idea Exploration, Research Assistance, Fast Iteration" }, 
-  { "name": "DeepSeek", "category": "AI Assistant", "icon": "https://cdn.simpleicons.org/deepseek", "bg": "hsla(220, 60%, 25%, 0.47)", "duration": "3+ Months", "experience": "Code Understanding, Backend Logic, Technical Problem Solving" }, 
-  { "name": "Gemini", "category": "AI Assistant", "icon": "https://cdn.simpleicons.org/googlegemini", "bg": "hsla(210, 60%, 25%, 0.47)", "duration": "1+ Year", "experience": "Research, Workflow Planning, Product Discussions" }, 
-  { "name": "Cursor", "category": "AI Development", "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/cursor.png", "bg": "hsla(240, 25%, 20%, 0.47)", "duration": "2+ Year", "experience": "AI-Assisted Coding, Refactoring, Full-Stack Development" }, 
-  { "name": "GitHub Copilot", "category": "AI Development", "icon": "https://cdn.simpleicons.org/githubcopilot", "bg": "hsla(230, 25%, 20%, 0.47)", "duration": "4+ Months", "experience": "Code Suggestions, Boilerplate Generation, Productivity" }, 
-  { "name": "Figma Make", "category": "AI Design", "icon": "https://cdn.simpleicons.org/figma", "bg": "hsla(14, 80%, 30%, 0.47)", "duration": "1+ Year", "experience": "UI Generation, Layout Exploration, Design Prototyping" }, 
-  { "name": "Uizard", "category": "AI Design", "icon": "https://cdn.brandfetch.io/ida2rZ7Ika/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1667688398390", "bg": "hsla(260, 55%, 25%, 0.47)", "duration": "2+ Months", "experience": "Rapid UI Mockups, Wireframing, Interface Concepts" }, 
-  { "name": "Lovable", "category": "AI Development", "icon": "https://cdn.brandfetch.io/idOJp2iXX5/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1778113910896", "bg": "hsla(340, 55%, 25%, 0.47)", "duration": "6+ Months", "experience": "Rapid Prototyping, AI Website Generation, Product Exploration" }, 
-  { "name": "Bolt.new", "category": "AI Development", "icon": "https://cdn.simpleicons.org/stackblitz", "bg": "hsla(220, 65%, 25%, 0.47)", "duration": "1+ Months", "experience": "Instant App Prototyping, Frontend Scaffolding, AI Workflows" }, 
-  { "name": "v0", "category": "AI Development", "icon": "https://cdn.simpleicons.org/vercel", "bg": "hsla(0, 0%, 18%, 0.47)", "duration": "1+ Months", "experience": "React UI Generation, Component Prototyping, Design-to-Code" }, 
-  { "name": "Framer AI", "category": "AI Design", "icon": "https://cdn.simpleicons.org/framer", "bg": "hsla(250, 65%, 25%, 0.47)", "duration": "1+ Months", "experience": "Landing Page Concepts, UI Experiments, Motion Design" }, 
-  { "name": "Blackbox AI", "category": "AI Development", "icon": "https://cdn.simpleicons.org/blackberry", "bg": "hsla(0, 0%, 12%, 0.47)", "duration": "6+ Months", "experience": "Code Search, Snippet Assistance, Development Productivity" }
+  {
+    "name": "HTML5",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    "bg": "hsla(18, 100%, 72%, 0.18)",
+    "duration": "4+ Years",
+    "experience": "Semantic HTML, Responsive Layouts, Accessibility, Structured UI"
+  },
+  {
+    "name": "CSS3",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    "bg": "hsla(210, 100%, 74%, 0.18)",
+    "duration": "4+ Years",
+    "experience": "Responsive Design, Flexbox, Grid, UI Styling, Animations"
+  },
+  {
+    "name": "JavaScript",
+    "category": "Programming",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    "bg": "hsla(50, 100%, 72%, 0.18)",
+    "duration": "4+ Years",
+    "experience": "Frontend Logic, Backend Development, APIs, Real-Time Workflows"
+  },
+  {
+    "name": "TypeScript",
+    "category": "Programming",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    "bg": "hsla(215, 100%, 74%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Type-Safe Applications, Maintainable Systems, Scalable Codebases"
+  },
+  {
+    "name": "Node.js",
+    "category": "Backend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    "bg": "hsla(120, 65%, 72%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "REST APIs, Backend Systems, Authentication, Real-Time Applications"
+  },
+  {
+    "name": "Express.js",
+    "category": "Backend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    "bg": "hsla(0, 0%, 92%, 0.16)",
+    "duration": "3+ Years",
+    "experience": "REST APIs, Middleware Architecture, Backend Workflows"
+  },
+  {
+    "name": "NestJS",
+    "category": "Backend",
+    "icon": "/src/assets/icons/nestjs.svg",
+    "bg": "hsla(340, 90%, 76%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Scalable APIs, SaaS Systems, Modular Backend Architecture"
+  },
+  {
+    "name": "MongoDB",
+    "category": "Database",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    "bg": "hsla(140, 65%, 72%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "Schema Design, Aggregation, Query Optimization, Data Modeling"
+  },
+  {
+    "name": "MySQL",
+    "category": "Database",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    "bg": "hsla(210, 85%, 74%, 0.18)",
+    "duration": "6+ Months",
+    "experience": "Relational Databases, Queries, Data Management, SQL Workflows"
+  },
+  {
+    "name": "React.js",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "bg": "hsla(190, 100%, 76%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Component-Based UI, API Integration, Dashboard Interfaces"
+  },
+  {
+    "name": "Next.js",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    "bg": "hsla(0, 0%, 96%, 0.16)",
+    "duration": "5+ Months",
+    "experience": "SSR, SSG, Routing, Modern Frontend Architecture"
+  },
+  {
+    "name": "Vite",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg",
+    "bg": "hsla(235, 100%, 76%, 0.18)",
+    "duration": "6+ Months",
+    "experience": "Fast Builds, Development Workflow, Frontend Tooling"
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    "bg": "hsla(180, 100%, 76%, 0.18)",
+    "duration": "3+ Months",
+    "experience": "Responsive UI, Utility-First Styling, Modern Interfaces"
+  },
+  {
+    "name": "Material UI",
+    "category": "Frontend",
+    "icon": "https://cdn.simpleicons.org/mui",
+    "bg": "hsla(210, 100%, 76%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Dashboard UI, Reusable Components, Application Interfaces"
+  },
+  {
+    "name": "Redux Toolkit",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    "bg": "hsla(262, 90%, 76%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "State Management, API State Handling, Frontend Workflows"
+  },
+  {
+    "name": "Sass",
+    "category": "Frontend",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+    "bg": "hsla(330, 90%, 78%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "Reusable Styling, Variables, Mixins, Structured CSS"
+  },
+  {
+    "name": "WebSockets",
+    "category": "Real-Time",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+    "bg": "hsla(260, 75%, 76%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Real-Time Communication, Multi-User Systems, State Synchronization"
+  },
+  {
+    "name": "JWT Authentication",
+    "category": "Backend",
+    "icon": "https://cdn.simpleicons.org/jsonwebtokens",
+    "bg": "hsla(28, 100%, 76%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "Authentication Systems, Access Control, Secure APIs"
+  },
+  {
+    "name": "Firebase",
+    "category": "Cloud",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+    "bg": "hsla(45, 100%, 74%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Hosting, Authentication, Storage, Deployment Workflows"
+  },
+  {
+    "name": "Google Cloud",
+    "category": "Cloud",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+    "bg": "hsla(220, 90%, 76%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "Cloud Run, Backend Deployment, Container Hosting"
+  },
+  {
+    "name": "Docker",
+    "category": "DevOps",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    "bg": "hsla(200, 100%, 76%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "Containerization, Docker Compose, Local Development Environments"
+  },
+  {
+    "name": "Git",
+    "category": "Tools",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "bg": "hsla(12, 100%, 72%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "Version Control, Collaboration, Branching, Deployment Workflows"
+  },
+  {
+    "name": "GitHub",
+    "category": "Tools",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "bg": "hsla(0, 0%, 95%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "Repository Management, Collaboration, Open Source Workflows"
+  },
+  {
+    "name": "Postman",
+    "category": "Tools",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+    "bg": "hsla(20, 100%, 74%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "API Testing, Debugging, Backend Workflow Validation"
+  },
+  {
+    "name": "Flutter",
+    "category": "Mobile",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+    "bg": "hsla(200, 100%, 76%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "Cross-Platform Applications, Mobile UI, API Integration"
+  },
+  {
+    "name": "Stripe",
+    "category": "Payments",
+    "icon": "https://cdn.simpleicons.org/stripe",
+    "bg": "hsla(255, 90%, 78%, 0.18)",
+    "duration": "2+ Months",
+    "experience": "Subscription Payments, Webhooks, Payment Workflows"
+  },
+  {
+    "name": "Razorpay",
+    "category": "Payments",
+    "icon": "https://cdn.simpleicons.org/razorpay",
+    "bg": "hsla(220, 100%, 76%, 0.18)",
+    "duration": "2+ Months",
+    "experience": "Payment Gateway Integration, Transactions, Backend Integration"
+  },
+  {
+    "name": "DNS Management",
+    "category": "Cloud",
+    "icon": "https://cdn.simpleicons.org/cloudflare",
+    "bg": "hsla(25, 100%, 76%, 0.18)",
+    "duration": "6+ Year",
+    "experience": "Custom Domains, DNS Configuration, Hosting Setup"
+  },
+  {
+    "name": "Figma",
+    "category": "Design",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    "bg": "hsla(15, 100%, 74%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "UI Mockups, Layout Planning, Design Systems"
+  },
+  {
+    "name": "Framer Motion",
+    "category": "Animation",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    "bg": "hsla(210, 100%, 76%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "UI Animations, Motion Effects, Interactive Interfaces"
+  },
+  {
+    "name": "Three.js",
+    "category": "Animation",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
+    "bg": "hsla(0, 0%, 94%, 0.16)",
+    "duration": "2+ Months",
+    "experience": "3D Interfaces, Scene Rendering, Interactive Graphics"
+  },
+  {
+    "name": "Python",
+    "category": "Programming",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "bg": "hsla(210, 90%, 76%, 0.18)",
+    "duration": "6+ Months",
+    "experience": "Scripting, Flask Basics, Automation, Data Processing"
+  },
+  {
+    "name": "REST APIs",
+    "category": "Backend",
+    "icon": "https://cdn.simpleicons.org/openapiinitiative",
+    "bg": "hsla(120, 65%, 72%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "API Design, CRUD Workflows, Backend Communication"
+  },
+  {
+    "name": "Authentication Systems",
+    "category": "Backend",
+    "icon": "https://cdn.simpleicons.org/auth0",
+    "bg": "hsla(28, 90%, 76%, 0.18)",
+    "duration": "3+ Years",
+    "experience": "JWT, Sessions, Access Control, Protected Routes"
+  },
+  {
+    "name": "System Design",
+    "category": "Architecture",
+    "icon": "https://cdn.simpleicons.org/diagramsdotnet",
+    "bg": "hsla(220, 75%, 76%, 0.18)",
+    "duration": "2+ Years",
+    "experience": "Workflow Design, SaaS Architecture, Maintainable Systems"
+  },
+  {
+    "name": "ChatGPT",
+    "category": "AI Assistant",
+    "icon": "/src/assets/icons/chatgpt.svg",
+    "bg": "hsla(145, 65%, 72%, 0.20)",
+    "duration": "3+ Years",
+    "experience": "Development Assistance, Architecture Planning, Content Structuring, Debugging"
+  },
+  {
+    "name": "Claude",
+    "category": "AI Assistant",
+    "icon": "https://cdn.simpleicons.org/anthropic",
+    "bg": "hsla(30, 75%, 76%, 0.18)",
+    "duration": "6+ Months",
+    "experience": "Long-form Reasoning, Technical Writing, Product Thinking"
+  },
+  {
+    "name": "Grok",
+    "category": "AI Assistant",
+    "icon": "https://cdn.simpleicons.org/x",
+    "bg": "hsla(0, 0%, 94%, 0.18)",
+    "duration": "2+ Months",
+    "experience": "Idea Exploration, Research Assistance, Fast Iteration"
+  },
+  {
+    "name": "DeepSeek",
+    "category": "AI Assistant",
+    "icon": "https://cdn.simpleicons.org/deepseek",
+    "bg": "hsla(225, 85%, 76%, 0.18)",
+    "duration": "3+ Months",
+    "experience": "Code Understanding, Backend Logic, Technical Problem Solving"
+  },
+  {
+    "name": "Gemini",
+    "category": "AI Assistant",
+    "icon": "https://cdn.simpleicons.org/googlegemini",
+    "bg": "hsla(210, 90%, 76%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "Research, Workflow Planning, Product Discussions"
+  },
+  {
+    "name": "Cursor",
+    "category": "AI Development",
+    "icon": "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/cursor.png",
+    "bg": "hsla(240, 45%, 88%, 0.18)",
+    "duration": "2+ Year",
+    "experience": "AI-Assisted Coding, Refactoring, Full-Stack Development"
+  },
+  {
+    "name": "GitHub Copilot",
+    "category": "AI Development",
+    "icon": "https://cdn.simpleicons.org/githubcopilot",
+    "bg": "hsla(230, 45%, 88%, 0.18)",
+    "duration": "4+ Months",
+    "experience": "Code Suggestions, Boilerplate Generation, Productivity"
+  },
+  {
+    "name": "Figma Make",
+    "category": "AI Design",
+    "icon": "https://cdn.simpleicons.org/figma",
+    "bg": "hsla(14, 100%, 76%, 0.18)",
+    "duration": "1+ Year",
+    "experience": "UI Generation, Layout Exploration, Design Prototyping"
+  },
+  {
+    "name": "Uizard",
+    "category": "AI Design",
+    "icon": "https://cdn.brandfetch.io/ida2rZ7Ika/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1667688398390",
+    "bg": "hsla(48, 100%, 74%, 0.18)",
+    "duration": "2+ Months",
+    "experience": "Rapid UI Mockups, Wireframing, Interface Concepts"
+  },
+  {
+    "name": "Lovable",
+    "category": "AI Development",
+    "icon": "https://cdn.brandfetch.io/idOJp2iXX5/w/400/h/400/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1778113910896",
+    "bg": "hsla(330, 90%, 76%, 0.18)",
+    "duration": "6+ Months",
+    "experience": "Rapid Prototyping, AI Website Generation, Product Exploration"
+  },
+  {
+    "name": "Bolt.new",
+    "category": "AI Development",
+    "icon": "https://cdn.simpleicons.org/stackblitz",
+    "bg": "hsla(220, 100%, 76%, 0.18)",
+    "duration": "1+ Months",
+    "experience": "Instant App Prototyping, Frontend Scaffolding, AI Workflows"
+  },
+  {
+    "name": "v0",
+    "category": "AI Development",
+    "icon": "https://cdn.simpleicons.org/vercel",
+    "bg": "hsla(0, 0%, 96%, 0.18)",
+    "duration": "1+ Months",
+    "experience": "React UI Generation, Component Prototyping, Design-to-Code"
+  },
+  {
+    "name": "Framer AI",
+    "category": "AI Design",
+    "icon": "https://cdn.simpleicons.org/framer",
+    "bg": "hsla(250, 90%, 78%, 0.18)",
+    "duration": "1+ Months",
+    "experience": "Landing Page Concepts, UI Experiments, Motion Design"
+  },
+  {
+    "name": "Blackbox AI",
+    "category": "AI Development",
+    "icon": "https://cdn.simpleicons.org/blackberry",
+    "bg": "hsla(0, 0%, 94%, 0.18)",
+    "duration": "6+ Months",
+    "experience": "Code Search, Snippet Assistance, Development Productivity"
+  }
 ]

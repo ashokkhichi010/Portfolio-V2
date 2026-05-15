@@ -1,16 +1,20 @@
 import React from 'react';
 
 export default function SkillsMobileDrawer({ activeSkill, isDrawerOpen, setIsDrawerOpen }) {
+  const drawerStyle = activeSkill ? {
+    '--skill-bg': activeSkill.bg,
+  } : undefined
+
   return (
     <div className={`skills-mobile-drawer lg:hidden ${isDrawerOpen ? 'open' : ''}`}>
       <div className="drawer-overlay" onClick={() => setIsDrawerOpen(false)}></div>
-      <div className="drawer-content" style={{ position: 'absolute', overflow: 'hidden' }}>
+      <div className="drawer-content" style={{ position: 'absolute', overflow: 'hidden', ...drawerStyle }}>
         <div className="drawer-handle" onClick={() => setIsDrawerOpen(false)} style={{ position: 'relative', zIndex: 10 }}></div>
         {activeSkill && (
           <>
             <div className="code-description" style={{ position: 'relative', zIndex: 10 }}>
               <div className="flex justify-between items-start mb-6">
-                <p className="code-title m-0" style={{ color: activeSkill.bg.replace('0.47', '1') }}>
+                <p className="code-title m-0">
                   {activeSkill.name.toUpperCase()}
                 </p>
               </div>
@@ -32,7 +36,7 @@ export default function SkillsMobileDrawer({ activeSkill, isDrawerOpen, setIsDra
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                opacity: 0.4
+                opacity: 0.6
               }} />
             </div>
           </>

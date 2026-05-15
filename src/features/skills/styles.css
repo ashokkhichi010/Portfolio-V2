@@ -215,7 +215,7 @@
   width: 100%;
   position: relative;
   min-height: 500px;
-  gap: 30px;
+  gap: 10px;
 }
 
 .skills-grid-wrapper {
@@ -229,8 +229,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* padding-left: 3rem; */
-  /* padding-right: 1.5rem; */
 }
 
 @media (min-width: 1024px) {
@@ -246,16 +244,21 @@
   .skills-side-panel {
     display: flex;
     width: 35%;
+    height: 90vh;
     position: sticky;
-    top: 15vh;
-    padding-left: 4rem;
+    top: 5vh;
   }
 }
 
 .panel-content-wrap {
   width: 100%;
   position: relative;
-  min-height: 450px;
+  padding: 2rem;
+  border-radius: 28px;
+  border: 1px solid var(--skill-bg, rgba(148, 163, 184, 0.2));
+  background: var(--skill-bg, rgba(15, 23, 42, 0.92));
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
 }
 
 .code-description {
@@ -270,9 +273,10 @@
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0 0 1rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--skill-bg, var(--border));
   padding-bottom: 0.5rem;
   transition: color 0.3s ease;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 }
 
 .desc-block {
@@ -366,8 +370,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--bg-dark);
-  border-top: 1px solid var(--border);
+  background: var(--skill-bg, var(--bg-dark));
+  border-top: 1px solid var(--skill-bg, var(--border));
   border-radius: 24px 24px 0 0;
   padding: 2rem;
   transform: translateY(100%);
@@ -385,7 +389,7 @@
 .drawer-handle {
   width: 40px;
   height: 4px;
-  background-color: var(--border);
+  background-color: var(--skill-bg, var(--border));
   border-radius: 4px;
   margin: 0 auto 2rem auto;
   cursor: pointer;
