@@ -103,8 +103,11 @@ const AboutSection = () => {
                 </>
               ) : (
                 <>
-                  <h2>Welcome</h2>
-                  Click on the cover page to start
+                    <h2>WELCOME</h2>
+                    <h3>to</h3>
+                    <h3><u>short intro</u></h3>
+                    <h2>ABOUT ME</h2>
+                    <h6>Click on the cover page to start</h6>
                   <MousePointerClick className="hint-icon-pulse" size={48} />
                 </>
               )}
