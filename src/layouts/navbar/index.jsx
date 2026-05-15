@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Home, User, Code, Briefcase, Rocket, Eye, Mail, Menu, X, GraduationCap } from 'lucide-react'
+import { User, Code, Briefcase, Rocket, Mail, Menu, X, GraduationCap } from 'lucide-react'
 import './styles.css'
 
 const Navbar = () => {
@@ -117,7 +117,13 @@ const Navbar = () => {
 
         {/* Menu Toggler Button */}
         <div className="nav-controls">
-          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -131,7 +137,7 @@ const Navbar = () => {
               className={`nav-link ${activeSection === link.href.substring(1) ? 'active' : ''}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              {link.icon}
+              <span className="nav-icon">{link.icon}</span>
               <span className="nav-text">{link.name}</span>
             </a>
           ))}
