@@ -6,7 +6,25 @@ import HexCard from './HexCard'
 import SkillsSidePanel from './SkillsSidePanel'
 import SkillsMobileDrawer from './SkillsMobileDrawer'
 
-const SKILLS = skillsData.map((skill, index) => ({ ...skill, index }));
+const localSkillIconModules = import.meta.glob('../../assets/icons/*.{svg,png,jpg,jpeg,webp,avif,gif}', {
+  eager: true,
+  import: 'default',
+})
+
+const localSkillIconMap = Object.fromEntries(
+  Object.entries(localSkillIconModules).map(([path, url]) => {
+    const normalizedPath = path.replace('../../', '/src/')
+    return [normalizedPath, url]
+  })
+)
+
+const resolveSkillIcon = (icon) => {
+  if (typeof icon !== 'string') return icon
+  if (!icon.startsWith('/src/assets/')) return icon
+  return localSkillIconMap[icon] || icon
+}
+
+const SKILLS = skillsData.map((skill, index) => ({ ...skill, icon: resolveSkillIcon(skill.icon), index }));
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
