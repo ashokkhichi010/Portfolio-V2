@@ -60,7 +60,7 @@ html {
 }
 
 .content-section {
-  padding: 3rem 0;
+  padding: 5rem 0;
   position: relative;
   background: transparent;
 }
@@ -75,7 +75,7 @@ html {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .section-number {
@@ -87,7 +87,17 @@ html {
 
 .section-title {
   font-family: var(--font-code);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: white;
+}
+/* Haldle mobile device */
+@media (max-width: 768px) {
+  .section-number {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
 }
