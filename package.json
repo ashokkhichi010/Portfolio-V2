@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "serve:hosting": "npm run build && firebase emulators:start --only hosting",
-    "deploy": "firebase deploy --only hosting:ashok-khichi-010-v2",
+    "deploy": "firebase deploy --only hosting:ashok-khichi-010",
     "deploy:preview": "firebase hosting:channel:deploy preview"
   },
   "dependencies": {
