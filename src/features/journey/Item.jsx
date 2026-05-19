@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const JourneyItem = ({ data, style }) => {
   return (
@@ -32,4 +32,4 @@ const JourneyItem = ({ data, style }) => {
   );
 };
 
-export default JourneyItem;
+export default memo(JourneyItem);

@@ -9,7 +9,8 @@ const CONFIG = {
   itemCount: journeyData.length,
   zGap: 1000,
   camSpeed: 3.5,
-  baseFov: 1000
+  baseFov: 1000,
+  hudUpdateInterval: 120
 };
 CONFIG.loopSize = CONFIG.itemCount * CONFIG.zGap;
 
@@ -18,6 +19,7 @@ const JourneySection = () => {
   const worldRef = useRef(null);
   const viewportRef = useRef(null);
   const rafRef = useRef(null);
+  const lastHudUpdateRef = useRef(0);
 
   // State managed via refs for performance (RAF loop)
   const state = useRef({
@@ -32,6 +34,11 @@ const JourneySection = () => {
   });
 
   const [hudData, setHudData] = useState({ scroll: 0, velocity: 0, fps: 60 });
+  const hudSnapshotRef = useRef(hudData);
+
+  useEffect(() => {
+    hudSnapshotRef.current = hudData;
+  }, [hudData]);
 
   // Initialize Items
   const items = useMemo(() => {
@@ -89,8 +96,16 @@ const JourneySection = () => {
       s.velocity += (s.targetSpeed - s.velocity) * 0.1;
       s.targetSpeed *= 0.95; // Friction
 
-      // HUD Sync (Debounced-ish via state update)
-      if (Math.abs(s.velocity) > 0.01 || time % 60 < 1) {
+      const shouldSyncHud =
+        time - lastHudUpdateRef.current >= CONFIG.hudUpdateInterval &&
+        (
+          Math.abs(s.velocity) > 0.01 ||
+          Math.abs(s.scroll - hudSnapshotRef.current.scroll) > 24 ||
+          Math.abs(s.fps - hudSnapshotRef.current.fps) > 0
+        );
+
+      if (shouldSyncHud) {
+        lastHudUpdateRef.current = time;
         setHudData({ scroll: s.scroll, velocity: s.velocity, fps: s.fps });
       }
 

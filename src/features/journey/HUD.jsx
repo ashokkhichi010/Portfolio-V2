@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const JourneyHUD = ({ scroll, velocity, fps }) => {
   return (
@@ -30,4 +30,4 @@ const JourneyHUD = ({ scroll, velocity, fps }) => {
   );
 };
 
-export default JourneyHUD;
+export default memo(JourneyHUD);
