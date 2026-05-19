@@ -96,22 +96,20 @@ const AboutSection = () => {
 
           {/* ── Outside Book Messages ── */}
           <div className={`book-intro-text ${isAtStart ? 'visible' : ''}`}>
-            <p>
-              {isMobile ? (
-                <>
-                  <MoveLeft className="hint-icon-x" size={48} />
-                </>
-              ) : (
-                <>
-                  <h2>WELCOME</h2>
-                  <h3>to</h3>
-                  <h3><u>short intro</u></h3>
-                  <h2>ABOUT ME</h2>
-                  <h6>Click on the cover page to start</h6>
-                  <MousePointerClick className="hint-icon-pulse" size={48} />
-                </>
-              )}
-            </p>
+            {isMobile ? (
+              <>
+                <MoveLeft className="hint-icon-x" size={48} />
+              </>
+            ) : (
+              <>
+                <h2>WELCOME</h2>
+                <h3>to</h3>
+                <h3><u>short intro</u></h3>
+                <h2>ABOUT ME</h2>
+                <h6>Click on the cover page to start</h6>
+                <MousePointerClick className="hint-icon-pulse" size={48} />
+              </>
+            )}
           </div>
 
           <div className={`book-outro-text ${isAtEnd ? 'visible' : ''}`}>
