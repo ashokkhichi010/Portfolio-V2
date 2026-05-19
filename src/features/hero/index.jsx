@@ -4,6 +4,7 @@ import { Activity, Briefcase, Code, Layers, Mail, Rocket, Server, ShieldCheck } 
 import './styles.css'
 import heroData from '../../data/hero.json'
 import logoUrl from '../../assets/icons/logo.svg';
+import SectionAnalytics from '../../components/SectionAnalytics'
 
 // Map icon string names from JSON to Lucide components
 const ICON_MAP = { Activity, Briefcase, Code, Layers, Mail, Rocket, Server, ShieldCheck };
@@ -72,63 +73,66 @@ const Hero = () => {
   }, [])
 
   return (
-    <section id="home" className="hero-section">
-      <div className="hero-background">
-        <div className="code-grid-bg"></div>
-      </div>
-
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-greeting">
-            <span className="greeting-text">{heroData.greeting}</span>
-            <span className="greeting-cursor">|</span>
-          </div>
-
-          <h1 className="hero-name">
-            <span className="name-prefix">let</span>
-            <span className="name-operator">=</span>
-            <span className="name-value">"{displayText}</span>
-            <span className="typewriter-cursor" aria-hidden="true">|</span>
-            <span className="name-suffix">";</span>
-          </h1>
-          <p className="hero-description">{heroData.description}</p>
-
-          <div className="hero-buttons">
-            {heroData.buttons.map((btn) => {
-              const IconComp = btn.icon ? ICON_MAP[btn.icon] : (btn.variant === 'primary' ? Rocket : Code)
-              return (
-                <a key={btn.label} href={btn.href} className={`btn btn-${btn.variant}`}>
-                  {btn.label} <IconComp size={20} />
-                </a>
-              )
-            })}
-          </div>
+    <>
+      <SectionAnalytics sectionId="home" sectionTitle="Hero" />
+      <section id="home" className="hero-section">
+        <div className="hero-background">
+          <div className="code-grid-bg"></div>
         </div>
 
-        <div className="hero-image-wrapper">
-          <div className="hero-image-container">
-            <div className="profile-image-glow"></div>
-            <div className="profile-image-frame">
-              <div className="profile-image">
-                <img src={logoUrl} alt="LinkedIn" width={260} />
-              </div>
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="hero-greeting">
+              <span className="greeting-text">{heroData.greeting}</span>
+              <span className="greeting-cursor">|</span>
             </div>
-            {heroData.badges.map((badge) => {
-              const IconComp = ICON_MAP[badge.icon] || Code;
-              return (
-                <div key={badge.title} className="floating-badge" style={badge.style}>
-                  <div className="badge-icon"><IconComp color={badge.color} size={24} /></div>
-                  <div className="badge-content">
-                    <span className="badge-title">{badge.title}</span>
-                    <span className="badge-libs">{badge.subtitle}</span>
-                  </div>
+
+            <h1 className="hero-name">
+              <span className="name-prefix">let</span>
+              <span className="name-operator">=</span>
+              <span className="name-value">"{displayText}</span>
+              <span className="typewriter-cursor" aria-hidden="true">|</span>
+              <span className="name-suffix">";</span>
+            </h1>
+            <p className="hero-description">{heroData.description}</p>
+
+            <div className="hero-buttons">
+              {heroData.buttons.map((btn) => {
+                const IconComp = btn.icon ? ICON_MAP[btn.icon] : (btn.variant === 'primary' ? Rocket : Code)
+                return (
+                  <a key={btn.label} href={btn.href} className={`btn btn-${btn.variant}`}>
+                    {btn.label} <IconComp size={20} />
+                  </a>
+                )
+              })}
+            </div>
+          </div>
+
+          <div className="hero-image-wrapper">
+            <div className="hero-image-container">
+              <div className="profile-image-glow"></div>
+              <div className="profile-image-frame">
+                <div className="profile-image">
+                  <img src={logoUrl} alt="LinkedIn" width={260} />
                 </div>
-              )
-            })}
+              </div>
+              {heroData.badges.map((badge) => {
+                const IconComp = ICON_MAP[badge.icon] || Code;
+                return (
+                  <div key={badge.title} className="floating-badge" style={badge.style}>
+                    <div className="badge-icon"><IconComp color={badge.color} size={24} /></div>
+                    <div className="badge-content">
+                      <span className="badge-title">{badge.title}</span>
+                      <span className="badge-libs">{badge.subtitle}</span>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 

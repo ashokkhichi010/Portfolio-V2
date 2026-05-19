@@ -6,6 +6,7 @@ import EducationSlide from './EducationSlide';
 import EducationNav from './EducationNav';
 import EducationTrail from './EducationTrail';
 import './styles.css';
+import SectionAnalytics from '../../components/SectionAnalytics';
 
 const EducationSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -57,41 +58,44 @@ const EducationSection = () => {
   };
 
   return (
-    <section id="education" ref={containerRef}>
-      {/* Section Heading Overlay */}
-      <div className="section-header">
-        <span className="section-number">05</span>
-        <h2 className="section-title">&lt;Education /&gt;</h2>
-      </div>
-
-      <div className="container">
-        <div
-          className="slider"
-          style={{
-            transform: `translateX(-${activeIndex * 100}%)`
-          }}
-        >
-          {educationData.map((edu, idx) => (
-            <EducationSlide
-              key={edu.id || idx}
-              edu={edu}
-              index={idx}
-            />
-          ))}
+    <>
+      <SectionAnalytics sectionId="education" sectionTitle="Education" />
+      <section id="education" ref={containerRef}>
+        {/* Section Heading Overlay */}
+        <div className="section-header">
+          <span className="section-number">05</span>
+          <h2 className="section-title">&lt;Education /&gt;</h2>
         </div>
 
-        <EducationNav
-          onPrev={prevSlide}
-          onNext={nextSlide}
-        />
+        <div className="container">
+          <div
+            className="slider"
+            style={{
+              transform: `translateX(-${activeIndex * 100}%)`
+            }}
+          >
+            {educationData.map((edu, idx) => (
+              <EducationSlide
+                key={edu.id || idx}
+                edu={edu}
+                index={idx}
+              />
+            ))}
+          </div>
 
-        <EducationTrail
-          data={educationData}
-          activeIndex={activeIndex}
-          onTrailClick={goToSlide}
-        />
-      </div>
-    </section>
+          <EducationNav
+            onPrev={prevSlide}
+            onNext={nextSlide}
+          />
+
+          <EducationTrail
+            data={educationData}
+            activeIndex={activeIndex}
+            onTrailClick={goToSlide}
+          />
+        </div>
+      </section>
+    </>
   );
 };
 

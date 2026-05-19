@@ -4,6 +4,7 @@ import JourneyItem from './Item';
 import journeyDataRaw from '../../data/journey.json';
 const journeyData = journeyDataRaw;
 import './styles.css';
+import SectionAnalytics from '../../components/SectionAnalytics';
 
 const CONFIG = {
   itemCount: journeyData.length,
@@ -158,21 +159,24 @@ const JourneySection = () => {
   }, [items]);
 
   return (
-    <section id="journey" className="journey-section" ref={containerRef} style={{ height: `${CONFIG.loopSize / 3}px` }}>
-      <div className="journey-sticky">
-        <JourneyHUD {...hudData} />
+    <>
+      <SectionAnalytics sectionId="journey" sectionTitle="Journey" />
+      <section id="journey" className="journey-section" ref={containerRef} style={{ height: `${CONFIG.loopSize / 3}px` }}>
+        <div className="journey-sticky">
+          <JourneyHUD {...hudData} />
 
-        <div className="journey-viewport" ref={viewportRef}>
-          <div className="journey-world" ref={worldRef}>
-            {items.map((item, idx) => (
-              <div key={item.id} id={item.id} className="journey-item-wrapper">
-                <JourneyItem data={item.data} type={item.data.type} />
-              </div>
-            ))}
+          <div className="journey-viewport" ref={viewportRef}>
+            <div className="journey-world" ref={worldRef}>
+              {items.map((item, idx) => (
+                <div key={item.id} id={item.id} className="journey-item-wrapper">
+                  <JourneyItem data={item.data} type={item.data.type} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
