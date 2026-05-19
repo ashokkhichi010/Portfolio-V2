@@ -17,19 +17,26 @@ const EducationSection = () => {
     // GSAP context for automatic cleanup and selector scoping
     const ctx = gsap.context(() => {
       const activeSlide = `.slide-index-${activeIndex}`;
+      const select = gsap.utils.selector(containerRef);
+      const activeSlideBg = select(`${activeSlide} .bg`);
+      const activeSlidePeriod = select(`${activeSlide} .illustration .edu-period`);
+      const activeSlideTitle = select(`${activeSlide} .details h1`);
+      const activeSlideInstitution = select(`${activeSlide} .details .edu-institution`);
+      const activeSlideDescription = select(`${activeSlide} .details p`);
+      const activeSlideInner = select(`${activeSlide} .illustration .inner`);
       const tl = gsap.timeline({ defaults: { duration: 0.7, ease: "power3.out" } });
 
       // Reset animations
-      gsap.set(".animate-item", { opacity: 1, x: 0, y: 0, scale: 1 });
-      gsap.set(".bg", { x: "0%", opacity: 1 });
+      gsap.set(select(".animate-item"), { opacity: 1, x: 0, y: 0, scale: 1 });
+      gsap.set(select(".bg"), { x: "0%", opacity: 1 });
 
       // Run active slide animations
-      tl.from(`${activeSlide} .bg`, { x: "-100%", opacity: 0 })
-        .from(`${activeSlide} .details .edu-period`, { opacity: 0, x: -30 }, "-=0.4")
-        .from(`${activeSlide} .details h1`, { opacity: 0, y: 30 }, "-=0.3")
-        .from(`${activeSlide} .details .edu-institution`, { opacity: 0, scale: 0.9 }, "-=0.2")
-        .from(`${activeSlide} .details p`, { opacity: 0, y: 20 }, "-=0.3")
-        .from(`${activeSlide} .illustration .inner`, { opacity: 0, scale: 0.8, rotateY: 30 }, "-=0.4");
+      if (activeSlideBg.length) tl.from(activeSlideBg, { x: "-100%", opacity: 0 })
+      if (activeSlidePeriod.length) tl.from(activeSlidePeriod, { opacity: 0, x: -30 }, "-=0.4")
+      if (activeSlideTitle.length) tl.from(activeSlideTitle, { opacity: 0, y: 30 }, "-=0.3")
+      if (activeSlideInstitution.length) tl.from(activeSlideInstitution, { opacity: 0, scale: 0.9 }, "-=0.2")
+      if (activeSlideDescription.length) tl.from(activeSlideDescription, { opacity: 0, y: 20 }, "-=0.3")
+      if (activeSlideInner.length) tl.from(activeSlideInner, { opacity: 0, scale: 0.8, rotateY: 30 }, "-=0.4")
     }, containerRef);
 
     startTimer();
