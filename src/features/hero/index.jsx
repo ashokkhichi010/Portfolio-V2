@@ -84,7 +84,7 @@ const Hero = () => {
             <span className="greeting-cursor">|</span>
           </div>
 
-          <h1 className="hero-name">
+          <h1 className="hero-name" translate="no">
             <span className="name-prefix">let</span>
             <span className="name-operator">=</span>
             <span className="name-value">"{displayText}</span>

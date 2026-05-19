@@ -122,7 +122,7 @@ const Navbar = () => {
     <header className={`main-header ${isScrolled ? 'scrolled' : ''} ${!isVisible && activeSection !== 'home' ? 'hidden' : ''}`}>
       <nav className="nav-container">
         <div className="nav-brand">
-          <a href="#home" className="brand-logo" onClick={() => setIsMenuOpen(false)}>
+          <a href="#home" className="brand-logo notranslate" onClick={() => setIsMenuOpen(false)} translate="no">
             <span className="logo-bracket">&lt;</span>
             <span className="logo-text">ASHOK KUMAR</span>
             <span className="logo-bracket">/&gt;</span>
