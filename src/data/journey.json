@@ -1,86 +1,65 @@
 [
   {
-    "year": "2019",
-    "title": "STARTED DEVELOPMENT JOURNEY",
+    "year": "2019 - 2021",
+    "title": "FOUNDATIONAL ENGINEERING",
     "type": "CARD",
-    "description": "Started learning programming, web development, and computer fundamentals while pursuing BCA. Built small academic and personal projects to strengthen implementation and debugging skills.",
+    "description": "My journey in software engineering began by mastering core programming principles, data structures, and database fundamentals. Through a blend of academic coursework and practical projects, I established a robust foundation in backend logic.",
     "id": "001"
   },
   {
-    "year": "2020",
-    "title": "FIRST FULL PROJECTS",
+    "year": "2022",
+    "title": "TRANSITION TO PROFESSIONAL",
     "type": "CARD",
-    "description": "Built frontend and backend projects using HTML, CSS, JavaScript, PHP, and MySQL. Improved understanding of CRUD systems, databases, authentication, and practical problem solving.",
+    "description": "Moving beyond academic exercises, I shifted my focus to production-grade backend development. I further honed my expertise in RESTful APIs, debugging, and systematic database design.",
     "id": "002"
   },
   {
-    "year": "2021",
-    "title": "BACKEND DEVELOPMENT FOCUS",
+    "year": "Oct 2022",
+    "title": "INDUSTRY ADOPTION",
     "type": "CARD",
-    "description": "Developed stronger interest in backend systems, APIs, workflows, and database-driven applications. Started focusing more on practical system behavior and maintainable logic.",
+    "description": "I joined Square Bits Pvt. Ltd., where I fully immersed myself in production-oriented workflows, collaborative version control, and mission-critical API development within an Agile environment.",
     "id": "003"
   },
   {
-    "year": "2022",
-    "title": "PROFESSIONAL PREPARATION",
+    "year": "Feb 2023",
+    "title": "ENGINEERING SaaS AT SCALE",
     "type": "CARD",
-    "description": "Worked on backend-focused projects and improved development fundamentals before entering professional software development environments.",
+    "description": "I designed complex SaaS modules, including secure payment gateways and authentication systems. I leveraged Node.js and MongoDB to build robust and scalable backend solutions.",
     "id": "004"
   },
   {
-    "year": "Oct 2022",
-    "title": "STARTED INDUSTRY EXPERIENCE",
+    "year": "2024",
+    "title": "REAL-TIME & EVENT-DRIVEN DESIGN",
     "type": "CARD",
-    "description": "Joined Square Bits Pvt. Ltd. as Backend Developer Trainee. Learned production-oriented backend development, API handling, debugging, and collaborative workflows.",
+    "description": "I expanded my technical capabilities to include WebSocket-based communication and event-driven architectures, enabling highly interactive and low-latency user experiences.",
     "id": "005"
   },
   {
-    "year": "Feb 2023",
-    "title": "BACKEND ENGINEER ROLE",
+    "year": "Nov 2024",
+    "title": "FOUNDED S3 LIBRARY PLATFORM",
     "type": "CARD",
-    "description": "Started working as Backend Engineer on SaaS applications involving REST APIs, payments, authentication systems, and operational workflows using Node.js and MongoDB.",
+    "description": "I assumed full ownership of the entire product lifecycle. I architected a multi-tenant SaaS platform, managing everything from infrastructure design to operational workflow logic.",
     "id": "006"
   },
   {
-    "year": "2024",
-    "title": "REAL-TIME SYSTEMS & SAAS",
+    "year": "2025",
+    "title": "PRODUCT & MARKET VALIDATION",
     "type": "CARD",
-    "description": "Worked on backend-heavy systems, WebSocket communication, workflow-driven applications, and scalable SaaS architecture while improving product understanding.",
+    "description": "Through direct field research, I cultivated a critical 'Product-First' mindset. I learned to bridge the gap between complex engineering solutions and real-world user adoption.",
     "id": "007"
   },
   {
-    "year": "Nov 2024",
-    "title": "STARTED S3 LIBRARY PLATFORM",
+    "year": "2026",
+    "title": "SYSTEMS ARCHITECTURE & GROWTH",
     "type": "CARD",
-    "description": "Started building S3 Library Platform independently after identifying operational inefficiencies in local library management systems.",
+    "description": "I further refined my engineering philosophy by prioritizing maintainable and modular system designs. Currently, my focus lies on integrating robust testing frameworks and scalable SaaS infrastructure.",
     "id": "008"
   },
   {
-    "year": "2025",
-    "title": "PRODUCT VALIDATION PHASE",
-    "type": "CARD",
-    "description": "Validated the product through direct interaction with libraries. Learned practical lessons about user behavior, operational workflows, trust barriers, and product adoption challenges.",
-    "id": "009"
-  },
-  {
-    "year": "Jan 2026",
-    "title": "PAUSED PRODUCT DEVELOPMENT",
-    "type": "CARD",
-    "description": "Paused S3 Library Platform after validation phase to strengthen technical foundations, improve product thinking, and refocus long-term development direction.",
-    "id": "010"
-  },
-  {
-    "year": "2026",
-    "title": "ADVANCED FULL-STACK FOCUS",
-    "type": "CARD",
-    "description": "Focused on improving backend architecture, scalable APIs, real-time systems, and maintainable SaaS application development through independent projects and experimentation.",
-    "id": "011"
-  },
-  {
     "year": "Present",
-    "title": "OPEN TO NEW OPPORTUNITIES",
+    "title": "OPEN TO SENIOR-LEVEL IMPACT",
     "type": "CARD",
-    "description": "Actively looking for backend-focused full stack development opportunities while continuing to build practical systems, improve backend engineering skills, and work on product-oriented development.",
-    "id": "012"
+    "description": "I am actively seeking opportunities to leverage my backend-centric engineering experience and product-oriented mindset to solve complex operational challenges within high-impact teams.",
+    "id": "009"
   }
 ]

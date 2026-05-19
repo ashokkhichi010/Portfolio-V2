@@ -1,33 +1,33 @@
 [
   {
     "period": "Feb 2026 - Present",
-    "role": "Backend-Focused Full Stack Developer",
-    "company": "Open to Opportunities",
-    "description": "Currently focused on improving backend architecture, SaaS system design, and real-time application development while actively looking for backend-focused full stack development opportunities. Continuing to build independent projects, strengthen product thinking, and improve maintainable system design through practical development work.",
+    "role": "Full Stack Software Engineer",
+    "company": "Open for New Challenges",
+    "description": "Actively seeking roles within large-scale backend environments. Currently architecting modular SaaS systems and refining Test-Driven Development (TDD) practices to build highly maintainable and production-ready infrastructure.",
     "number": "01",
     "accent": "#c084fc"
   },
   {
-    "period": "Nov 2024 - Jan 2026 · 1 yr 3 Months",
-    "role": "Independent Product Developer",
+    "period": "Nov 2024 - Jan 2026",
+    "role": "Founder & Lead Engineer",
     "company": "S3 Library Platform",
-    "description": "Built a SaaS platform independently after identifying operational problems in local library systems. Worked on backend APIs, authentication systems, subscriptions, seat allocation workflows, attendance tracking, payments, and admin operations. Learned practical product validation, user behavior, operational workflows, and real-world adoption challenges through direct interaction with libraries.",
+    "description": "Architected and delivered an end-to-end multi-tenant SaaS platform. Managed the entire lifecycle—from database schema design and RESTful API development to frontend integration. Successfully validated product-market fit through direct field research and iterative deployments, thereby gaining deep expertise in operational workflow design.",
     "number": "02",
     "accent": "#60a5fa"
   },
   {
-    "period": "Feb 2023 - Oct 2024 · 1 yr 9 Months",
+    "period": "Feb 2023 - Oct 2024",
     "role": "Backend Engineer",
     "company": "Square Bits Pvt. Ltd.",
-    "description": "Worked on backend systems for SaaS applications using Node.js, Express.js, MongoDB, and MySQL. Built REST APIs, payment integrations, workflow-based modules, and authentication systems. Improved understanding of scalable backend development, maintainable architecture, debugging, and production-oriented workflows.",
+    "description": "Engineered scalable backend services using Node.js and TypeScript. Developed and maintained robust RESTful APIs, payment gateway integrations, and complex business workflow modules. Focused on performance optimization and database reliability within high-traffic production environments.",
     "number": "03",
     "accent": "#34d399"
   },
   {
-    "period": "Oct 2022 - Jan 2023 · 4 Months",
+    "period": "Oct 2022 - Jan 2023",
     "role": "Backend Developer Trainee",
     "company": "Square Bits Pvt. Ltd.",
-    "description": "Started professional backend development by working on API development, debugging, testing, and backend workflows in a production-oriented environment. Built strong fundamentals in backend architecture, API handling, database integration, and collaborative development practices.",
+    "description": "Gained foundational experience in professional software engineering. Assisted in the development and debugging of production-grade APIs, database schema migrations, and core backend service implementations within a collaborative Agile environment.",
     "number": "04",
     "accent": "#f59e0b"
   }

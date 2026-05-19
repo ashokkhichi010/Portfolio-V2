@@ -9,132 +9,72 @@
     "id": 2,
     "type": "left",
     "title": "Who I Am",
-    "description": "I build practical software systems focused on backend development, APIs, real-time workflows, and maintainable architecture. My work is driven by solving real operational problems through simple and reliable solutions."
+    "description": "A pragmatic, 'backend-first' engineer focused on building scalable systems that solve real-world operational problems."
   },
   {
     "id": 3,
     "type": "right",
-    "description": "Product-oriented developer with a strong interest in building systems that are practical, scalable, and easy to maintain.",
+    "title": "My Philosophy",
+    "description": "I believe that software should simplify operations, not complicate them. My approach prioritizes 'maintainability' and 'clean architecture' over theoretical complexity.",
     "listItems": [
-      "Focused on backend systems and SaaS platforms",
-      "Interested in real-world workflows and usability",
-      "Prefers simple architecture over unnecessary complexity"
+      "Backend-first architecture",
+      "Pragmatic Coding Instead of Over-engineering",
+      "Focused on long-term maintainability"
     ]
   },
   {
     "id": 4,
     "type": "left",
-    "title": "What I Build",
-    "description": "Most of my work revolves around backend-heavy applications involving APIs, authentication systems, real-time communication, workflow management, and SaaS platforms."
+    "title": "Engineering Lessons",
+    "description": "As an 'Indie Developer', my journey has taught me the difference between 'writing code' and 'building a product'."
   },
   {
     "id": 5,
     "type": "right",
-    "description": "I enjoy building systems that solve operational challenges and improve day-to-day workflows.",
+    "title": "Key Learnings & Growth",
+    "description": "From my experience building S3 Library SaaS, I have learned the importance of 'market fit' and 'robust engineering'.",
     "listItems": [
-      "Workflow-driven applications",
-      "Authentication and role systems",
-      "Real-time communication features"
+      "Market Research: Validate it before building.",
+      "Testing: Automated tests are essential for production stability.",
+      "Tooling: AI is a powerful accelerator, but human oversight and debugging are necessary."
     ]
   },
   {
     "id": 6,
     "type": "left",
-    "title": "How I Approach Development",
-    "description": "I prefer understanding the actual problem before designing the solution. My focus stays on usability, maintainability, and building systems that work reliably in practical environments."
+    "title": "My Technical Focus",
+    "description": "Expertise in robust backend systems, APIs, and end-to-end workflow management."
   },
   {
     "id": 7,
     "type": "right",
-    "description": "I believe software should simplify operations instead of creating unnecessary complexity.",
+    "title": "Core Competencies",
+    "description": "My focus lies in delivering stable, secure, and high-performance backend services.",
     "listItems": [
-      "Simple and maintainable architecture",
-      "Clear workflows and structured systems",
-      "Practical development over theoretical complexity"
+      "API Design: RESTful Architecture and Integration.",
+      "Database Management: MongoDB Schema Design.",
+      "Full-Stack: Connecting Backend Logic with Functional UI/UX."
     ]
   },
   {
     "id": 8,
     "type": "left",
-    "title": "Independent Product Building",
-    "description": "Building products independently taught me how technical decisions connect with real-world usage, user expectations, operational limitations, and product adoption."
+    "title": "Looking Ahead",
+    "description": "Continuously refining my ability to articulate technical solutions and build more reliable systems."
   },
   {
     "id": 9,
     "type": "right",
-    "description": "Working independently strengthened both technical and product thinking skills.",
+    "title": "Professional Goals",
+    "description": "My current focus is on transitioning toward a more collaborative team environment where I can contribute my backend expertise.",
     "listItems": [
-      "Idea validation through direct feedback",
-      "End-to-end development ownership",
-      "Continuous improvement through iteration"
+      "Mastering testing frameworks (Jest/Supertest).",
+      "Improving technical documentation and communication.",
+      "Contributing to impactful and scalable SaaS products."
     ]
   },
   {
     "id": 10,
-    "type": "left",
-    "title": "Backend Engineering Focus",
-    "description": "Backend development is the area I enjoy the most. I like designing APIs, handling workflows, structuring systems, and improving reliability in applications."
-  },
-  {
-    "id": 11,
-    "type": "right",
-    "description": "My development style focuses on clarity, maintainability, and structured implementation.",
-    "listItems": [
-      "REST API development",
-      "Authentication and access control",
-      "Real-time system workflows"
-    ]
-  },
-  {
-    "id": 12,
-    "type": "left",
-    "title": "Product Thinking",
-    "description": "Real-world product development helped me understand that successful systems require more than just code. Adoption, usability, trust, and workflow fit matter equally."
-  },
-  {
-    "id": 13,
-    "type": "right",
-    "description": "I try to balance technical implementation with practical usability.",
-    "listItems": [
-      "Validate before scaling",
-      "Build based on real problems",
-      "Focus on operational simplicity"
-    ]
-  },
-  {
-    "id": 14,
-    "type": "left",
-    "title": "Vision",
-    "description": "My long-term goal is to build reliable software systems that solve practical operational problems while remaining simple, maintainable, and accessible."
-  },
-  {
-    "id": 15,
-    "type": "right",
-    "description": "I want to continue improving as a backend-focused developer while building meaningful products grounded in real-world use cases.",
-    "listItems": [
-      "Build scalable SaaS systems",
-      "Create practical workflow solutions",
-      "Continue learning through real projects"
-    ]
-  },
-  {
-    "id": 16,
-    "type": "left",
-    "title": "Beyond Coding",
-    "description": "I enjoy understanding how systems behave in real environments — from technical workflows to user interaction patterns and operational constraints."
-  },
-  {
-    "id": 17,
-    "type": "right",
-    "description": "For me, development is not only about writing code, but also about building systems people can actually use effectively.",
-    "listItems": [
-      "Problem-solving mindset",
-      "Product-oriented development",
-      "Continuous practical learning"
-    ]
-  },
-  {
-    "id": 18,
     "type": "back",
     "title": "End of Chapter."
   }

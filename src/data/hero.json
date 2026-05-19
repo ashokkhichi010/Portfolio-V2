@@ -1,8 +1,8 @@
 {
   "greeting": "Hello, I'm",
   "typedTexts": ["Ashok Kumar", "a Full Stack Developer", "a Backend Engineer", "a SaaS Builder"],
-  "title": "Backend-Focused Full Stack Developer",
-  "description": "I build practical SaaS systems, APIs, and real-time applications focused on solving real operational problems through maintainable backend architecture and workflow-driven development.",
+  "title": "Full Stack Software Engineer",
+  "description": "I specialize in taking products from concept to production. I build the backend cores and functional interfaces that power operational SaaS platforms. I prioritize practical coding and delivering useful outcomes over theoretical perfection.",
   "buttons": [
     {
       "label": "Get In Touch",

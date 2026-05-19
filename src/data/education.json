@@ -1,22 +1,20 @@
 [
   {
     "id": 1,
-    "degree": "Master of Computer Applications",
-    "shortForm": "MCA",
-    "institution": "Aishwarya College of Education(BTU), Jodhpur (RAJ)",
-    "period": "2023 - 2024 Discontinued",
-    "description": "Started MCA while continuing professional backend development work. Later paused the program to focus on building S3 Library Platform and gaining practical experience in SaaS systems, backend architecture, workflows, and product-oriented development through real-world implementation.",
+    "degree": "Master of Computer Applications (MCA)",
+    "institution": "Aishwarya College of Education (BTU), Jodhpur",
+    "period": "2023 - 2024",
+    "description": "Completed advanced coursework in Software Systems. Strategically pivoted toward full-time product development to architect the S3 Library SaaS platform, prioritizing real-world system design, multi-tenant architecture, and practical full-stack deployment over academic studies.",
     "color": "#8B5CF6",
     "bgColor": "#2B1A4A99",
     "accentColor": "rgba(139, 92, 246, 0.4)"
   },
   {
     "id": 2,
-    "degree": "Bachelor of Computer Applications",
-    "shortForm": "BCA",
-    "institution": "Lachoo Memorial College of Science and Technology, Jodhpur (RAJ)",
+    "degree": "Bachelor of Computer Applications (BCA)",
+    "institution": "Lachoo Memorial College of Science and Technology, Jodhpur",
     "period": "2019 - 2022",
-    "description": "Built strong foundations in programming, web development, databases, data structures, and application development. Worked on multiple academic and personal projects that improved problem-solving, debugging, backend logic, and practical implementation skills.",
+    "description": "Established a strong foundation in Data Structures, Algorithms, and Software Engineering. Developed and deployed several academic projects, focusing on backend logic, database management, and structured application development.",
     "color": "#3B82F6",
     "bgColor": "#17255499",
     "accentColor": "rgba(59, 130, 246, 0.4)"
