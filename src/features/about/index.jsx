@@ -5,7 +5,6 @@ import CoverPage from './CoverPage';
 import aboutData from '../../data/about.json';
 import './styles.css';
 import { MoveLeft, MoveUp, MousePointerClick } from 'lucide-react';
-import SectionAnalytics from '../../components/SectionAnalytics';
 
 const MOBILE_BREAKPOINT = 1050;
 
@@ -87,63 +86,60 @@ const AboutSection = () => {
   };
 
   return (
-    <>
-      <SectionAnalytics sectionId="about" sectionTitle="About" />
-      <section id="about" className="about-section">
-        <div
-          className="about-book"
-          onTouchStart={isMobile ? handleTouchStart : undefined}
-          onTouchEnd={isMobile ? handleTouchEnd : undefined}
-        >
-          <div className="pages" ref={pagesRef}>
+    <section id="about" className="about-section">
+      <div
+        className="about-book"
+        onTouchStart={isMobile ? handleTouchStart : undefined}
+        onTouchEnd={isMobile ? handleTouchEnd : undefined}
+      >
+        <div className="pages" ref={pagesRef}>
 
-            {/* ── Outside Book Messages ── */}
-            <div className={`book-intro-text ${isAtStart ? 'visible' : ''}`}>
-              <p>
-                {isMobile ? (
-                  <>
-                    <MoveLeft className="hint-icon-x" size={48} />
-                  </>
-                ) : (
-                  <>
-                    <h2>WELCOME</h2>
-                    <h3>to</h3>
-                    <h3><u>short intro</u></h3>
-                    <h2>ABOUT ME</h2>
-                    <h6>Click on the cover page to start</h6>
-                    <MousePointerClick className="hint-icon-pulse" size={48} />
-                  </>
-                )}
-              </p>
-            </div>
-
-            <div className={`book-outro-text ${isAtEnd ? 'visible' : ''}`}>
-              <h2>Thank You</h2>
-              <p>
-                Scroll upwards to proceed
-                <MoveUp className="hint-icon-y" size={48} />
-              </p>
-            </div>
-
-            {aboutData.map((page, index) => {
-              const isFlipped = flippedPages.has(page.id);
-              const pageThemeClass = `page-theme-${page.type}`;
-
-              return (
-                <div
-                  key={page.id}
-                  className={`page ${isFlipped ? 'flipped' : ''} ${pageThemeClass}`}
-                  style={!isMobile ? { zIndex: getZIndex(index) } : undefined}
-                  onClick={!isMobile ? () => handlePageClick(index) : undefined}
-                >
-                  {renderPageContent(page)}
-                </div>
-              );
-            })}
+          {/* ── Outside Book Messages ── */}
+          <div className={`book-intro-text ${isAtStart ? 'visible' : ''}`}>
+            <p>
+              {isMobile ? (
+                <>
+                  <MoveLeft className="hint-icon-x" size={48} />
+                </>
+              ) : (
+                <>
+                  <h2>WELCOME</h2>
+                  <h3>to</h3>
+                  <h3><u>short intro</u></h3>
+                  <h2>ABOUT ME</h2>
+                  <h6>Click on the cover page to start</h6>
+                  <MousePointerClick className="hint-icon-pulse" size={48} />
+                </>
+              )}
+            </p>
           </div>
+
+          <div className={`book-outro-text ${isAtEnd ? 'visible' : ''}`}>
+            <h2>Thank You</h2>
+            <p>
+              Scroll upwards to proceed
+              <MoveUp className="hint-icon-y" size={48} />
+            </p>
+          </div>
+
+          {aboutData.map((page, index) => {
+            const isFlipped = flippedPages.has(page.id);
+            const pageThemeClass = `page-theme-${page.type}`;
+
+            return (
+              <div
+                key={page.id}
+                className={`page ${isFlipped ? 'flipped' : ''} ${pageThemeClass}`}
+                style={!isMobile ? { zIndex: getZIndex(index) } : undefined}
+                onClick={!isMobile ? () => handlePageClick(index) : undefined}
+              >
+                {renderPageContent(page)}
+              </div>
+            );
+          })}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

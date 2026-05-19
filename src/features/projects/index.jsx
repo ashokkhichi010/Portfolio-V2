@@ -5,7 +5,6 @@ import ProjectCard from './ProjectCard'
 import ProjectDrawer from './ProjectDrawer'
 import { resolveProjectImages } from './projectImages'
 import './styles.css'
-import SectionAnalytics from '../../components/SectionAnalytics'
 
 const ProjectsSection = () => {
   const [activeProjectIndex, setActiveProjectIndex] = useState(null)
@@ -71,38 +70,35 @@ const ProjectsSection = () => {
   }
 
   return (
-    <>
-      <SectionAnalytics sectionId="projects" sectionTitle="Projects" />
-      <Section id="projects" number="04" title="Projects">
-        <div className="projects-gallery">
-          {projectsWithImages.map((project, idx) => (
-            <ProjectCard
-              key={project.title}
-              project={project}
-              onOpen={() => setActiveProjectIndex(idx)}
-            />
-          ))}
-        </div>
+    <Section id="projects" number="04" title="Projects">
+      <div className="projects-gallery">
+        {projectsWithImages.map((project, idx) => (
+          <ProjectCard
+            key={project.title}
+            project={project}
+            onOpen={() => setActiveProjectIndex(idx)}
+          />
+        ))}
+      </div>
 
-        <ProjectDrawer
-          project={activeProject}
-          activeImageIndex={activeProject ? (projectImageIndexes[activeProject.title] || 0) : 0}
-          onClose={() => setActiveProjectIndex(null)}
-          onPreviousImage={() => {
-            if (!activeProject) return
-            updateProjectImageIndex(activeProject.title, activeProject.resolvedImages.length, -1)
-          }}
-          onNextImage={() => {
-            if (!activeProject) return
-            updateProjectImageIndex(activeProject.title, activeProject.resolvedImages.length, 1)
-          }}
-          onSelectImage={(imageIndex) => {
-            if (!activeProject) return
-            setProjectImageIndex(activeProject.title, imageIndex)
-          }}
-        />
-      </Section>
-    </>
+      <ProjectDrawer
+        project={activeProject}
+        activeImageIndex={activeProject ? (projectImageIndexes[activeProject.title] || 0) : 0}
+        onClose={() => setActiveProjectIndex(null)}
+        onPreviousImage={() => {
+          if (!activeProject) return
+          updateProjectImageIndex(activeProject.title, activeProject.resolvedImages.length, -1)
+        }}
+        onNextImage={() => {
+          if (!activeProject) return
+          updateProjectImageIndex(activeProject.title, activeProject.resolvedImages.length, 1)
+        }}
+        onSelectImage={(imageIndex) => {
+          if (!activeProject) return
+          setProjectImageIndex(activeProject.title, imageIndex)
+        }}
+      />
+    </Section>
   )
 }
 

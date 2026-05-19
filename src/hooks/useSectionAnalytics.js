@@ -1,35 +1,19 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { trackAnalyticsEvent } from '../lib/firebase'
 
-export const useSectionAnalytics = (sectionId, sectionTitle) => {
+export const useSectionAnalytics = (activeSection, sectionTitles = {}) => {
+  const trackedSectionsRef = useRef(new Set())
+
   useEffect(() => {
-    if (!sectionId) return undefined
+    if (!activeSection) return undefined
+    if (trackedSectionsRef.current.has(activeSection)) return undefined
 
-    const sectionElement = document.getElementById(sectionId)
-    if (!sectionElement) return undefined
+    trackedSectionsRef.current.add(activeSection)
+    trackAnalyticsEvent('section_view', {
+      section_id: activeSection,
+      section_title: sectionTitles[activeSection] || activeSection,
+    })
 
-    let hasTracked = false
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting || hasTracked) return
-
-          hasTracked = true
-          trackAnalyticsEvent('section_view', {
-            section_id: sectionId,
-            section_title: sectionTitle || sectionId,
-          })
-        })
-      },
-      {
-        root: null,
-        threshold: 0.45,
-      }
-    )
-
-    observer.observe(sectionElement)
-
-    return () => observer.disconnect()
-  }, [sectionId, sectionTitle])
+    return undefined
+  }, [activeSection, sectionTitles])
 }

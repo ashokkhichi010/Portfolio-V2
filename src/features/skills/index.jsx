@@ -5,7 +5,6 @@ import skillsData from '../../data/skills.json'
 import HexCard from './HexCard'
 import SkillsSidePanel from './SkillsSidePanel'
 import SkillsMobileDrawer from './SkillsMobileDrawer'
-import SectionAnalytics from '../../components/SectionAnalytics'
 
 const localSkillIconModules = import.meta.glob('../../assets/icons/*.{svg,png,jpg,jpeg,webp,avif,gif}', {
   eager: true,
@@ -101,57 +100,54 @@ export default function SkillsSection() {
   }, [layout])
 
   return (
-    <>
-      <SectionAnalytics sectionId="skills" sectionTitle="Skills" />
-      <Section id="skills" number="02" title="Skills">
-        <div className="skills-container-layout">
+    <Section id="skills" number="02" title="Skills">
+      <div className="skills-container-layout">
 
-          {/* Left Side: Hex Grid */}
-          <div
-            ref={containerRef}
-            className="skills-grid-wrapper"
-            role="list"
-            aria-label="Skills"
-          >
-            {layout && rows.map(({ items, isOdd, rowIndex }) => (
-              <div
-                key={rowIndex}
-                className="hex-grid-row"
-                style={{
-                  gap: `${layout.gap}px`,
-                  marginTop: rowIndex === 0 ? 0 : `-${layout.overlap}px`,
-                  marginLeft: isOdd
-                    ? `${Math.round(layout.hexW / 2 + layout.gap / 2)}px`
-                    : 0,
-                }}
-              >
-                {items.map((skill, ci) => (
-                  <HexCard
-                    key={skill.name}
-                    skill={skill}
-                    hexW={layout.hexW}
-                    hexH={layout.hexH}
-                    animDelay={rowIndex * 0.06 + ci * 0.04}
-                    onHover={(s) => setActiveSkill(s)}
-                    onClick={(s) => { setActiveSkill(s); setIsDrawerOpen(true); }}
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-
-          {/* Right Side Panel (Desktop only) */}
-          <SkillsSidePanel activeSkill={activeSkill} />
-
-          {/* Bottom Drawer (Mobile only) */}
-          <SkillsMobileDrawer
-            activeSkill={activeSkill}
-            isDrawerOpen={isDrawerOpen}
-            setIsDrawerOpen={setIsDrawerOpen}
-          />
-
+        {/* Left Side: Hex Grid */}
+        <div
+          ref={containerRef}
+          className="skills-grid-wrapper"
+          role="list"
+          aria-label="Skills"
+        >
+          {layout && rows.map(({ items, isOdd, rowIndex }) => (
+            <div
+              key={rowIndex}
+              className="hex-grid-row"
+              style={{
+                gap: `${layout.gap}px`,
+                marginTop: rowIndex === 0 ? 0 : `-${layout.overlap}px`,
+                marginLeft: isOdd
+                  ? `${Math.round(layout.hexW / 2 + layout.gap / 2)}px`
+                  : 0,
+              }}
+            >
+              {items.map((skill, ci) => (
+                <HexCard
+                  key={skill.name}
+                  skill={skill}
+                  hexW={layout.hexW}
+                  hexH={layout.hexH}
+                  animDelay={rowIndex * 0.06 + ci * 0.04}
+                  onHover={(s) => setActiveSkill(s)}
+                  onClick={(s) => { setActiveSkill(s); setIsDrawerOpen(true); }}
+                />
+              ))}
+            </div>
+          ))}
         </div>
-      </Section>
-    </>
+
+        {/* Right Side Panel (Desktop only) */}
+        <SkillsSidePanel activeSkill={activeSkill} />
+
+        {/* Bottom Drawer (Mobile only) */}
+        <SkillsMobileDrawer
+          activeSkill={activeSkill}
+          isDrawerOpen={isDrawerOpen}
+          setIsDrawerOpen={setIsDrawerOpen}
+        />
+
+      </div>
+    </Section>
   )
 }

@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { User, Code, Briefcase, Rocket, Mail, Menu, X, GraduationCap } from 'lucide-react'
 import './styles.css'
+import { useSectionAnalytics } from '../../hooks/useSectionAnalytics'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState(window.location.hash.substring(1) || 'home')
+
+  const sectionTitles = {
+    home: 'Hero',
+    about: 'About',
+    skills: 'Skills',
+    experience: 'Experience',
+    journey: 'Journey',
+    projects: 'Projects',
+    education: 'Education',
+    contact: 'Contact',
+  }
+
+  useSectionAnalytics(activeSection, sectionTitles)
 
   useEffect(() => {
     let currentScrollY = window.scrollY
