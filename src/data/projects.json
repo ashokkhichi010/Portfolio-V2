@@ -1,8 +1,37 @@
 [
   {
+    "title": "The Digital Museum of Human Thought",
+    "description": "The Digital Museum of Human Thought is an immersive educational web platform designed to present the complete evolution of Western philosophy as an interactive historical journey. Instead of treating philosophy as a collection of isolated biographies and theories, the platform transforms more than 2,600 years of intellectual history into a visually engaging timeline experience. Users travel from the pre-philosophical mythological world of Ancient Greece through the Presocratics, Classical philosophers, Medieval thinkers, Enlightenment philosophers, Existentialists, Postmodernists, and contemporary philosophical movements. Each philosopher is represented through cinematic artwork, multilingual content, historical context, famous quotations, and detailed explanations of their contributions to human thought. The platform emphasizes storytelling, accessibility, and visual learning, allowing users to understand how philosophical ideas evolved, influenced one another, and shaped modern civilization. Built with a mobile-first design approach, the project combines historical education, digital museum concepts, interactive timelines, localization support, and modern UI/UX principles to create an engaging learning experience for students, educators, philosophy enthusiasts, and lifelong learners.",
+    "timeframe": "May 2026 – May 2026",
+    "tags": [
+      "ReactJS",
+      "TailwindCSS",
+      "JavaScript",
+      "Interactive Timeline",
+      "Educational Platform",
+      "Digital Museum",
+      "Philosophy",
+      "History",
+      "Responsive Design",
+      "Localization",
+      "Multilingual Support",
+      "Framer Motion",
+      "UI/UX Design",
+      "Content Architecture",
+      "Knowledge Visualization"
+    ],
+    "images": [
+      "thought-museum_1.png",
+      "thought-museum_2.png",
+      "thought-museum_3.png"
+    ],
+    "github": "https://github.com/ashokkhichi010/Thought-Museum",
+    "live": "https://thought-museum.web.app/"
+  },
+  {
     "title": "MD Agro Engineering",
     "description": "MD Agro Engineering is a modern industrial website project designed for a rural agricultural and steel fabrication workshop. The platform focuses on showcasing real fabrication work including tractor attachments, agricultural machinery, trailer bodies, portable cabins, steel structures, and custom welding projects. Unlike typical corporate or startup websites, this project is intentionally designed for rural and non-technical users with a simple, trustworthy, and mobile-first user experience. The website emphasizes easy navigation, large visual project showcases, WhatsApp-first communication, and fast accessibility on low-network devices. Built using ReactJS, TailwindCSS, Framer Motion, and Redux Toolkit, the project follows a scalable frontend architecture with a separate reusable styling system for future redesign flexibility. Future versions will integrate Firebase for project management, inquiry handling, dynamic content updates, and admin-based project publishing. The overall goal is to improve the workshop’s digital presence, local credibility, and customer trust through authentic industrial branding and practical UI/UX design.",
-    "timeframe": "May 2026 - Present",
+    "timeframe": "May 2026 - May 2026",
     "tags": [
       "ReactJS",
       "TailwindCSS",
