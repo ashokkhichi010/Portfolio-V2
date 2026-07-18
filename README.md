@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://partner.s3library.com/static/media/app_icon_primary.9809d0496d938e417441aa07c0078e5f.svg" width="140" alt="Custom S3 Library"/>
+<img src="./src/assets/icons/logo.svg" alt="Portfolio Logo" width="140"/>
 
-# Custom S3 Library
+# Ashok Kumar Portfolio
 
-### 📚 Local-First Library Management System
+### 🚀 Modern Developer Portfolio & Engineering Showcase
 
-A modern browser-based library management application built with **React**, **TypeScript**, and **IndexedDB** using a Local-First architecture. Designed for small and medium self-study libraries, the application works entirely inside the browser without requiring a backend server, internet connection, cloud database, or user authentication.
+A futuristic personal portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS** to showcase professional experience, engineering projects, technical expertise, and product development journey. The portfolio emphasizes clean architecture, immersive user experience, and high-performance web technologies.
 
 <p>
 
@@ -14,8 +14,8 @@ A modern browser-based library management application built with **React**, **Ty
 <img src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript"/>
 <img src="https://img.shields.io/badge/Vite-Build-646CFF?logo=vite"/>
 <img src="https://img.shields.io/badge/TailwindCSS-38BDF8?logo=tailwindcss"/>
-<img src="https://img.shields.io/badge/IndexedDB-Offline-success"/>
-<img src="https://img.shields.io/badge/Architecture-Local--First-orange"/>
+<img src="https://img.shields.io/badge/Framer_Motion-Animations-FF0055"/>
+<img src="https://img.shields.io/badge/Responsive-Mobile_First-success"/>
 
 </p>
 
@@ -25,188 +25,198 @@ A modern browser-based library management application built with **React**, **Ty
 
 # 📖 Overview
 
-**Custom S3 Library** is a lightweight, offline-first library management system created for library owners who need a simple, reliable, and high-performance solution without the complexity of cloud infrastructure.
+The **Ashok Kumar Portfolio** is a modern, interactive portfolio website designed to present professional experience, software engineering expertise, freelance work, and product development projects in an engaging and structured format.
 
-Unlike traditional SaaS platforms, this application stores all operational data locally inside the browser using **IndexedDB**. Every operation—including creating students, managing subscriptions, configuring seats, and generating reports—is performed locally, ensuring instant response times and uninterrupted operation even without an internet connection.
+Rather than functioning as a simple resume website, the portfolio serves as an engineering showcase that demonstrates technical skills, architecture thinking, product development experience, and problem-solving capabilities. Every section is carefully designed to provide recruiters, clients, and collaborators with a clear understanding of my development journey and the systems I have built.
 
-The application follows a **Local-First Architecture**, where the local database acts as the single source of truth while remaining future-ready for optional online synchronization. :contentReference[oaicite:1]{index=1}
+The website follows a modular architecture with reusable components, smooth animations, responsive layouts, and a futuristic visual design while maintaining excellent performance and accessibility.
 
 ---
 
 # 🎯 Project Goals
 
-The application was designed to:
+The portfolio is designed to:
 
-- Eliminate dependency on cloud infrastructure.
-- Allow libraries to operate completely offline.
-- Provide instant data access with zero network latency.
-- Reduce operational costs for small libraries.
-- Enable future migration to cloud synchronization without changing business logic.
-- Maintain complete ownership of library data.
+- Showcase professional experience and technical skills.
+- Present engineering projects with detailed case studies.
+- Highlight product development and freelance work.
+- Demonstrate frontend engineering capabilities.
+- Create an engaging and memorable user experience.
+- Provide recruiters and clients with a centralized professional profile.
 
 ---
 
 # ✨ Core Features
 
-## 🏢 Library Management
+## 🏠 Hero Section
 
-Manage complete library information.
+A modern landing section introducing the developer.
 
 Features include:
 
-- Library Profile
-- Library Settings
-- Contact Information
-- Working Hours
-- Basic Configuration
+- Animated Introduction
+- Professional Summary
+- Dynamic Role Highlights
+- Social Media Links
+- Resume Download
+- Call-to-Action Buttons
 
 ---
 
-## 🏗 Branch Management
+## 👨‍💻 About Me
 
-Support multiple branches within the same workspace.
-
-Features:
-
-- Create Branches
-- Update Branch Details
-- Branch Configuration
-- Branch Statistics
-
----
-
-## 🏢 Floor Management
-
-Configure library floors.
-
-Features:
-
-- Create Floors
-- Edit Floors
-- Delete Floors
-- Floor Capacity
-- Floor Status
-
----
-
-## 💺 Seat Management
-
-Complete seat configuration.
-
-Capabilities:
-
-- Create Seats
-- Edit Seats
-- Seat Categories
-- Seat Labels
-- Availability Status
-- Bulk Operations
-
----
-
-## 👨‍🎓 Student Management
-
-Manage student records locally.
-
-Features:
-
-- Student Registration
-- Student Profiles
-- Search & Filters
-- Membership Status
-- Attendance Records
-
----
-
-## 💳 Subscription Management
-
-Track student subscriptions.
-
-Features:
-
-- Subscription Plans
-- Renewals
-- Expiry Tracking
-- Active Students
-- Payment Status
-
----
-
-## 📊 Reports & Analytics
-
-View operational insights.
+Comprehensive professional introduction.
 
 Includes:
 
-- Active Students
-- Occupancy Statistics
-- Subscription Summary
-- Revenue Overview
-- Daily Reports
+- Career Journey
+- Professional Philosophy
+- Technical Expertise
+- Personal Values
+- Development Approach
 
 ---
 
-## 💾 Backup & Restore
+## 💼 Experience
 
-Protect local data through export/import.
+Professional experience timeline.
+
+Displays:
+
+- Company Experience
+- Freelance Projects
+- Product Development
+- Responsibilities
+- Technologies Used
+
+---
+
+## 🚀 Projects
+
+Detailed showcase of engineering projects.
+
+Includes:
+
+- Featured Projects
+- Project Descriptions
+- Technologies
+- Architecture Highlights
+- Live Demo Links
+- GitHub Repositories
+- Screenshots
+- Project Timeline
+
+---
+
+## 🛠 Technical Skills
+
+Categorized technology stack.
+
+Sections:
+
+- Programming Languages
+- Frontend Technologies
+- Backend Technologies
+- Databases
+- Cloud & DevOps
+- Tools & Platforms
+
+---
+
+## 📜 Certifications & Achievements
+
+Highlights:
+
+- Professional Certifications
+- Technical Achievements
+- Learning Journey
+- Product Milestones
+
+---
+
+## 📄 Resume
+
+Professional resume section.
 
 Features:
 
-- Excel Export
-- Excel Import
-- Local Backup
-- Restore Database
-- Data Migration
+- Resume Preview
+- Download Resume
+- ATS-Friendly Resume
+- Career Summary
 
 ---
 
-# 🚀 Local-First Architecture
+## 📞 Contact
 
-Unlike traditional web applications, this project follows a Local-First architecture.
+Connect with recruiters and clients.
 
-```
-User Interface
-       │
-       ▼
-Business Logic
-       │
-       ▼
-Repository Layer
-       │
-       ▼
-Data Provider
-       │
-       ▼
-IndexedDB (idb)
-```
+Includes:
 
-All CRUD operations interact with the local database first.
-
-No API calls are required.
-
-No backend server is required.
-
-Future online synchronization can be introduced by replacing the storage provider while keeping the business logic unchanged. :contentReference[oaicite:2]{index=2}
+- Contact Form
+- Email
+- LinkedIn
+- GitHub
+- WhatsApp
+- Location
 
 ---
 
-# 🏗 Data Provider Architecture
+# 🎨 User Experience
 
-The application uses a storage abstraction layer.
+The portfolio combines modern UI with futuristic aesthetics.
+
+Design principles:
+
+- Minimal Interface
+- Glassmorphism Effects
+- Smooth Animations
+- Interactive Components
+- Dark Theme
+- Responsive Layout
+- Accessibility First
+
+---
+
+# 📱 Responsive Design
+
+Optimized for all devices.
+
+Supported platforms:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+The layout automatically adapts to different screen sizes while maintaining usability and visual consistency.
+
+---
+
+# 🏗 Application Architecture
+
+The project follows a scalable component-based architecture.
 
 ```
-DataProvider
-
-├── IndexedDB Provider
-│
-├── Future Firebase Provider
-│
-├── Future REST Provider
-│
-└── Future Supabase Provider
+Portfolio Website
+        │
+        ▼
+React Router
+        │
+        ▼
+Pages
+        │
+ ┌──────┼──────────────┐
+ │      │              │
+ ▼      ▼              ▼
+Hero  Projects      Contact
+ │
+ ▼
+Shared Components
+ │
+ ▼
+Assets & Configuration
 ```
-
-This architecture allows storage engines to be swapped without changing UI components or business logic. :contentReference[oaicite:3]{index=3}
 
 ---
 
@@ -218,11 +228,11 @@ This architecture allows storage engines to be swapped without changing UI compo
 | Language | TypeScript |
 | Build Tool | Vite |
 | Styling | Tailwind CSS |
+| Animations | Framer Motion |
+| Icons | Lucide React |
 | Routing | React Router |
-| Local Database | IndexedDB |
-| IndexedDB Wrapper | idb |
 | State Management | React Hooks |
-| Storage Pattern | Data Provider |
+| Forms | React Hook Form |
 
 ---
 
@@ -231,58 +241,110 @@ This architecture allows storage engines to be swapped without changing UI compo
 ```text
 src
 │
-├── app
+├── assets
+│
 ├── components
-├── core
-│   ├── config
-│   ├── database
-│   ├── providers
-│   └── repositories
+│   ├── hero
+│   ├── about
+│   ├── experience
+│   ├── projects
+│   ├── skills
+│   ├── certifications
+│   ├── contact
+│   ├── common
+│   └── shared
 │
-├── features
-│   ├── branches
-│   ├── floors
-│   ├── seats
-│   ├── students
-│   ├── subscriptions
-│   ├── plans
-│   ├── shifts
-│   └── dashboard
-│
-├── hooks
 ├── layouts
 ├── pages
+├── hooks
+├── services
+├── data
+├── constants
 ├── types
 ├── utils
+├── styles
+├── routes
+│
+├── App.tsx
 └── main.tsx
 ```
 
 ---
 
-# ⚡ Why Local-First?
+# 🌐 Website Sections
 
-Compared with traditional cloud applications:
-
-| Local-First | Cloud-First |
-|------------|-------------|
-| Works offline | Internet required |
-| Instant response | Network latency |
-| No backend cost | Server infrastructure |
-| User owns data | Data stored remotely |
-| Browser database | Cloud database |
+```
+Landing Page
+      │
+      ▼
+Hero
+      │
+      ▼
+About
+      │
+      ▼
+Experience
+      │
+      ▼
+Projects
+      │
+      ▼
+Skills
+      │
+      ▼
+Achievements
+      │
+      ▼
+Resume
+      │
+      ▼
+Contact
+```
 
 ---
 
-# 🔐 Privacy
+# 🎨 Design System
 
-The application is designed with privacy in mind.
+The portfolio follows a centralized design system.
 
-- No login required
-- No cloud storage
-- No external database
-- No tracking
-- Data remains inside the user's browser
-- Users control backup and restoration of their own data
+Includes:
+
+- Tailwind Design Tokens
+- Typography Scale
+- Color Palette
+- Responsive Breakpoints
+- Reusable Components
+- Animation Guidelines
+- Consistent Spacing
+
+---
+
+# ⚡ Performance Optimization
+
+Implemented optimizations include:
+
+- Code Splitting
+- Lazy Loading
+- Optimized Images
+- Tree Shaking
+- Vite Production Build
+- Component Memoization
+- Asset Optimization
+
+---
+
+# ♿ Accessibility
+
+The portfolio follows accessibility best practices.
+
+Features include:
+
+- Semantic HTML
+- Keyboard Navigation
+- ARIA Labels
+- Focus States
+- Color Contrast
+- Responsive Typography
 
 ---
 
@@ -293,7 +355,7 @@ The application is designed with privacy in mind.
 ```bash
 git clone <repository-url>
 
-cd custom-s3-library
+cd portfolio
 ```
 
 ---
@@ -306,7 +368,21 @@ npm install
 
 ---
 
-## Run Development Server
+## Configure Environment
+
+Create an environment file.
+
+```env
+VITE_APP_NAME=Ashok Kumar Portfolio
+
+VITE_EMAIL_SERVICE=
+
+VITE_EMAIL_TEMPLATE=
+```
+
+---
+
+## Start Development
 
 ```bash
 npm run dev
@@ -322,62 +398,114 @@ npm run build
 
 ---
 
+## Preview Build
+
+```bash
+npm run preview
+```
+
+---
+
 # 📜 Available Scripts
 
 | Command | Description |
 |----------|-------------|
-| npm run dev | Development server |
+| npm run dev | Start development server |
 | npm run build | Production build |
 | npm run preview | Preview production build |
-| npm run lint | ESLint |
+| npm run lint | Run ESLint |
+| npm run format | Format source code |
 
 ---
 
-# 🔮 Future Roadmap
+# 📋 Development Guidelines
+
+### Code Quality
+
+- Write modular, reusable components.
+- Keep business logic separate from UI.
+- Use TypeScript for type safety.
+- Follow consistent naming conventions.
+- Maintain a scalable folder structure.
+
+---
+
+### UI Guidelines
+
+- Use Tailwind CSS utility classes.
+- Avoid hardcoded values.
+- Build reusable components.
+- Ensure responsiveness.
+- Maintain animation consistency.
+
+---
+
+### Performance
+
+- Lazy load heavy components.
+- Optimize assets.
+- Minimize bundle size.
+- Use efficient rendering patterns.
+
+---
+
+### SEO
+
+The portfolio is optimized for search engines through:
+
+- Semantic HTML
+- Meta Tags
+- Open Graph Support
+- Structured Content
+- Fast Loading Performance
+
+---
+
+# 🔮 Roadmap
 
 Planned improvements include:
 
-- Optional Cloud Synchronization
-- Multi-device Sync
-- Role-based Authentication
-- QR Attendance
-- Progressive Web App (PWA)
-- Desktop Packaging
-- Automatic Backup
+- Blog & Technical Articles
+- Project Case Studies
+- Interactive Architecture Diagrams
+- AI Assistant Integration
+- Theme Customizer
 - Multi-language Support
-- Plugin System
-- Theme Customization
+- Analytics Dashboard
+- Visitor Statistics
+- Progressive Web App (PWA)
+- CMS Integration
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome.
+Although this is a personal portfolio, suggestions and improvements are always welcome.
 
-Please:
+If you would like to contribute:
 
 1. Fork the repository.
 2. Create a feature branch.
-3. Write clean and reusable code.
-4. Test your implementation.
+3. Implement your improvements.
+4. Test your changes.
 5. Submit a Pull Request.
 
 ---
 
 # 📄 License
 
-This project is developed for the **S3 Library Ecosystem**.
+This project is released for educational and portfolio purposes.
 
-For commercial licensing or collaboration, please contact the project owner.
+The source code may not be redistributed commercially without permission.
 
 ---
 
 <div align="center">
 
-### Built with ❤️ using React, TypeScript & IndexedDB
+### Built with ❤️ using React, TypeScript & Tailwind CSS
 
-**Custom S3 Library**
+**Ashok Kumar Portfolio**
 
-Offline • Local-First • Fast • Private • Future-Ready
+Modern • Responsive • Interactive • Engineering Focused
 
 </div>
